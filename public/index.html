@@ -12,8 +12,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-  
+  <link rel="stylesheet" href="css/style.css">
+
 
 </head>
 
@@ -40,10 +40,24 @@
           happening and what the city has to offer.</p>
         <div class="tags">
           <span class="tag">PIN 733201</span>
+
           <span class="tag">Uttar Dinajpur, West Bengal</span>
-          <span class="tag" id="live-clock">🕒 Loading time...</span>
-          <span class="tag" id="live-temp">🌡️ Loading weather...</span>
-          <span class="tag" id="live-condition">Fetching updates...</span>
+
+          <span class="tag" id="live-clock" aria-live="off">
+            🕒 Loading time...
+          </span>
+
+          <span class="tag" id="live-temp" aria-live="polite">
+            🌡️ Loading weather...
+          </span>
+
+          <span class="tag" id="live-condition" aria-live="polite">
+            Fetching updates...
+          </span>
+
+          <span class="tag" id="live-aqi" aria-live="polite">
+            🌫️ Loading air quality...
+          </span>
         </div>
 
         <div class="board" role="navigation" aria-label="City guide">
@@ -164,7 +178,7 @@
     </div>
   </footer>
 
-  <script src="js/weather.js"></script>
+  <script src="/js/shared/live-environment.js" defer></script>
 
 </body>
 
