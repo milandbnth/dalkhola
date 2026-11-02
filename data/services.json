@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "category": "Services & Utilities",
+    "last_updated": "2026-11-02T10:49:20.076026Z",
+    "osm_hospital_nodes_detected": 3,
+    "osm_bank_nodes_detected": 5
+  },
+  "healthcare": [
+    {
+      "id": "hosp-1",
+      "name": "Dalkhola Rural Hospital",
+      "type": "Government Rural Hospital & Emergency Center",
+      "contact": "Emergency Desk: 24x7 Available",
+      "address": "Hospital Road, Dalkhola, West Bengal 733201",
+      "image": "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80",
+      "badge": "24x7 Emergency"
+    },
+    {
+      "id": "hosp-2",
+      "name": "Dalkhola Urban Primary Health Centre (UPHC)",
+      "type": "Public Municipal Health Clinic",
+      "contact": "OPD Hours: 9:00 AM \u2013 2:00 PM",
+      "address": "Ward No. 4, Dalkhola Municipality",
+      "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
+      "badge": "Free Civic Care"
+    }
+  ],
+  "municipality": [
+    {
+      "id": "muni-1",
+      "name": "Dalkhola Municipality Office",
+      "type": "Civic Governing Body & Urban Administration",
+      "address": "Municipality Building, Main Road, Dalkhola, PIN 733201",
+      "departments": [
+        "Birth & Death Registration",
+        "Trade License Section",
+        "Property Tax & Assessment",
+        "Public Works & Water Supply"
+      ],
+      "timing": "Monday \u2013 Friday: 10:00 AM \u2013 5:00 PM",
+      "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80",
+      "badge": "Civic HQ"
+    }
+  ],
+  "banking": [
+    {
+      "id": "bank-1",
+      "name": "State Bank of India (SBI)",
+      "branch": "Dalkhola Branch",
+      "ifsc": "SBIN0002047",
+      "micr": "733002506",
+      "services": [
+        "Personal Banking",
+        "Forex Desk",
+        "Commercial Loans",
+        "24/7 ATM/Cash Deposit"
+      ],
+      "address": "Station Road, Dalkhola, PIN 733201",
+      "image": "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=800&q=80",
+      "badge": "Nationalized Bank"
+    },
+    {
+      "id": "bank-2",
+      "name": "Punjab National Bank (PNB)",
+      "branch": "Dalkhola Commercial Node",
+      "ifsc": "PUNB0024400",
+      "services": [
+        "Agricultural Loans",
+        "MSME Account",
+        "ATM Services"
+      ],
+      "address": "NH 12 Junction, Hatbari, Dalkhola",
+      "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80",
+      "badge": "Nationalized Bank"
+    },
+    {
+      "id": "bank-3",
+      "name": "Bandhan Bank",
+      "branch": "Dalkhola Town Branch",
+      "ifsc": "BDBL0001850",
+      "services": [
+        "Microfinance",
+        "Retail Savings",
+        "Fixed Deposits"
+      ],
+      "address": "Goalgaon Road, Dalkhola",
+      "image": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=800&q=80",
+      "badge": "Private Retail Bank"
+    }
+  ],
+  "post_office": [
+    {
+      "id": "po-1",
+      "name": "Dalkhola Sub Post Office (S.O.)",
+      "pin_code": "733201",
+      "postal_division": "Dinajpur Division (North Bengal Region)",
+      "services": [
+        "Speed Post & Registered Parcel",
+        "Postal Life Insurance (PLI)",
+        "Aadhaar Seva Kendra",
+        "Post Office Savings Bank (POSB)"
+      ],
+      "address": "Station Road, Ward No. 5, Dalkhola, Uttar Dinajpur, West Bengal 733201",
+      "image": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80",
+      "badge": "India Post Hub"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "city": "Dalkhola",
+    "pin_code": "733201",
+    "district": "Uttar Dinajpur",
+    "state": "West Bengal",
+    "country": "India",
+    "last_updated": "2026-11-02T04:01:41.074136Z"
+  },
+  "business": {
+    "markets": [
+      "Hatbari Trade Hub",
+      "Goalgaon Market",
+      "Station Road Commercial Area"
+    ],
+    "key_industries": [
+      "Maize Trading & Wholesale",
+      "Jute Processing",
+      "Cold Storage & Warehousing"
+    ],
+    "directory": [
+      {
+        "name": "Dalkhola Grain & Maize Merchants Association",
+        "category": "Agriculture Trade",
+        "area": "Hatbari"
+      },
+      {
+        "name": "NH 27 Cold Logistics Node",
+        "category": "Logistics & Warehousing",
+        "area": "NH 27 Bypass"
+      }
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "portal": {
+    "name": "Dalkhola Online",
+    "city": "Dalkhola",
+    "version": "1.0.0",
+    "default_module": "home"
+  },
+  "modules": [
+    {
+      "id": "home",
+      "title": "Home",
+      "page": "index.html",
+      "enabled": true,
+      "data_mode": "hybrid",
+      "manual_data": "data/modules/home/manual/content.json",
+      "automated_data": "data/modules/home/automated/content.json",
+      "overrides": "data/modules/home/overrides.json",
+      "published_data": "public/data/modules/home.json"
+    },
+    {
+      "id": "business",
+      "title": "Business",
+      "page": "business.html",
+      "enabled": true,
+      "data_mode": "hybrid",
+      "manual_data": "data/modules/business/manual/content.json",
+      "automated_data": "data/modules/business/automated/content.json",
+      "overrides": "data/modules/business/overrides.json",
+      "published_data": "public/data/modules/business.json"
+    },
+    {
+      "id": "education",
+      "title": "Education",
+      "page": "education.html",
+      "enabled": true,
+      "data_mode": "hybrid",
+      "manual_data": "data/modules/education/manual/content.json",
+      "automated_data": "data/modules/education/automated/content.json",
+      "overrides": "data/modules/education/overrides.json",
+      "published_data": "public/data/modules/education.json"
+    },
+    {
+      "id": "services",
+      "title": "Services",
+      "page": "services.html",
+      "enabled": true,
+      "data_mode": "hybrid",
+      "manual_data": "data/modules/services/manual/content.json",
+      "automated_data": "data/modules/services/automated/content.json",
+      "overrides": "data/modules/services/overrides.json",
+      "published_data": "public/data/modules/services.json"
+    },
+    {
+      "id": "transport",
+      "title": "Transport",
+      "page": "transport.html",
+      "enabled": true,
+      "data_mode": "hybrid",
+      "manual_data": "data/modules/transport/manual/content.json",
+      "automated_data": "data/modules/transport/automated/content.json",
+      "overrides": "data/modules/transport/overrides.json",
+      "published_data": "public/data/modules/transport.json"
+    }
+  ]
+}
