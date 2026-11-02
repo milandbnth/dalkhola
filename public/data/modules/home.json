@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "city": "Dalkhola",
+    "pin_code": "733201",
+    "district": "Uttar Dinajpur",
+    "state": "West Bengal",
+    "country": "India",
+    "last_updated": "2026-11-02T04:01:41.074136Z"
+  },
+  "overview": {
+    "hero_title": "Welcome to Dalkhola",
+    "tagline": "The Commercial & Transit Hub of North Bengal",
+    "highways": [
+      "NH 12",
+      "NH 27"
+    ],
+    "railway_junction": "Dalkhola (DLK)"
+  }
+}

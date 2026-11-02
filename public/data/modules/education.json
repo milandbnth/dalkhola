@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "city": "Dalkhola",
+    "pin_code": "733201",
+    "district": "Uttar Dinajpur",
+    "state": "West Bengal",
+    "country": "India",
+    "last_updated": "2026-11-02T04:01:41.074136Z"
+  },
+  "education": {
+    "colleges": [
+      {
+        "name": "Dalkhola College",
+        "type": "General Degree College",
+        "affiliated_to": "University of Gour Banga"
+      }
+    ],
+    "schools": [
+      {
+        "name": "Dalkhola High School (H.S.)",
+        "type": "Higher Secondary",
+        "medium": "Bengali / Hindi"
+      },
+      {
+        "name": "Dalkhola Girls High School",
+        "type": "Secondary",
+        "medium": "Bengali"
+      }
+    ]
+  }
+}

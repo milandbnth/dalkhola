@@ -1,0 +1,38 @@
+{
+  "portal": {
+    "name": "Dalkhola Online",
+    "version": "1.0.0"
+  },
+  "modules": [
+    {
+      "id": "home",
+      "title": "Home",
+      "enabled": true,
+      "data_url": "/data/modules/home.json"
+    },
+    {
+      "id": "business",
+      "title": "Business",
+      "enabled": true,
+      "data_url": "/data/modules/business.json"
+    },
+    {
+      "id": "education",
+      "title": "Education",
+      "enabled": true,
+      "data_url": "/data/modules/education.json"
+    },
+    {
+      "id": "services",
+      "title": "Services",
+      "enabled": true,
+      "data_url": "/data/modules/services.json"
+    },
+    {
+      "id": "transport",
+      "title": "Transport",
+      "enabled": true,
+      "data_url": "/data/modules/transport.json"
+    }
+  ]
+}

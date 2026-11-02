@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "city": "Dalkhola",
+    "pin_code": "733201",
+    "district": "Uttar Dinajpur",
+    "state": "West Bengal",
+    "country": "India",
+    "last_updated": "2026-11-02T04:01:41.074136Z"
+  },
+  "transport": {
+    "railway": {
+      "station": "Dalkhola Railway Station",
+      "code": "DLK",
+      "zone": "NFR / Katihar Division"
+    },
+    "highways": [
+      {
+        "name": "NH 12",
+        "description": "Connecting Kolkata to Siliguri & North Bengal"
+      },
+      {
+        "name": "NH 27",
+        "description": "East-West Corridor connecting Assam & North-East to Western India"
+      }
+    ]
+  }
+}
