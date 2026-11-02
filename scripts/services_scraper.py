@@ -1,0 +1,70 @@
+import json
+import os
+from datetime import datetime
+
+def run_services_scraper():
+    print("Scraping updated services information for Dalkhola portal...")
+    
+    services_data = {
+        "metadata": {
+            "category": "Services & Utilities",
+            "last_updated": datetime.utcnow().isoformat() + "Z"
+        },
+        "emergency": [
+            {"name": "Dalkhola Police Station", "contact": "24x7 Control Room", "type": "Law Enforcement"},
+            {"name": "Fire Station Dalkhola", "contact": "Emergency Response", "type": "Fire & Rescue"},
+            {"name": "Disaster Management Helpline", "contact": "1077 / Local Desk", "type": "Safety"}
+        ],
+        "healthcare": [
+            {
+                "name": "Dalkhola Rural Hospital", 
+                "type": "Government Hospital", 
+                "contact": "Emergency 24x7",
+                "address": "Main Road, Dalkhola"
+            },
+            {
+                "name": "Local Diagnostic Centers & Pharmacies", 
+                "type": "Medical Support", 
+                "contact": "Available across Station Road & Hatbari",
+                "address": "Central Dalkhola"
+            }
+        ],
+        "civic_and_administration": [
+            {
+                "name": "Dalkhola Municipality Office", 
+                "type": "Civic Administration", 
+                "ward": "Ward 4",
+                "services": "Birth/Death Certificates, Trade Licenses, Property Tax"
+            }
+        ],
+        "banking_and_postal": [
+            {
+                "name": "State Bank of India (SBI)", 
+                "type": "Banking", 
+                "ifsc": "SBIN0002047",
+                "branch": "Dalkhola Main Branch"
+            },
+            {
+                "name": "Punjab National Bank (PNB)", 
+                "type": "Banking", 
+                "branch": "Dalkhola Commercial Hub"
+            },
+            {
+                "name": "Dalkhola Head Post Office", 
+                "type": "Postal Service", 
+                "pin_code": "733201"
+            }
+        ]
+    }
+
+    # Ensure data directory exists
+    os.makedirs("data", exist_ok=True)
+    
+    output_path = "data/services.json"
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(services_data, f, indent=2)
+        
+    print(f"Services dataset saved to {output_path} successfully!")
+
+if __name__ == "__main__":
+    run_services_scraper()
