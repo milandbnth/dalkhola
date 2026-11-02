@@ -118,8 +118,8 @@ def run_services_scraper():
         ]
     }
 
-    os.makedirs("data", exist_ok=True)
-    output_path = "data/services.json"
+    os.makedirs("public/data", exist_ok=True)
+    output_path = "public/data/services.json"
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(services_data, f, indent=2)
 
