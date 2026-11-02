@@ -3,8 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>City Services — Dalkhola Portal</title>
+  <title>City Services & Infrastructure — Dalkhola Portal</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Card Image Specific Styling */
+    .snap-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 0.75rem;
+    }
+    .badge-pill {
+      align-self: flex-start;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      background: var(--teal-ink);
+      color: var(--teal);
+    }
+  </style>
 </head>
 <body>
 
@@ -22,155 +41,147 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
   <main class="wrap">
     <section class="hero">
-      <h1>City Services</h1>
-      <p class="lead">Essential civic utilities, emergency helplines, municipal offices, and public welfare services across Dalkhola.</p>
+      <h1>Public Services</h1>
+      <p class="lead">Essential healthcare centers, municipal administrative desks, banking facilities, and postal offices in Dalkhola.</p>
     </section>
 
-    <!-- 1. Emergency Contacts Section -->
+    <!--  Health Care and Hospitals -->
     <section class="block">
       <div class="sec-head">
         <div>
-          <h2>Emergency Contacts</h2>
-          <p>24/7 helplines, police station, and disaster response.</p>
-        </div>
-      </div>
-      <div class="bento" id="emergency-container">
-        <!-- Populated dynamically via scraper data -->
-      </div>
-    </section>
-
-    <!-- 2. Healthcare Section -->
-    <section class="block">
-      <div class="sec-head">
-        <div>
-          <h2>Healthcare & Hospitals</h2>
-          <p>Government hospitals and medical infrastructure.</p>
+          <h2>Health Care & Hospitals</h2>
+          <p>Government rural hospital, emergency response centers, and primary health clinics.</p>
         </div>
       </div>
       <div class="bento" id="healthcare-container">
-        <!-- Populated dynamically via scraper data -->
+        <!-- Rendered via JS -->
       </div>
     </section>
 
-    <!-- 3. Civic & Administration Section -->
+    <!-- 2. Dalkhola Municipality -->
     <section class="block">
       <div class="sec-head">
         <div>
-          <h2>Civic Administration</h2>
-          <p>Municipality office and public administrative services.</p>
+          <h2>Dalkhola Municipality</h2>
+          <p>Local urban governance, trade licensing, tax assessment, and public works office.</p>
         </div>
       </div>
-      <div class="bento" id="civic-container">
-        <!-- Populated dynamically via scraper data -->
+      <div class="bento" id="municipality-container">
+        <!-- Rendered via JS -->
       </div>
     </section>
 
-    <!-- 4. Banking & Postal Section -->
+    <!-- 3. Banking & Financial Services -->
     <section class="block">
       <div class="sec-head">
         <div>
-          <h2>Banking & Postal Services</h2>
-          <p>Nationalized banks and postal network.</p>
+          <h2>Banking & Financial Services</h2>
+          <p>Nationalized banks, commercial branches, IFSC details, and 24/7 ATM network.</p>
         </div>
       </div>
       <div class="bento" id="banking-container">
-        <!-- Populated dynamically via scraper data -->
+        <!-- Rendered via JS -->
       </div>
     </section>
 
-    <!-- Map Section -->
+    <!-- 4. Post Office -->
     <section class="block">
       <div class="sec-head">
         <div>
-          <h2>Service Hub Locations</h2>
-          <p>Locate key administrative buildings and municipal centers around Dalkhola.</p>
+          <h2>Post Office (India Post)</h2>
+          <p>Sub Post Office (PIN 733201), Speed Post, POSB savings, and Aadhaar services.</p>
         </div>
       </div>
-      <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14316.55!2d88.48!3d26.44!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e441!2sDalkhola%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+      <div class="bento" id="postoffice-container">
+        <!-- Rendered via JS -->
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="wrap">
-      <div>&copy; 2026 Dalkhola City Portal. Built for the community.</div>
-      <div id="last-updated">Maintained via Automated GitHub Actions CI/CD</div>
+      <div>&copy; 2026 Dalkhola City Portal. All dynamic datasets maintained via GitHub Actions.</div>
+      <div id="last-updated">Updating data...</div>
     </div>
   </footer>
 
-  <!-- Dynamic Data Populator Script -->
+  <!-- Dynamic Population Script -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       fetch('data/services.json')
-        .then(response => {
-          if (!response.ok) throw new Error('Failed to load services data');
-          return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
-          console.log("Loaded Services Data:", data);
-
-          // Populate Emergency Contacts
-          const emergencyEl = document.getElementById('emergency-container');
-          if (emergencyEl && data.emergency) {
-            emergencyEl.innerHTML = data.emergency.map(item => `
-              <div class="snap s3">
-                <h3>${item.name}</h3>
-                <p>Type: ${item.type}</p>
-                <span class="go">${item.contact}</span>
-              </div>
-            `).join('');
-          }
-
-          // Populate Healthcare
-          const healthcareEl = document.getElementById('healthcare-container');
-          if (healthcareEl && data.healthcare) {
-            healthcareEl.innerHTML = data.healthcare.map(item => `
-              <div class="snap s3">
-                <h3>${item.name}</h3>
-                <p>${item.type} — ${item.address || ''}</p>
-                <span class="go">${item.contact}</span>
-              </div>
-            `).join('');
-          }
-
-          // Populate Civic Administration
-          const civicEl = document.getElementById('civic-container');
-          if (civicEl && data.civic_and_administration) {
-            civicEl.innerHTML = data.civic_and_administration.map(item => `
+          // 1. Healthcare Render
+          const healthEl = document.getElementById('healthcare-container');
+          if (healthEl && data.healthcare) {
+            healthEl.innerHTML = data.healthcare.map(item => `
               <div class="snap s2">
+                <img src="${item.image}" alt="${item.name}" class="snap-img">
+                <span class="badge-pill">${item.badge}</span>
                 <h3>${item.name}</h3>
-                <p>${item.services}</p>
-                <span class="go">Ward: ${item.ward}</span>
+                <p><strong>${item.type}</strong></p>
+                <p>${item.address}</p>
+                <span class="go">${item.contact}</span>
               </div>
             `).join('');
           }
 
-          // Populate Banking & Postal
-          const bankingEl = document.getElementById('banking-container');
-          if (bankingEl && data.banking_and_postal) {
-            bankingEl.innerHTML = data.banking_and_postal.map(item => `
+          // 2. Municipality Render
+          const muniEl = document.getElementById('municipality-container');
+          if (muniEl && data.municipality) {
+            muniEl.innerHTML = data.municipality.map(item => `
+              <div class="snap s1">
+                <img src="${item.image}" alt="${item.name}" class="snap-img">
+                <span class="badge-pill">${item.badge}</span>
+                <h3>${item.name}</h3>
+                <p>${item.type}</p>
+                <p><strong>Services:</strong> ${item.departments.join(', ')}</p>
+                <span class="go">Timing: ${item.timing}</span>
+              </div>
+            `).join('');
+          }
+
+          // 3. Banking Render
+          const bankEl = document.getElementById('banking-container');
+          if (bankEl && data.banking) {
+            bankEl.innerHTML = data.banking.map(item => `
               <div class="snap s3">
+                <img src="${item.image}" alt="${item.name}" class="snap-img">
+                <span class="badge-pill">${item.badge}</span>
                 <h3>${item.name}</h3>
-                <p>${item.type} ${item.ifsc ? '— IFSC: ' + item.ifsc : ''}</p>
-                <span class="go">${item.branch || item.pin_code ? 'Pin: ' + (item.pin_code || item.branch) : 'Active'}</span>
+                <p><strong>Branch:</strong> ${item.branch}</p>
+                <p><strong>IFSC:</strong> ${item.ifsc}</p>
+                <p>${item.address}</p>
+                <span class="go">${item.services.join(' • ')}</span>
               </div>
             `).join('');
           }
 
-          // Update timestamp if available
+          // 4. Post Office Render
+          const poEl = document.getElementById('postoffice-container');
+          if (poEl && data.post_office) {
+            poEl.innerHTML = data.post_office.map(item => `
+              <div class="snap s1">
+                <img src="${item.image}" alt="${item.name}" class="snap-img">
+                <span class="badge-pill">${item.badge}</span>
+                <h3>${item.name} (PIN: ${item.pin_code})</h3>
+                <p><strong>Division:</strong> ${item.postal_division}</p>
+                <p><strong>Key Facilities:</strong> ${item.services.join(', ')}</p>
+                <span class="go">${item.address}</span>
+              </div>
+            `).join('');
+          }
+
+          // Timestamp
           if (data.metadata && data.metadata.last_updated) {
-            const dateStr = new Date(data.metadata.last_updated).toLocaleDateString();
-            document.getElementById('last-updated').innerText = `Last Scraped: ${dateStr}`;
+            const dateStr = new Date(data.metadata.last_updated).toLocaleString();
+            document.getElementById('last-updated').innerText = `Last Refreshed: ${dateStr}`;
           }
         })
-        .catch(error => console.error('Error fetching dynamic services data:', error));
+        .catch(err => console.error("Error loading services JSON:", err));
     });
   </script>
-
 </body>
 </html>
