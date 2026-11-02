@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
@@ -31,36 +31,6 @@
       box-sizing: border-box;
       padding-top: env(safe-area-inset-top, 0px);
       padding-bottom: env(safe-area-inset-bottom, 0px);
-    }
-
-    @media (prefers-color-scheme:dark) {
-      :root:not([data-theme="light"]) {
-        --bg: #0C151B;
-        --surface: #14212A;
-        --ink: #EAF0F2;
-        --muted: #9DB0BA;
-        --line: #26363F;
-        --teal: #38bdf8;
-        --teal-ink: #0C151B;
-        --board: #1B2D38;
-        --board-ink: #F3F6F7;
-        --board-dim: #8FA3AE;
-        color-scheme: dark;
-      }
-    }
-
-    :root[data-theme="dark"] {
-      --bg: #0C151B;
-      --surface: #14212A;
-      --ink: #EAF0F2;
-      --muted: #9DB0BA;
-      --line: #26363F;
-      --teal: #38bdf8;
-      --teal-ink: #0C151B;
-      --board: #1B2D38;
-      --board-ink: #F3F6F7;
-      --board-dim: #8FA3AE;
-      color-scheme: dark;
     }
 
     *,
@@ -414,7 +384,19 @@
     }
 
     .s1 {
-      grid-column: span 3
+      grid-column: span 3;
+      background: #0284c7;
+      border: 0;
+      color: #fff
+    }
+
+    .s1 p,
+    .s1 .go {
+      color: #e0f2fe
+    }
+
+    .s1 h3 {
+      font-size: clamp(1.6rem, 3vw, 2.1rem)
     }
 
     .s2 {
@@ -431,21 +413,6 @@
 
     .s5 {
       grid-column: span 2
-    }
-
-    .s1 {
-      background: #0284c7;
-      border: 0;
-      color: #fff
-    }
-
-    .s1 p,
-    .s1 .go {
-      color: #e0f2fe
-    }
-
-    .s1 h3 {
-      font-size: clamp(1.6rem, 3vw, 2.1rem)
     }
 
     /* getting here */
@@ -532,18 +499,6 @@
 
       .nav nav {
         display: none
-      }
-    }
-
-    @media (prefers-reduced-motion:reduce) {
-      html {
-        scroll-behavior: auto
-      }
-
-      .board a.row {
-        animation: none;
-        opacity: 1;
-        transform: none
       }
     }
   </style>
