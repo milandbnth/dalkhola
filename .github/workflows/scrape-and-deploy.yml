@@ -1,6 +1,9 @@
 name: Dalkhola Automated Data Pipeline & Deploy
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: '0 0 * * 0' # Every Sunday at 00:00 UTC
   workflow_dispatch:
