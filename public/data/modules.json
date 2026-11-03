@@ -7,30 +7,35 @@
     {
       "id": "home",
       "title": "Home",
+      "page": "index.html",
       "enabled": true,
       "data_url": "/data/modules/home.json"
     },
     {
       "id": "business",
       "title": "Business",
+      "page": "business.html",
       "enabled": true,
       "data_url": "/data/modules/business.json"
     },
     {
       "id": "education",
       "title": "Education",
+      "page": "education.html",
       "enabled": true,
       "data_url": "/data/modules/education.json"
     },
     {
       "id": "services",
       "title": "Services",
+      "page": "services.html",
       "enabled": true,
       "data_url": "/data/modules/services.json"
     },
     {
       "id": "transport",
       "title": "Transport",
+      "page": "transport.html",
       "enabled": true,
       "data_url": "/data/modules/transport.json"
     }

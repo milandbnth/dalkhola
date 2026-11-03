@@ -15,13 +15,13 @@ def load_json(path):
         return json.load(file)
 
 
-def run_script(script_name):
+def run_script(script_name, *args):
     script_path = ROOT / "scripts" / "common" / script_name
 
-    print(f"\nRunning {script_name}...")
+    print(f"\nRunning {script_name} {' '.join(args)}...")
 
     result = subprocess.run(
-        [sys.executable, str(script_path)],
+        [sys.executable, str(script_path), *args],
         cwd=ROOT
     )
 
@@ -92,6 +92,7 @@ def generate_public_registry(config):
         public_modules.append({
             "id": module["id"],
             "title": module["title"],
+            "page": module["page"],
             "enabled": module["enabled"],
             "data_url": get_public_data_url(
                 module["published_data"]
@@ -140,6 +141,7 @@ def main():
     config = load_json(CONFIG_FILE)
 
     run_script("validator.py")
+    run_script("id_assigner.py", "--check")
     run_script("merger.py")
 
     verify_published_modules(config["modules"])

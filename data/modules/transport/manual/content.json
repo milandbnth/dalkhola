@@ -11,16 +11,19 @@
     "railway": {
       "station": "Dalkhola Railway Station",
       "code": "DLK",
-      "zone": "NFR / Katihar Division"
+      "zone": "NFR / Katihar Division",
+      "id": "DLK-TRN-000001"
     },
     "highways": [
       {
         "name": "NH 12",
-        "description": "Connecting Kolkata to Siliguri & North Bengal"
+        "description": "Connecting Kolkata to Siliguri & North Bengal",
+        "id": "DLK-TRN-000002"
       },
       {
         "name": "NH 27",
-        "description": "East-West Corridor connecting Assam & North-East to Western India"
+        "description": "East-West Corridor connecting Assam & North-East to Western India",
+        "id": "DLK-TRN-000003"
       }
     ]
   }

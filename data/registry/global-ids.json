@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "counters": {
+    "BIZ": 2,
+    "EDU": 3,
+    "SRV": 7,
+    "TRN": 3
+  },
+  "legacy_ids": {
+    "services:hosp-1": "DLK-SRV-000001",
+    "services:hosp-2": "DLK-SRV-000002",
+    "services:muni-1": "DLK-SRV-000003",
+    "services:bank-1": "DLK-SRV-000004",
+    "services:bank-2": "DLK-SRV-000005",
+    "services:bank-3": "DLK-SRV-000006",
+    "services:po-1": "DLK-SRV-000007"
+  },
+  "records": {
+    "DLK-BIZ-000001": {
+      "module": "business",
+      "source": "data/modules/business/manual/content.json.business.directory[0]"
+    },
+    "DLK-BIZ-000002": {
+      "module": "business",
+      "source": "data/modules/business/manual/content.json.business.directory[1]"
+    },
+    "DLK-EDU-000001": {
+      "module": "education",
+      "source": "data/modules/education/manual/content.json.education.colleges[0]"
+    },
+    "DLK-EDU-000002": {
+      "module": "education",
+      "source": "data/modules/education/manual/content.json.education.schools[0]"
+    },
+    "DLK-EDU-000003": {
+      "module": "education",
+      "source": "data/modules/education/manual/content.json.education.schools[1]"
+    },
+    "DLK-SRV-000001": {
+      "module": "services",
+      "source": "data/modules/services/manual/content.json.healthcare[0]"
+    },
+    "DLK-SRV-000002": {
+      "module": "services",
+      "source": "data/modules/services/manual/content.json.healthcare[1]"
+    },
+    "DLK-SRV-000003": {
+      "module": "services",
+      "source": "data/modules/services/manual/content.json.municipality[0]"
+    },
+    "DLK-SRV-000004": {
+      "module": "services",
+      "source": "data/modules/services/manual/content.json.banking[0]"
+    },
+    "DLK-SRV-000005": {
+      "module": "services",
+      "source": "data/modules/services/manual/content.json.banking[1]"
+    },
+    "DLK-SRV-000006": {
+      "module": "services",
+      "source": "data/modules/services/manual/content.json.banking[2]"
+    },
+    "DLK-SRV-000007": {
+      "module": "services",
+      "source": "data/modules/services/manual/content.json.post_office[0]"
+    },
+    "DLK-TRN-000001": {
+      "module": "transport",
+      "source": "data/modules/transport/manual/content.json.transport.railway"
+    },
+    "DLK-TRN-000002": {
+      "module": "transport",
+      "source": "data/modules/transport/manual/content.json.transport.highways[0]"
+    },
+    "DLK-TRN-000003": {
+      "module": "transport",
+      "source": "data/modules/transport/manual/content.json.transport.highways[1]"
+    }
+  }
+}

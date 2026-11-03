@@ -12,19 +12,22 @@
       {
         "name": "Dalkhola College",
         "type": "General Degree College",
-        "affiliated_to": "University of Gour Banga"
+        "affiliated_to": "University of Gour Banga",
+        "id": "DLK-EDU-000001"
       }
     ],
     "schools": [
       {
         "name": "Dalkhola High School (H.S.)",
         "type": "Higher Secondary",
-        "medium": "Bengali / Hindi"
+        "medium": "Bengali / Hindi",
+        "id": "DLK-EDU-000002"
       },
       {
         "name": "Dalkhola Girls High School",
         "type": "Secondary",
-        "medium": "Bengali"
+        "medium": "Bengali",
+        "id": "DLK-EDU-000003"
       }
     ]
   }

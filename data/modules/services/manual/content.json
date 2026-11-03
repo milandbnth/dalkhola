@@ -7,7 +7,7 @@
   },
   "healthcare": [
     {
-      "id": "hosp-1",
+      "id": "DLK-SRV-000001",
       "name": "Dalkhola Rural Hospital",
       "type": "Government Rural Hospital & Emergency Center",
       "contact": "Emergency Desk: 24x7 Available",
@@ -16,7 +16,7 @@
       "badge": "24x7 Emergency"
     },
     {
-      "id": "hosp-2",
+      "id": "DLK-SRV-000002",
       "name": "Dalkhola Urban Primary Health Centre (UPHC)",
       "type": "Public Municipal Health Clinic",
       "contact": "OPD Hours: 9:00 AM – 2:00 PM",
@@ -27,7 +27,7 @@
   ],
   "municipality": [
     {
-      "id": "muni-1",
+      "id": "DLK-SRV-000003",
       "name": "Dalkhola Municipality Office",
       "type": "Civic Governing Body & Urban Administration",
       "address": "Municipality Building, Main Road, Dalkhola, PIN 733201",
@@ -44,7 +44,7 @@
   ],
   "banking": [
     {
-      "id": "bank-1",
+      "id": "DLK-SRV-000004",
       "name": "State Bank of India (SBI)",
       "branch": "Dalkhola Branch",
       "ifsc": "SBIN0002047",
@@ -60,7 +60,7 @@
       "badge": "Nationalized Bank"
     },
     {
-      "id": "bank-2",
+      "id": "DLK-SRV-000005",
       "name": "Punjab National Bank (PNB)",
       "branch": "Dalkhola Commercial Node",
       "ifsc": "PUNB0024400",
@@ -74,7 +74,7 @@
       "badge": "Nationalized Bank"
     },
     {
-      "id": "bank-3",
+      "id": "DLK-SRV-000006",
       "name": "Bandhan Bank",
       "branch": "Dalkhola Town Branch",
       "ifsc": "BDBL0001850",
@@ -90,7 +90,7 @@
   ],
   "post_office": [
     {
-      "id": "po-1",
+      "id": "DLK-SRV-000007",
       "name": "Dalkhola Sub Post Office (S.O.)",
       "pin_code": "733201",
       "postal_division": "Dinajpur Division (North Bengal Region)",

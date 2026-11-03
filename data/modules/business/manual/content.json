@@ -22,12 +22,14 @@
       {
         "name": "Dalkhola Grain & Maize Merchants Association",
         "category": "Agriculture Trade",
-        "area": "Hatbari"
+        "area": "Hatbari",
+        "id": "DLK-BIZ-000001"
       },
       {
         "name": "NH 27 Cold Logistics Node",
         "category": "Logistics & Warehousing",
-        "area": "NH 27 Bypass"
+        "area": "NH 27 Bypass",
+        "id": "DLK-BIZ-000002"
       }
     ]
   }

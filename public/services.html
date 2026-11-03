@@ -110,14 +110,14 @@
   <!-- Dynamic Population Script -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      fetch('data/services.json')
+      fetch('/data/modules/services.json')
         .then(response => response.json())
         .then(data => {
           // 1. Healthcare Render
           const healthEl = document.getElementById('healthcare-container');
           if (healthEl && data.healthcare) {
             healthEl.innerHTML = data.healthcare.map(item => `
-              <div class="snap s2">
+              <div class="snap s2" id="record-${item.id}">
                 <img src="${item.image}" alt="${item.name}" class="snap-img">
                 <span class="badge-pill">${item.badge}</span>
                 <h3>${item.name}</h3>
@@ -132,7 +132,7 @@
           const muniEl = document.getElementById('municipality-container');
           if (muniEl && data.municipality) {
             muniEl.innerHTML = data.municipality.map(item => `
-              <div class="snap s1">
+              <div class="snap s1" id="record-${item.id}">
                 <img src="${item.image}" alt="${item.name}" class="snap-img">
                 <span class="badge-pill">${item.badge}</span>
                 <h3>${item.name}</h3>
@@ -147,7 +147,7 @@
           const bankEl = document.getElementById('banking-container');
           if (bankEl && data.banking) {
             bankEl.innerHTML = data.banking.map(item => `
-              <div class="snap s3">
+              <div class="snap s3" id="record-${item.id}">
                 <img src="${item.image}" alt="${item.name}" class="snap-img">
                 <span class="badge-pill">${item.badge}</span>
                 <h3>${item.name}</h3>
@@ -163,7 +163,7 @@
           const poEl = document.getElementById('postoffice-container');
           if (poEl && data.post_office) {
             poEl.innerHTML = data.post_office.map(item => `
-              <div class="snap s1">
+              <div class="snap s1" id="record-${item.id}">
                 <img src="${item.image}" alt="${item.name}" class="snap-img">
                 <span class="badge-pill">${item.badge}</span>
                 <h3>${item.name} (PIN: ${item.pin_code})</h3>

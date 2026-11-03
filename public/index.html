@@ -38,6 +38,22 @@
         <h1>Dalkhola</h1>
         <p class="lead">A busy junction town in Uttar Dinajpur where roads, rail and markets meet. Find out what’s
           happening and what the city has to offer.</p>
+
+        <div class="portal-search" role="search"
+          style="max-width: 680px; width: 100%; margin: 28px 0; margin-right: auto; display: flex; align-items: center; gap: 12px; background: #fff; border: 1px solid #dbe2ea; border-radius: 14px; padding: 8px 16px; box-shadow: 0 6px 24px rgba(0,0,0,0.06);">
+
+          <span aria-hidden="true" style="font-size: 20px;">🔍</span>
+
+          <input type="search" id="portal-search" name="q"
+            placeholder="Search businesses, schools, hospitals, transport..."
+            aria-label="Search all Dalkhola Online sections" autocomplete="off"
+            style="flex: 1; min-width: 0; border: 0; outline: none; background: transparent; padding: 12px 4px; font: inherit; font-size: 15px;">
+
+        </div>
+
+        <div id="portal-search-results" aria-live="polite"></div>
+
+
         <div class="tags">
           <span class="tag">PIN 733201</span>
 
@@ -178,6 +194,8 @@
     </div>
   </footer>
 
+  <script src="/js/shared/data-loader.js" defer></script>
+  <script src="/js/shared/global-search.js" defer></script>
   <script src="/js/shared/live-environment.js" defer></script>
 
 </body>
