@@ -35,9 +35,22 @@
   <main id="top">
     <div class="wrap">
       <section class="hero">
-        <h1>Dalkhola</h1>
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <h1>Dalkhola</h1>
         <p class="lead">A busy junction town in Uttar Dinajpur where roads, rail and markets meet. Find out what’s
           happening and what the city has to offer.</p>
+          </div>
+
+          <div class="hero-image-frame image-frame">
+            <figure class="hero-image">
+              <img
+                src="https://res.cloudinary.com/m8ojhenk/image/upload/v1793719388/dal_hero.jpg"
+                alt="Dalkhola collage featuring the railway station, Durga Puja celebrations and Shree Agrasen Mahavidyalaya"
+                fetchpriority="high">
+            </figure>
+          </div>
+        </div>
 
         <div class="portal-search" role="search"
           style="max-width: 680px; width: 100%; margin: 28px 0; margin-right: auto; display: flex; align-items: center; gap: 12px; background: #fff; border: 1px solid #dbe2ea; border-radius: 14px; padding: 8px 16px; box-shadow: 0 6px 24px rgba(0,0,0,0.06);">
@@ -77,13 +90,13 @@
         </div>
 
         <div class="board" role="navigation" aria-label="City guide">
-          <div class="board-head"><span>Explore sections</span><span>Quick links</span></div>
+          <div class="board-head"><span>Explore Dalkhola</span><span>Quick links</span></div>
           <a class="row" href="business.html"><b>Business & Trade</b><span>Wholesale markets, maize trade and local
-              commerce</span><em>Open</em></a>
+              commerce</span><em>Explore</em></a>
           <a class="row" href="education.html"><b>Education</b><span>Schools, colleges and learning
-              centers</span><em>Browse</em></a>
+              centers</span><em>Explore</em></a>
           <a class="row" href="services.html"><b>Civic Services</b><span>Hospitals, municipal offices and
-              banking</span><em>View</em></a>
+              banking</span><em>Explore</em></a>
           <a class="row" href="transport.html"><b>Transport & Highways</b><span>Dalkhola Junction (DLK) and NH 12 / NH
               27</span><em>Explore</em></a>
         </div>
@@ -194,6 +207,7 @@
     </div>
   </footer>
 
+  <script src="/js/shared/image-frame.js" defer></script>
   <script src="/js/shared/data-loader.js" defer></script>
   <script src="/js/shared/global-search.js" defer></script>
   <script src="/js/shared/live-environment.js" defer></script>
