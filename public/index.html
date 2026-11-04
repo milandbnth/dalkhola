@@ -15,10 +15,10 @@
   <link rel="stylesheet" href="css/style.css">
 
 
-<!-- SHARED-FAVICON:START -->
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="dalkhola-favicon.png">
-<!-- SHARED-FAVICON:END -->
+  <!-- SHARED-FAVICON:START -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="dalkhola-favicon.png">
+  <!-- SHARED-FAVICON:END -->
 
 
 
@@ -27,25 +27,24 @@
 <body>
 
   <!-- SHARED-HEADER:START -->
-<header class="nav">
-  <div class="wrap">
-    <a class="brand" href="index.html">
-      <span class="brand-logo-container">
-        <img src="images/dalkhola-online-logo.svg"
-             alt="Dalkhola Online">
-      </span>
-    </a>
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-logo-container">
+          <img src="images/dalkhola-online-logo.svg" alt="Dalkhola Online">
+        </span>
+      </a>
 
-    <nav aria-label="Main navigation">
-      <a href="index.html" class="active" aria-current="page">Home</a>
-      <a href="business.html" >Business</a>
-      <a href="education.html" >Education</a>
-      <a href="services.html" >Services</a>
-      <a href="transport.html" >Transport</a>
-    </nav>
-  </div>
-</header>
-<!-- SHARED-HEADER:END -->
+      <nav aria-label="Main navigation">
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="business.html">Business</a>
+        <a href="education.html">Education</a>
+        <a href="services.html">Services</a>
+        <a href="transport.html">Transport</a>
+      </nav>
+    </div>
+  </header>
+  <!-- SHARED-HEADER:END -->
 
 
 
@@ -55,14 +54,13 @@
         <div class="hero-layout">
           <div class="hero-copy">
             <h1>Dalkhola</h1>
-        <p class="lead">A busy junction town in Uttar Dinajpur where roads, rail and markets meet. Find out what’s
-          happening and what the city has to offer.</p>
+            <p class="lead">A busy junction town in Uttar Dinajpur where roads, rail and markets meet. Find out what’s
+              happening and what the city has to offer.</p>
           </div>
 
           <div class="hero-image-frame image-frame">
             <figure class="hero-image">
-              <img
-                src="https://res.cloudinary.com/m8ojhenk/image/upload/v1793719388/dal_hero.jpg"
+              <img src="https://res.cloudinary.com/m8ojhenk/image/upload/v1793719388/dal_hero.jpg"
                 alt="Dalkhola collage featuring the railway station, Durga Puja celebrations and Shree Agrasen Mahavidyalaya"
                 fetchpriority="high">
             </figure>
@@ -120,102 +118,236 @@
       </section>
     </div>
 
-    <section class="block" id="news">
+
+    <!-- CITY HIGHLIGHTS -->
+
+    <section class="home-highlights">
       <div class="wrap">
-        <div class="sec-head">
-          <h2>Latest from Dalkhola</h2>
-          <p>News and updates from around the city, updated automatically via GitHub Actions.</p>
+        <div class="home-section-heading">
+          <span class="home-eyebrow">WELCOME TO NORTH BENGAL</span>
+          <h2>A city that connects<br>people and possibilities.</h2>
+          <p>
+            Discover the places, opportunities and essential information
+            that make Dalkhola an important regional hub.
+          </p>
         </div>
-        <div class="news">
-          <article class="story lead">
-            <span class="meta">Automated Data Pipeline</span>
-            <h3>Decoupled Static Architecture & GitHub Pages Deployment</h3>
-            <p>Your city portal runs on an automated CI/CD pipeline. Python scripts fetch and compile data into
-              dalkhola.json, rendering lightning-fast pages seamlessly.</p>
-          </article>
-          <article class="story">
-            <span class="meta">Infrastructure</span>
-            <h3>Highway & Rail Integration</h3>
-            <p>Serving as the core transit corridor connecting North Bengal, Bihar, and the North-East.</p>
-          </article>
-          <article class="story">
-            <span class="meta">Community</span>
-            <h3>Local Markets & Trade</h3>
-            <p>Hatbari and surrounding commercial zones driving local agricultural wholesale economies.</p>
-          </article>
+
+        <div class="highlight-grid">
+
+          <a href="index.html#map-section" class="highlight-card highlight-primary">
+            <img class="highlight-image" src="https://res.cloudinary.com/m8ojhenk/image/upload/v1793777366/irly.jpg"
+              alt="Dalkhola town, West Bengal" loading="lazy">
+            <div class="highlight-card-content">
+              <span class="highlight-icon">📍</span>
+              <span class="highlight-label">OUR LOCATION</span>
+              <h3>Dalkhola</h3>
+              <p>Uttar Dinajpur, West Bengal, India</p>
+              <span class="highlight-number">733201</span>
+            </div>
+          </a>
+
+          <a href="transport.html" class="highlight-card">
+            <img class="highlight-image" src="https://res.cloudinary.com/m8ojhenk/image/upload/v1793777422/stn.png"
+              alt="Dalkhola Railway Station" loading="lazy">
+            <div class="highlight-card-content">
+              <span class="highlight-icon">🚆</span>
+              <span class="highlight-label">CONNECTIVITY</span>
+              <h3>Railway Junction</h3>
+              <p>Dalkhola Railway Station connects the region through important rail routes.</p>
+            </div>
+          </a>
+
+          <a href="transport.html" class="highlight-card">
+            <img class="highlight-image" src="https://res.cloudinary.com/m8ojhenk/image/upload/v1793777254/rd.jpg"
+              alt="Road connectivity around Dalkhola" loading="lazy">
+            <div class="highlight-card-content">
+              <span class="highlight-icon">🛣️</span>
+              <span class="highlight-label">ROAD NETWORK</span>
+              <h3>Highway Hub</h3>
+              <p>NH 12 and NH 27 connect Dalkhola with major regional destinations.</p>
+            </div>
+          </a>
+
+          <a href="business.html" class="highlight-card">
+            <img class="highlight-image" src="https://res.cloudinary.com/m8ojhenk/image/upload/v1793777165/trd.png"
+              alt="Local market and commercial area of Dalkhola" loading="lazy">
+            <div class="highlight-card-content">
+              <span class="highlight-icon">🌾</span>
+              <span class="highlight-label">LOCAL ECONOMY</span>
+              <h3>Trade & Commerce</h3>
+              <p>A regional commercial centre known for agricultural wholesale and trading.</p>
+            </div>
+            </a>
+
         </div>
       </div>
     </section>
 
-    <section class="block" id="explore">
+    <!-- LATEST FROM DALKHOLA -->
+    <section class="home-section home-news" id="news">
       <div class="wrap">
-        <div class="sec-head">
-          <h2>Explore the city</h2>
-          <p>Select any section below to open its dedicated page.</p>
-        </div>
-        <div class="bento">
-          <a class="snap s1" href="business.html">
-            <h3>Business & Trade</h3>
-            <p>Explore commercial hubs, maize markets, and local enterprise directories.</p><span class="go">Open
-              business portal</span>
-          </a>
-          <a class="snap s2" href="education.html">
-            <h3>Education</h3>
-            <p>Browse higher secondary schools and college affiliations in PIN 733201.</p><span class="go">See
-              education</span>
-          </a>
-          <a class="snap s3" href="services.html">
-            <h3>Civic Services</h3>
-            <p>Access healthcare directory details, hospitals, and banking contacts.</p><span class="go">See
-              services</span>
-          </a>
-          <a class="snap s4" href="transport.html">
-            <h3>Transport</h3>
-            <p>Check railway station routes (DLK) and national highway corridors.</p><span class="go">See
-              transport</span>
-          </a>
-          <a class="snap s5" href="index.html">
-            <h3>Overview</h3>
-            <p>Return to the main city landing page summary and quick facts.</p><span class="go">Home overview</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="block" id="getting-here">
-      <div class="wrap">
-        <div class="here">
+        <div class="home-section-heading heading-row">
           <div>
-            <h2>Getting here</h2>
-            <p>Dalkhola is a major arterial junction, making it exceptionally accessible by both road and rail networks.
-            </p>
+            <span class="home-eyebrow">CITY STORIES & INFORMATION</span>
+            <h2>Discover Dalkhola.</h2>
           </div>
-          <ul>
-            <li><b>By rail</b>Dalkhola Railway Station (DLK) connects directly across Katihar Division lines.</li>
-            <li><b>By road</b>National Highways NH 12 and NH 27 connect the city smoothly across state borders.</li>
-            <li><b>By air</b>Bagdogra Airport serves as the nearest primary flight transit gateway.</li>
-          </ul>
+          <p>Explore the infrastructure, commerce and community that shape our city.</p>
+        </div>
+
+        <div class="news-modern-grid">
+          <article class="news-modern news-featured">
+            <div class="news-visual news-visual-one">
+              <span>🏙️</span>
+            </div>
+            <div class="news-content">
+              <span class="news-category">CITY INFRASTRUCTURE</span>
+              <h3>A strategic gateway to North Bengal</h3>
+              <p>Dalkhola's road and railway connectivity makes it an important transit point connecting neighbouring
+                regions.</p>
+              <a href="transport.html">Explore transportation <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="news-modern">
+            <div class="news-visual news-visual-two">
+              <span>🌾</span>
+            </div>
+            <div class="news-content">
+              <span class="news-category">BUSINESS & TRADE</span>
+              <h3>Markets that keep the city moving</h3>
+              <p>Discover local markets, agricultural trading and commercial opportunities.</p>
+              <a href="business.html">Explore business <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="news-modern">
+            <div class="news-visual news-visual-three">
+              <span>🎓</span>
+            </div>
+            <div class="news-content">
+              <span class="news-category">EDUCATION</span>
+              <h3>Learning and educational opportunities</h3>
+              <p>Find educational institutions and learning resources in and around Dalkhola.</p>
+              <a href="education.html">Explore education <span>↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPLORE THE CITY -->
+    <section class="home-section explore-modern" id="explore">
+      <div class="wrap">
+        <div class="home-section-heading">
+          <span class="home-eyebrow">EXPLORE OUR PORTAL</span>
+          <h2>Everything you need,<br>all in one place.</h2>
+          <p>Your guide to the essential places, services and opportunities in Dalkhola.</p>
+        </div>
+
+        <div class="explore-modern-grid">
+          <a href="business.html" class="explore-modern-card">
+            <span class="explore-icon">🏪</span>
+            <span class="explore-index">01 / COMMERCE</span>
+            <h3>Business & Trade</h3>
+            <p>Markets, wholesale trade and local businesses.</p>
+            <span class="explore-arrow">↗</span>
+          </a>
+
+          <a href="education.html" class="explore-modern-card">
+            <span class="explore-icon">📚</span>
+            <span class="explore-index">02 / LEARNING</span>
+            <h3>Education</h3>
+            <p>Schools, colleges and educational institutions.</p>
+            <span class="explore-arrow">↗</span>
+          </a>
+
+          <a href="services.html" class="explore-modern-card">
+            <span class="explore-icon">🏥</span>
+            <span class="explore-index">03 / ESSENTIALS</span>
+            <h3>Civic Services</h3>
+            <p>Healthcare, public offices and banking information.</p>
+            <span class="explore-arrow">↗</span>
+          </a>
+
+          <a href="transport.html" class="explore-modern-card">
+            <span class="explore-icon">🚉</span>
+            <span class="explore-index">04 / CONNECTIVITY</span>
+            <h3>Transport</h3>
+            <p>Railway information, roads and highway connectivity.</p>
+            <span class="explore-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GETTING AROUND -->
+    <section class="home-section connectivity-section" id="getting-here">
+      <div class="wrap">
+        <div class="connectivity-panel">
+          <div class="connectivity-copy">
+            <span class="home-eyebrow">PLAN YOUR JOURNEY</span>
+            <h2>Well connected.<br>Easy to explore.</h2>
+            <p>Dalkhola is an important road and railway junction in Uttar Dinajpur. Explore the main ways to reach the
+              city.</p>
+            <a href="transport.html" class="connectivity-button">
+              Explore transport <span>↗</span>
+            </a>
+          </div>
+
+          <div class="connectivity-list">
+            <div class="connectivity-item">
+              <span class="connectivity-icon">🚆</span>
+              <div>
+                <h3>By Railway</h3>
+                <p>Dalkhola Railway Station (DLK)</p>
+              </div>
+              <span class="connectivity-number">01</span>
+            </div>
+
+            <div class="connectivity-item">
+              <span class="connectivity-icon">🛣️</span>
+              <div>
+                <h3>By Road</h3>
+                <p>National Highways NH 12 and NH 27</p>
+              </div>
+              <span class="connectivity-number">02</span>
+            </div>
+
+            <div class="connectivity-item">
+              <span class="connectivity-icon">✈️</span>
+              <div>
+                <h3>By Air</h3>
+                <p>Bagdogra Airport is a regional air travel gateway.</p>
+              </div>
+              <span class="connectivity-number">03</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION MAP -->
+    <section class="home-section home-map-section" id="map-section">
+      <div class="wrap">
+        <div class="home-section-heading heading-row">
+          <div>
+            <span class="home-eyebrow">FIND US ON THE MAP</span>
+            <h2>Explore our location.</h2>
+          </div>
+          <p>Find Dalkhola in Uttar Dinajpur, West Bengal.</p>
+        </div>
+
+        <div class="modern-map">
+          <iframe title="Google Map of Dalkhola"
+            src="https://maps.google.com/maps?q=Dalkhola%2C%20Uttar%20Dinajpur%2C%20West%20Bengal%20733201&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="450" style="border:0" allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
     </section>
   </main>
 
-  <section class="block" id="map-section">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2>Dalkhola Location Map</h2>
-        <p>Interactive Google Map showing Dalkhola junction, major highways (NH 12 / NH 27), and railway connectivity.
-        </p>
-      </div>
-      <div class="map-container">
-        <iframe title="Google Map of Dalkhola"
-          src="https://maps.google.com/maps?q=Dalkhola%2C%20Uttar%20Dinajpur%2C%20West%20Bengal%20733201&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          width="100%" height="400" style="border:0; border-radius: 18px;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </div>
-  </section>
 
   <footer>
     <div class="wrap">
