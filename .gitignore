@@ -1,0 +1,32 @@
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files and backups
+*.tmp
+*.temp
+*.bak
+*.backup
+*~
+
+# Logs
+*.log
+
+# Local development
+.venv/
+venv/
+node_modules/
+

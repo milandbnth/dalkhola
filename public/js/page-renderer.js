@@ -1,3 +1,4 @@
+
 /**
  * Dalkhola Online - Module Page Renderer
  *
@@ -76,17 +77,224 @@
         return section;
     }
 
-    function renderBusiness(data) {
-        const records = data.business?.directory || [];
+    // BUSINESS DIRECTORY: category cards and filtered listings
 
-        return [
-            createSection("Business Directory", records, record =>
-                createCard(record, record.name, [
-                    { label: "Category", value: record.category },
-                    { label: "Area", value: record.area }
-                ])
-            )
+    function renderBusiness(data) {
+        if (!data || !data.business) {
+            console.error("Business data is missing:", data);
+            container.textContent = "Unable to load business information.";
+            return [];
+        }
+
+        const records = data.business.directory || [];
+
+        // Keep the original Cloudinary URLs here.
+        const categories = [
+            {
+                id: "eat",
+                title: "Eat",
+                image: "https://res.cloudinary.com/m8ojhenk/image/upload/v1793901399/eat3.png",
+                description: "Restaurants, hotels, cafés and food businesses."
+            },
+            {
+                id: "shop",
+                title: "Shop",
+                image: "https://res.cloudinary.com/m8ojhenk/image/upload/v1793901398/shop.png",
+                description: "Shops, markets and local retail businesses."
+            },
+            {
+                id: "entertain",
+                title: "Entertain",
+                image: "https://res.cloudinary.com/m8ojhenk/image/upload/v1793901399/entern.png",
+                description: "Entertainment, recreation and leisure."
+            },
+            {
+                id: "miscellaneous",
+                title: "Miscellaneous",
+                image: "https://res.cloudinary.com/m8ojhenk/image/upload/v1793901398/misc.png",
+                description: "Other businesses and local establishments."
+            }
         ];
+
+        function openCategory(category) {
+            const filteredRecords = records.filter(record =>
+                (record.section || "miscellaneous") === category.id
+            );
+
+            container.replaceChildren();
+
+            const backButton = createElement(
+                "button",
+                "business-directory-back",
+                "← Back to categories"
+            );
+
+            backButton.type = "button";
+            backButton.addEventListener("click", showCategories);
+            container.appendChild(backButton);
+
+            const heading = createElement(
+                "h2",
+                "business-directory-title",
+                `${category.title} in Dalkhola`
+            );
+
+            container.appendChild(heading);
+
+            if (!filteredRecords.length) {
+                container.appendChild(
+                    createElement(
+                        "p",
+                        "loading-message",
+                        "No listings are currently available in this category."
+                    )
+                );
+                return;
+            }
+
+            const section = createSection(
+                category.title,
+                filteredRecords,
+                record => createCard(record, record.name, [
+                    { label: "Category", value: record.category },
+                    { label: "Area", value: record.area },
+                    { label: "Address", value: record.address },
+                    {
+                        label: "Verification",
+                        value: record.verification_status === "unverified"
+                            ? "Not yet verified"
+                            : ""
+                    }
+                ])
+            );
+
+            if (section) {
+                section.querySelector("h2")?.remove();
+                container.appendChild(section);
+            }
+
+            requestAnimationFrame(scrollToRequestedRecord);
+        }
+
+        function showCategories() {
+            const grid = createElement("div", "business-category-grid");
+
+            categories.forEach(category => {
+                const count = records.filter(record =>
+                    (record.section || "miscellaneous") === category.id
+                ).length;
+
+                const card = createElement(
+                    "button",
+                    "business-category-card"
+                );
+
+                card.type = "button";
+                card.setAttribute(
+                    "aria-label",
+                    `Explore ${category.title} businesses`
+                );
+
+                // Image container
+                const imageContainer = createElement(
+                    "div",
+                    "business-category-image"
+                );
+
+                const img = document.createElement("img");
+                img.src = category.image;
+                img.alt = `${category.title} businesses in Dalkhola`;
+                img.loading = "lazy";
+                img.decoding = "async";
+
+                img.onerror = function () {
+                    console.error(
+                        `Unable to load category image: ${category.title}`,
+                        category.image
+                    );
+                    imageContainer.style.display = "none";
+                };
+
+                imageContainer.appendChild(img);
+                card.appendChild(imageContainer);
+
+                // Card text
+                const content = createElement(
+                    "div",
+                    "business-category-content"
+                );
+
+                content.appendChild(
+                    createElement("span", "business-category-name", category.title)
+                );
+
+                content.appendChild(
+                    createElement(
+                        "span",
+                        "business-category-description",
+                        category.description
+                    )
+                );
+
+                content.appendChild(
+                    createElement(
+                        "span",
+                        "business-category-count",
+                        `${count} ${count === 1 ? "listing" : "listings"}`
+                    )
+                );
+
+                content.appendChild(
+                    createElement(
+                        "span",
+                        "business-category-arrow",
+                        "Explore →"
+                    )
+                );
+
+                card.appendChild(content);
+
+                // Pass the category object, not data and category.id.
+                card.addEventListener("click", () => {
+                    openCategory(category);
+                });
+
+                grid.appendChild(card);
+            });
+
+            container.replaceChildren(grid);
+        }
+
+        // Preserve direct links to individual records.
+        function openCategoryFromHash() {
+            if (!window.location.hash.startsWith("#record-")) {
+                return false;
+            }
+
+            const recordId = window.location.hash.slice("#record-".length);
+
+            const record = records.find(item => item.id === recordId);
+
+            if (!record) {
+                return false;
+            }
+
+            const category = categories.find(
+                item => item.id === (record.section || "miscellaneous")
+            );
+
+            if (category) {
+                openCategory(category);
+                return true;
+            }
+
+            return false;
+        }
+
+        showCategories();
+        openCategoryFromHash();
+
+        return [];
     }
 
     function renderEducation(data) {
@@ -194,17 +402,20 @@
 
             const data = await window.PortalData.load(moduleId);
 
+            container.replaceChildren();
+
+            if (moduleId === "business") {
+                renderBusiness(data);
+                return;
+            }
+
             const renderers = {
-                business: renderBusiness,
                 education: renderEducation,
                 services: renderServices,
                 transport: renderTransport
             };
 
-            const sections = renderers[moduleId](data)
-                .filter(Boolean);
-
-            container.replaceChildren();
+            const sections = renderers[moduleId](data).filter(Boolean);
 
             if (!sections.length) {
                 container.appendChild(
