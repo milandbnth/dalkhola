@@ -1390,3 +1390,705 @@ a.highlight-card:focus-visible {
   transform: translateY(-5px);
   box-shadow: 0 18px 40px rgba(0, 0, 0, .18);
 }
+
+
+/* =========================================
+   LATEST FROM DALKHOLA - EDITORIAL DESIGN
+========================================= */
+
+.home-news {
+  padding-top: 85px;
+  padding-bottom: 85px;
+}
+
+.home-news .home-section-heading {
+  margin-bottom: 35px;
+}
+
+.news-modern-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+.news-modern {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--card, var(--bg));
+  display: flex;
+  flex-direction: column;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.news-modern:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 42px rgba(20, 35, 55, .12);
+}
+
+/* Photo area */
+
+.news-photo {
+  position: relative;
+  height: 225px;
+  overflow: hidden;
+  background: var(--line);
+}
+
+.news-featured .news-photo {
+  height: 270px;
+}
+
+.news-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+
+.news-modern:hover .news-photo img {
+  transform: scale(1.06);
+}
+
+.news-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 45%,
+    rgba(0, 0, 0, .48) 100%
+  );
+  pointer-events: none;
+}
+
+.news-photo-label {
+  position: absolute;
+  z-index: 1;
+  left: 18px;
+  bottom: 17px;
+  color: #fff;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+/* Content */
+
+.news-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.news-category {
+  color: var(--accent, #2563eb);
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.news-content h3 {
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  line-height: 1.25;
+  letter-spacing: -.035em;
+  margin: 0 0 12px;
+}
+
+.news-featured .news-content h3 {
+  font-size: clamp(1.45rem, 2.2vw, 1.9rem);
+}
+
+.news-content p {
+  color: var(--muted);
+  font-size: .94rem;
+  line-height: 1.75;
+  margin: 0 0 22px;
+}
+
+.news-content a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  width: fit-content;
+  margin-top: auto;
+  color: var(--accent, #2563eb);
+  font-weight: 750;
+  font-size: .9rem;
+  text-decoration: none;
+  transition: gap .25s ease;
+}
+
+.news-content a:hover {
+  gap: 15px;
+}
+
+.news-content a span {
+  font-size: 1.1rem;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .news-modern-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .news-featured {
+    grid-column: 1 / -1;
+  }
+
+  .news-featured .news-photo {
+    height: 300px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .home-news {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  .news-modern-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .news-featured {
+    grid-column: auto;
+  }
+
+  .news-photo,
+  .news-featured .news-photo {
+    height: 220px;
+  }
+
+  .news-content {
+    padding: 21px;
+  }
+}
+
+/* =========================================
+   BUSINESS PAGE - DALKHOLA ONLINE
+========================================= */
+
+.business-hero {
+  padding: 65px 0 75px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 5% 5%, rgba(221, 157, 68, .13), transparent 32%),
+    var(--bg);
+}
+
+.business-hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.business-eyebrow {
+  display: inline-block;
+  color: var(--accent, #2563eb);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.business-hero-copy h1 {
+  margin: 18px 0;
+  font-family: var(--display, "Bricolage Grotesque", sans-serif);
+  font-size: clamp(3rem, 6vw, 5.4rem);
+  line-height: .99;
+  letter-spacing: -.065em;
+}
+
+.business-hero-copy h1 span {
+  color: var(--accent, #2563eb);
+}
+
+.business-hero-copy > p {
+  max-width: 520px;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.business-hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.business-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-weight: 750;
+  text-decoration: none;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.business-button-primary {
+  color: #fff;
+  background: var(--accent, #2563eb);
+}
+
+.business-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(20, 35, 55, .15);
+}
+
+.business-text-link {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.business-location-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 35px;
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+.business-hero-visual {
+  position: relative;
+  min-height: 430px;
+  overflow: hidden;
+  border-radius: 24px;
+  background: var(--line);
+  box-shadow: 0 25px 60px rgba(20, 35, 55, .14);
+}
+
+.business-hero-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.business-image-caption {
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 45px 25px 25px;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(0, 0, 0, .76));
+}
+
+.business-image-caption span {
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+}
+
+.business-image-caption strong {
+  font-family: var(--display, sans-serif);
+  font-size: 1.5rem;
+}
+
+/* INTRODUCTION */
+
+.business-intro-section {
+  padding: 65px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--card, var(--bg));
+}
+
+.business-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.business-intro h2,
+.business-section-heading h2 {
+  margin: 12px 0 0;
+  font-family: var(--display, sans-serif);
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 1.08;
+  letter-spacing: -.05em;
+}
+
+.business-intro > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+/* SECTION HEADINGS */
+
+.business-sectors-section,
+.business-directory-section {
+  padding: 85px 0;
+}
+
+.business-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.business-section-heading > p {
+  max-width: 400px;
+  margin: 0 0 5px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* BUSINESS SECTOR CARDS */
+
+.business-sector-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.business-sector-card {
+  padding: 25px;
+  min-height: 255px;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  background: var(--card, var(--bg));
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.business-sector-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(20, 35, 55, .09);
+}
+
+.business-sector-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 23px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--accent, #2563eb) 11%, transparent);
+  font-size: 1.55rem;
+}
+
+.business-sector-card > span {
+  color: var(--muted);
+  font-size: .67rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.business-sector-card h3 {
+  margin: 12px 0 9px;
+  font-family: var(--display, sans-serif);
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.business-sector-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .88rem;
+  line-height: 1.7;
+}
+
+/* LOCAL MARKETS PANEL */
+
+.business-markets-section {
+  padding: 15px 0 85px;
+}
+
+.business-markets-panel {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 55px;
+  padding: 50px;
+  border-radius: 24px;
+  color: #fff;
+  background: #172b35;
+}
+
+.business-markets-copy .business-eyebrow {
+  color: #f2c47c;
+}
+
+.business-markets-copy h2 {
+  max-width: 420px;
+  margin: 15px 0;
+  color: #fff;
+  font-family: var(--display, sans-serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.08;
+  letter-spacing: -.05em;
+}
+
+.business-markets-copy p {
+  max-width: 430px;
+  color: rgba(255, 255, 255, .72);
+  line-height: 1.8;
+}
+
+.business-light-link {
+  display: inline-flex;
+  gap: 12px;
+  margin-top: 18px;
+  color: #f2c47c;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.business-market-list {
+  align-self: center;
+}
+
+.business-market-list > div {
+  display: grid;
+  grid-template-columns: 35px 1fr 25px;
+  align-items: center;
+  gap: 12px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .16);
+}
+
+.business-market-list > div:first-child {
+  border-top: 1px solid rgba(255, 255, 255, .16);
+}
+
+.business-market-list > div > span:first-child {
+  color: #f2c47c;
+  font-size: .75rem;
+  font-weight: 800;
+}
+
+.business-market-list strong {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.business-market-arrow {
+  color: #f2c47c;
+  text-align: right;
+}
+
+/* DIRECTORY */
+
+.business-directory-section {
+  background: var(--card, var(--bg));
+}
+
+.business-directory-grid {
+  align-items: stretch;
+}
+
+.business-directory-grid:empty {
+  display: none;
+}
+
+/* CTA */
+
+.business-cta-section {
+  padding: 0 0 85px;
+}
+
+.business-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 45px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--bg);
+}
+
+.business-cta h2 {
+  margin: 12px 0;
+  font-family: var(--display, sans-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -.05em;
+}
+
+.business-cta p {
+  max-width: 480px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.business-cta-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 230px;
+}
+
+.business-cta-links a {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 17px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+  transition: border-color .2s ease, transform .2s ease;
+}
+
+.business-cta-links a:hover {
+  border-color: var(--accent, #2563eb);
+  transform: translateX(4px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+  .business-hero-layout {
+    gap: 30px;
+  }
+
+  .business-hero-visual {
+    min-height: 360px;
+  }
+
+  .business-sector-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .business-markets-panel {
+    gap: 30px;
+    padding: 35px;
+  }
+}
+
+@media (max-width: 700px) {
+  .business-hero {
+    padding: 45px 0 55px;
+  }
+
+  .business-hero-layout,
+  .business-intro,
+  .business-markets-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .business-hero-copy h1 {
+    font-size: clamp(3rem, 13vw, 4.5rem);
+  }
+
+  .business-hero-visual {
+    min-height: 290px;
+  }
+
+  .business-intro {
+    gap: 20px;
+  }
+
+  .business-section-heading {
+    display: block;
+  }
+
+  .business-section-heading > p {
+    margin-top: 15px;
+  }
+
+  .business-sectors-section,
+  .business-directory-section {
+    padding: 60px 0;
+  }
+
+  .business-markets-section {
+    padding-bottom: 60px;
+  }
+
+  .business-markets-panel {
+    padding: 28px 23px;
+  }
+
+  .business-cta {
+    display: block;
+    padding: 28px 23px;
+  }
+
+  .business-cta-links {
+    margin-top: 25px;
+  }
+
+  .business-cta-section {
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .business-sector-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .business-sector-card {
+    min-height: auto;
+  }
+
+  .business-hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* Stack market links vertically */
+.business-market-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.business-market-list > a,
+.business-market-list > div {
+  display: grid;
+  grid-template-columns: 42px 1fr 24px;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line, #e5e5e0);
+  text-decoration: none;
+  color: var(--text, #20252a);
+}
+
+.business-market-list > a:first-child,
+.business-market-list > div:first-child {
+  border-top: 1px solid var(--line, #e5e5e0);
+}
+
+.business-market-list > a:hover strong {
+  color: var(--accent, #b66b2d);
+}
+
+.business-market-list .business-market-arrow {
+  justify-self: end;
+}

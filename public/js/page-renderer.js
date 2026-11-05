@@ -1,7 +1,7 @@
 /**
  * Dalkhola Online - Module Page Renderer
  *
- * Renders Business, Education and Transport pages
+ * Renders Business, Education, Services and Transport pages
  * using the shared PortalData loader.
  */
 
@@ -11,7 +11,7 @@
     const container = document.getElementById("content-list");
     const moduleId = document.body.dataset.category;
 
-    if (!container || !["business", "education", "transport"].includes(moduleId)) {
+    if (!container || !["business", "education", "services", "transport"].includes(moduleId)) {
         return;
     }
 
@@ -109,6 +109,27 @@
         ];
     }
 
+    function renderServices(data) {
+        const services = data.services || {};
+
+        return [
+            createSection("Healthcare", services.healthcare || [], record =>
+                createCard(record, record.name, [
+                    { label: "Type", value: record.type },
+                    { label: "Contact", value: record.contact }
+                ])
+            ),
+
+            createSection("Civic & Banking", services.civic_and_banking || [], record =>
+                createCard(record, record.name, [
+                    { label: "Type", value: record.type },
+                    { label: "Ward", value: record.ward },
+                    { label: "IFSC", value: record.ifsc }
+                ])
+            )
+        ];
+    }
+
     function renderTransport(data) {
         const transport = data.transport || {};
         const sections = [];
@@ -152,7 +173,7 @@
 
         const target = document.getElementById(targetId);
 
-        if (target) {
+        if (target && typeof target.scrollIntoView === "function") {
             target.scrollIntoView({
                 behavior: "smooth",
                 block: "center"
@@ -176,6 +197,7 @@
             const renderers = {
                 business: renderBusiness,
                 education: renderEducation,
+                services: renderServices,
                 transport: renderTransport
             };
 

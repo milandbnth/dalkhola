@@ -1,7 +1,9 @@
 /**
  * Dalkhola Online - Shared Data Loader
  *
- * Compatible with GitHub Pages and custom domains.
+ * Compatible with GitHub Pages, project sub-paths and custom domains.
+ * The site root is derived from this script's own URL, so the portal
+ * works whether it is served from / or from /repo-name/.
  *
  * Usage:
  * const data = await PortalData.load("services");
@@ -10,11 +12,32 @@
 (function (window) {
     "use strict";
 
-    const REGISTRY_URL = "/data/modules.json";
+    const scriptSrc =
+        (document.currentScript && document.currentScript.src) || "";
+
+    const BASE_URL = scriptSrc
+        ? new URL("../../", scriptSrc)
+        : new URL("/", window.location.href);
+
+    const REGISTRY_URL = new URL("data/modules.json", BASE_URL).href;
 
     let registryPromise = null;
 
     const cache = new Map();
+
+    /**
+     * Resolve a module data_url against the detected site root, so that
+     * values such as "/data/dalkhola.json" keep working from a sub-path.
+     */
+    function resolveUrl(url) {
+        const value = String(url || "");
+
+        if (/^https?:\/\//i.test(value)) {
+            return value;
+        }
+
+        return new URL(value.replace(/^\/+/, ""), BASE_URL).href;
+    }
 
     /**
      * Fetch JSON from a URL.
@@ -92,7 +115,7 @@
         const module = await getModule(moduleId);
 
         try {
-            const data = await fetchJSON(module.data_url);
+            const data = await fetchJSON(resolveUrl(module.data_url));
 
             cache.set(moduleId, data);
 

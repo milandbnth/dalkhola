@@ -1,0 +1,70 @@
+/* Dalkhola Online - directory card layout
+   Link this after css/style.css on business.html, education.html,
+   services.html and transport.html, or paste the block into style.css. */
+
+/* The renderer injects <section class="content-section"> into #content-list,
+   which style.css has no rules for. Keep it a normal block column. */
+#content-list {
+  display: block;
+}
+
+#content-list .content-section {
+  margin: 0 0 2.75rem;
+}
+
+#content-list .content-section:last-child {
+  margin-bottom: 0;
+}
+
+#content-list .content-section > h2 {
+  font: 700 clamp(1.4rem, 2.4vw, 1.85rem)/1.15 var(--display, inherit);
+  letter-spacing: -0.02em;
+  margin: 0 0 1.35rem;
+}
+
+/* .snap.s2 spans 3 of the 6 bento columns, so cards sit half-width.
+   Give directory grids a clean three-up layout instead. */
+#content-list .bento {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+#content-list .bento > .snap {
+  grid-column: auto;
+  min-width: 0;
+}
+
+#content-list .snap h3 {
+  margin: 0 0 0.35rem;
+  overflow-wrap: anywhere;
+}
+
+#content-list .snap p {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* The record id is used for deep links (#record-biz-001) but is machine data. */
+#content-list .record-id {
+  display: none;
+}
+
+#content-list .loading-message,
+#content-list .error-message {
+  margin: 0;
+  color: var(--muted, #5b6570);
+}
+
+@media (max-width: 1024px) {
+  #content-list .bento {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  #content-list .bento {
+    grid-template-columns: 1fr;
+  }
+}

@@ -29,11 +29,13 @@
     ],
     "directory": [
       {
+        "id": "biz-001",
         "name": "Dalkhola Grain & Maize Merchants Association",
         "category": "Agriculture Trade",
         "area": "Hatbari"
       },
       {
+        "id": "biz-002",
         "name": "NH 27 Cold Logistics Node",
         "category": "Logistics & Warehousing",
         "area": "NH 27 Bypass"
@@ -43,6 +45,7 @@
   "education": {
     "colleges": [
       {
+        "id": "edu-001",
         "name": "Dalkhola College",
         "type": "General Degree College",
         "affiliated_to": "University of Gour Banga"
@@ -50,11 +53,13 @@
     ],
     "schools": [
       {
+        "id": "edu-002",
         "name": "Dalkhola High School (H.S.)",
         "type": "Higher Secondary",
         "medium": "Bengali / Hindi"
       },
       {
+        "id": "edu-003",
         "name": "Dalkhola Girls High School",
         "type": "Secondary",
         "medium": "Bengali"
@@ -64,6 +69,7 @@
   "services": {
     "healthcare": [
       {
+        "id": "svc-001",
         "name": "Dalkhola Rural Hospital",
         "type": "Government Hospital",
         "contact": "Emergency 24x7"
@@ -71,11 +77,13 @@
     ],
     "civic_and_banking": [
       {
+        "id": "svc-002",
         "name": "Dalkhola Municipality Office",
         "type": "Civic Administration",
         "ward": "Ward 4"
       },
       {
+        "id": "svc-003",
         "name": "State Bank of India (Dalkhola Branch)",
         "type": "Bank",
         "ifsc": "SBIN0002047"
@@ -84,16 +92,19 @@
   },
   "transport": {
     "railway": {
+      "id": "tra-001",
       "station": "Dalkhola Railway Station",
       "code": "DLK",
       "zone": "NFR / Katihar Division"
     },
     "highways": [
       {
+        "id": "tra-002",
         "name": "NH 12",
         "description": "Connecting Kolkata to Siliguri & North Bengal"
       },
       {
+        "id": "tra-003",
         "name": "NH 27",
         "description": "East-West Corridor connecting Assam & North-East to Western India"
       }
