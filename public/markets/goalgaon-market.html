@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="Goalgaon Market — Purba and Paschim Goalgaon in Dalkhola, Uttar Dinajpur: census facts, trade, map and access.">
+  <meta name="description"
+    content="Goalgaon Market — Purba and Paschim Goalgaon in Dalkhola, Uttar Dinajpur: census facts, trade, map and access.">
   <title>Goalgaon Market | Dalkhola Online</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/business-markets.css">
+  <script src="/js/shared/header.js" defer></script>
+  <script src="/js/shared/footer.js" defer></script>
   <!-- SHARED-FAVICON:START -->
   <link rel="icon" href="../favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="../dalkhola-favicon.png">
@@ -18,91 +24,313 @@
   <!-- Page-scoped styling for the content blocks on this guide only.
        Nothing here targets the shared header, nav, hero or footer. -->
   <style>
-    .hb-block { padding: 2.6rem 0; border-top: 1px solid rgba(19, 26, 29, 0.1); }
-    .hb-block h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.15; margin: 0.25rem 0 0.7rem; }
-    .hb-block h3 { font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
-    .hb-block p { line-height: 1.7; margin: 0 0 0.9rem; max-width: 70ch; }
-    .hb-block p:last-child { margin-bottom: 0; }
+    .hb-block {
+      padding: 2.6rem 0;
+      border-top: 1px solid rgba(19, 26, 29, 0.1);
+    }
+
+    .hb-block h2 {
+      font-size: clamp(1.5rem, 2.6vw, 2rem);
+      line-height: 1.15;
+      margin: 0.25rem 0 0.7rem;
+    }
+
+    .hb-block h3 {
+      font-size: 1.05rem;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    .hb-block p {
+      line-height: 1.7;
+      margin: 0 0 0.9rem;
+      max-width: 70ch;
+    }
+
+    .hb-block p:last-child {
+      margin-bottom: 0;
+    }
 
     /* Quick facts */
-    .hb-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(196px, 1fr)); gap: 12px; margin: 1.4rem 0 0; padding: 0; }
-    .hb-fact { border: 1px solid rgba(19, 26, 29, 0.12); border-radius: 12px; padding: 14px 16px; background: rgba(255, 255, 255, 0.6); }
-    .hb-fact dt { font-size: 0.71rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #b4471f; margin: 0 0 5px; }
-    .hb-fact dd { margin: 0; font-size: 0.95rem; font-weight: 600; line-height: 1.4; }
-    .hb-fact dd small { display: block; font-weight: 400; font-size: 0.8rem; color: rgba(19, 26, 29, 0.62); margin-top: 3px; line-height: 1.45; }
+    .hb-facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));
+      gap: 12px;
+      margin: 1.4rem 0 0;
+      padding: 0;
+    }
+
+    .hb-fact {
+      border: 1px solid rgba(19, 26, 29, 0.12);
+      border-radius: 12px;
+      padding: 14px 16px;
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    .hb-fact dt {
+      font-size: 0.71rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: #b4471f;
+      margin: 0 0 5px;
+    }
+
+    .hb-fact dd {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .hb-fact dd small {
+      display: block;
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: rgba(19, 26, 29, 0.62);
+      margin-top: 3px;
+      line-height: 1.45;
+    }
 
     /* Lists */
-    .hb-list { margin: 0.2rem 0 1rem; padding-left: 20px; line-height: 1.65; }
-    .hb-list li { margin-bottom: 7px; }
-    .hb-chip { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: #e6f0ec; color: #0f5c4d; border-radius: 999px; padding: 3px 8px; margin-left: 6px; vertical-align: 1px; }
+    .hb-list {
+      margin: 0.2rem 0 1rem;
+      padding-left: 20px;
+      line-height: 1.65;
+    }
+
+    .hb-list li {
+      margin-bottom: 7px;
+    }
+
+    .hb-chip {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: #e6f0ec;
+      color: #0f5c4d;
+      border-radius: 999px;
+      padding: 3px 8px;
+      margin-left: 6px;
+      vertical-align: 1px;
+    }
 
     /* Note */
-    .hb-note { background: #fdf6ef; border: 1px solid #f0dcc6; border-left: 4px solid #b4471f; border-radius: 10px; padding: 16px 18px; margin: 1.3rem 0 0; font-size: 0.9rem; line-height: 1.6; color: #6b4a33; max-width: 78ch; }
-    .hb-note strong { color: #4a2f20; }
-    .hb-note a { color: #8a3a18; }
+    .hb-note {
+      background: #fdf6ef;
+      border: 1px solid #f0dcc6;
+      border-left: 4px solid #b4471f;
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin: 1.3rem 0 0;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #6b4a33;
+      max-width: 78ch;
+    }
+
+    .hb-note strong {
+      color: #4a2f20;
+    }
+
+    .hb-note a {
+      color: #8a3a18;
+    }
 
     /* Table */
-    .hb-table { width: 100%; border-collapse: collapse; margin: 1.2rem 0 0; font-size: 0.93rem; border: 1px solid rgba(19, 26, 29, 0.12); border-radius: 12px; overflow: hidden; }
-    .hb-table caption { caption-side: bottom; text-align: left; font-size: 0.78rem; color: rgba(19, 26, 29, 0.62); padding-top: 10px; }
-    .hb-table th, .hb-table td { text-align: left; padding: 11px 14px; border-bottom: 1px solid rgba(19, 26, 29, 0.1); }
-    .hb-table th { background: #f4ecdf; font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(19, 26, 29, 0.7); }
-    .hb-table tr:last-child td { border-bottom: 0; }
-    .hb-table td:last-child { font-variant-numeric: tabular-nums; }
-    .hb-coords td:last-child, .hb-coords th:last-child { text-align: right; }
+    .hb-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.2rem 0 0;
+      font-size: 0.93rem;
+      border: 1px solid rgba(19, 26, 29, 0.12);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .hb-table caption {
+      caption-side: bottom;
+      text-align: left;
+      font-size: 0.78rem;
+      color: rgba(19, 26, 29, 0.62);
+      padding-top: 10px;
+    }
+
+    .hb-table th,
+    .hb-table td {
+      text-align: left;
+      padding: 11px 14px;
+      border-bottom: 1px solid rgba(19, 26, 29, 0.1);
+    }
+
+    .hb-table th {
+      background: #f4ecdf;
+      font-size: 0.74rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(19, 26, 29, 0.7);
+    }
+
+    .hb-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .hb-table td:last-child {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .hb-coords td:last-child,
+    .hb-coords th:last-child {
+      text-align: right;
+    }
 
     /* Map */
-    .hb-map-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr); gap: 30px; align-items: start; margin-top: 1.2rem; }
-    .hb-map-frame { position: relative; border-radius: 14px; overflow: hidden; border: 1px solid rgba(19, 26, 29, 0.12); background: #f4ecdf; box-shadow: 0 12px 30px -22px rgba(19, 26, 29, 0.55); }
-    .hb-map-frame iframe { display: block; width: 100%; height: 340px; border: 0; }
-    .hb-map-caption { font-size: 0.79rem; line-height: 1.55; color: rgba(19, 26, 29, 0.68); margin: 10px 2px 0; }
-    .hb-map-caption a { color: #0f5c4d; }
-    .hb-map-side h3 { font-size: 1rem; margin: 0 0 8px; }
-    .hb-map-side p { font-size: 0.9rem; margin-bottom: 12px; }
-    .hb-addr { font-size: 0.88rem; line-height: 1.7; border: 1px solid rgba(19, 26, 29, 0.12); border-radius: 12px; padding: 14px 16px; background: rgba(255, 255, 255, 0.6); }
+    .hb-map-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+      gap: 30px;
+      align-items: start;
+      margin-top: 1.2rem;
+    }
+
+    .hb-map-frame {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(19, 26, 29, 0.12);
+      background: #f4ecdf;
+      box-shadow: 0 12px 30px -22px rgba(19, 26, 29, 0.55);
+    }
+
+    .hb-map-frame iframe {
+      display: block;
+      width: 100%;
+      height: 340px;
+      border: 0;
+    }
+
+    .hb-map-caption {
+      font-size: 0.79rem;
+      line-height: 1.55;
+      color: rgba(19, 26, 29, 0.68);
+      margin: 10px 2px 0;
+    }
+
+    .hb-map-caption a {
+      color: #0f5c4d;
+    }
+
+    .hb-map-side h3 {
+      font-size: 1rem;
+      margin: 0 0 8px;
+    }
+
+    .hb-map-side p {
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+
+    .hb-addr {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      border: 1px solid rgba(19, 26, 29, 0.12);
+      border-radius: 12px;
+      padding: 14px 16px;
+      background: rgba(255, 255, 255, 0.6);
+    }
 
     /* Buttons */
-    .hb-btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
-    .hb-btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.6rem 0.95rem; border-radius: 999px; border: 1px solid rgba(19, 26, 29, 0.22); text-decoration: none; font-weight: 600; font-size: 0.88rem; line-height: 1.2; }
-    .hb-btn:hover, .hb-btn:focus-visible { border-color: #0f5c4d; color: #0f5c4d; }
-    .hb-btn-solid { background: #0f5c4d; border-color: #0f5c4d; color: #fff; }
-    .hb-btn-solid:hover, .hb-btn-solid:focus-visible { background: #0b493d; border-color: #0b493d; color: #fff; }
+    .hb-btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .hb-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.6rem 0.95rem;
+      border-radius: 999px;
+      border: 1px solid rgba(19, 26, 29, 0.22);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.88rem;
+      line-height: 1.2;
+    }
+
+    .hb-btn:hover,
+    .hb-btn:focus-visible {
+      border-color: #0f5c4d;
+      color: #0f5c4d;
+    }
+
+    .hb-btn-solid {
+      background: #0f5c4d;
+      border-color: #0f5c4d;
+      color: #fff;
+    }
+
+    .hb-btn-solid:hover,
+    .hb-btn-solid:focus-visible {
+      background: #0b493d;
+      border-color: #0b493d;
+      color: #fff;
+    }
 
     /* Sources */
-    .hb-sources { margin: 1.1rem 0 0; padding-left: 22px; font-size: 0.9rem; line-height: 1.6; }
-    .hb-sources li { margin-bottom: 10px; }
-    .hb-sources span { font-weight: 600; }
-    .hb-sources a { color: #0f5c4d; }
-    .hb-fine { font-size: 0.85rem; margin-top: 1.1rem; color: rgba(19, 26, 29, 0.72); }
+    .hb-sources {
+      margin: 1.1rem 0 0;
+      padding-left: 22px;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .hb-sources li {
+      margin-bottom: 10px;
+    }
+
+    .hb-sources span {
+      font-weight: 600;
+    }
+
+    .hb-sources a {
+      color: #0f5c4d;
+    }
+
+    .hb-fine {
+      font-size: 0.85rem;
+      margin-top: 1.1rem;
+      color: rgba(19, 26, 29, 0.72);
+    }
 
     @media (max-width: 820px) {
-      .hb-map-grid { grid-template-columns: 1fr; gap: 20px; }
-      .hb-block { padding: 2rem 0; }
-      .hb-map-frame iframe { height: 300px; }
+      .hb-map-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .hb-block {
+        padding: 2rem 0;
+      }
+
+      .hb-map-frame iframe {
+        height: 300px;
+      }
     }
+
     @media (max-width: 620px) {
-      .hb-table { display: block; overflow-x: auto; }
+      .hb-table {
+        display: block;
+        overflow-x: auto;
+      }
     }
   </style>
 </head>
+
 <body>
-  <!-- SHARED-HEADER:START -->
-  <header class="nav">
-    <div class="wrap">
-      <a class="brand" href="../index.html" aria-label="Dalkhola Online home">
-        <span class="brand-logo-container">
-          <img src="../images/dalkhola-online-logo.svg" alt="Dalkhola Online">
-        </span>
-      </a>
-      <nav aria-label="Main navigation">
-        <a href="../index.html">Home</a>
-        <a href="../business.html" class="active" aria-current="page">Business</a>
-        <a href="../education.html">Education</a>
-        <a href="../services.html">Services</a>
-        <a href="../transport.html">Transport</a>
-      </nav>
-    </div>
-  </header>
-  <!-- SHARED-HEADER:END -->
 
   <main class="market-page">
     <section class="market-detail-hero">
@@ -111,15 +339,16 @@
           <a class="market-back-link" href="../business.html#business-sectors">← Back to Business &amp; Trade</a>
           <span class="market-eyebrow">MARKET GUIDE · DALKHOLA</span>
           <h1>Goalgaon Market</h1>
-          <p class="market-lead">Purba and Paschim Goalgaon are the two halves of one village area north of Dalkhola — 2,758 people at the 2011 census, farming land whose grain and maize move through the town's market.</p>
+          <p class="market-lead">Purba and Paschim Goalgaon are the two halves of one village area north of Dalkhola —
+            2,758 people at the 2011 census, farming land whose grain and maize move through the town's market.</p>
           <div class="market-meta">
             <span>📍 Goalgaon (Purba + Paschim), Dalkhola</span>
             <span>PIN 733201 · West Bengal</span>
           </div>
         </div>
         <div class="market-detail-visual" role="img" aria-label="Goalgaon Market in Dalkhola">
-          <img src="PASTE_CLOUDINARY_URL_FOR_GOALGAON_MARKET" alt="Goalgaon Market in Dalkhola">
-          <span class="market-visual-number">02</span>
+          <img src="https://res.cloudinary.com/m8ojhenk/image/upload/v1793948104/goal.png" alt="Goalgaon Market in Dalkhola">
+          <span class="market-visual-number"></span>
         </div>
       </div>
     </section>
@@ -170,18 +399,54 @@
       <h2 id="glance-h">Goalgaon at a glance</h2>
       <p>Administrative and census details for the village, as recorded for Purba and Paschim Goalgaon separately.</p>
       <dl class="hb-facts">
-        <div class="hb-fact"><dt>District</dt><dd>Uttar Dinajpur<small>West Bengal, India</small></dd></div>
-        <div class="hb-fact"><dt>Subdivision</dt><dd>Islampur<small>Karandighi is one of its CD blocks</small></dd></div>
-        <div class="hb-fact"><dt>Block</dt><dd>Karandighi<small>Community development block</small></dd></div>
-        <div class="hb-fact"><dt>Gram panchayat</dt><dd>Dalkhola–I<small>Both halves fall in this GP</small></dd></div>
-        <div class="hb-fact"><dt>Police station</dt><dd>Dalkhola<small>Local addresses read “P.S. Dalkhola”</small></dd></div>
-        <div class="hb-fact"><dt>Post office · PIN</dt><dd>Dalkhola S.O. · 733201<small>Many addresses use P.O. Shikarpur</small></dd></div>
-        <div class="hb-fact"><dt>Census villages</dt><dd>Purba 309383 · Paschim 309384<small>Two separate census records</small></dd></div>
-        <div class="hb-fact"><dt>Population (2011)</dt><dd>2,758<small>1,707 east + 1,051 west</small></dd></div>
-        <div class="hb-fact"><dt>Households (2011)</dt><dd>487<small>300 east + 187 west</small></dd></div>
-        <div class="hb-fact"><dt>Nearest town</dt><dd>Dalkhola<small>Roughly 2 km south of the village</small></dd></div>
-        <div class="hb-fact"><dt>Nearest highway</dt><dd>NH-27<small>NH-12 and NH-17 join at Dalkhola</small></dd></div>
-        <div class="hb-fact"><dt>Railway station</dt><dd>Dalkhola (DLK)<small>NFR, Katihar division</small></dd></div>
+        <div class="hb-fact">
+          <dt>District</dt>
+          <dd>Uttar Dinajpur<small>West Bengal, India</small></dd>
+        </div>
+        <div class="hb-fact">
+          <dt>Subdivision</dt>
+          <dd>Islampur<small>Karandighi is one of its CD blocks</small></dd>
+        </div>
+        <div class="hb-fact">
+          <dt>Block</dt>
+          <dd>Karandighi<small>Community development block</small></dd>
+        </div>
+        <div class="hb-fact">
+          <dt>Gram panchayat</dt>
+          <dd>Dalkhola–I<small>Both halves fall in this GP</small></dd>
+        </div>
+        <div class="hb-fact">
+          <dt>Police station</dt>
+          <dd>Dalkhola<small>Local addresses read “P.S. Dalkhola”</small></dd>
+        </div>
+        <div class="hb-fact">
+          <dt>Post office · PIN</dt>
+          <dd>Dalkhola S.O. · 733201<small>Many addresses use P.O. Shikarpur</small></dd>
+        </div>
+        <div class="hb-fact">
+          <dt>Census villages</dt>
+          <dd>Purba 309383 · Paschim 309384<small>Two separate census records</small></dd>
+        </div>
+        <div class="hb-fact">
+          <dt>Population (2011)</dt>
+          <dd>2,758<small>1,707 east + 1,051 west</small></dd>
+        </div>
+        <div class="hb-fact">
+          <dt>Households (2011)</dt>
+          <dd>487<small>300 east + 187 west</small></dd>
+        </div>
+        <div class="hb-fact">
+          <dt>Nearest town</dt>
+          <dd>Dalkhola<small>Roughly 2 km south of the village</small></dd>
+        </div>
+        <div class="hb-fact">
+          <dt>Nearest highway</dt>
+          <dd>NH-27<small>NH-12 and NH-17 join at Dalkhola</small></dd>
+        </div>
+        <div class="hb-fact">
+          <dt>Railway station</dt>
+          <dd>Dalkhola (DLK)<small>NFR, Katihar division</small></dd>
+        </div>
       </dl>
     </section>
 
@@ -194,7 +459,8 @@
         farming population.
       </p>
       <table class="hb-table">
-        <caption>Census of India 2011, village primary census abstract. Literacy is for the population aged 7 and above.</caption>
+        <caption>Census of India 2011, village primary census abstract. Literacy is for the population aged 7 and above.
+        </caption>
         <thead>
           <tr>
             <th scope="col">Measure</th>
@@ -204,21 +470,71 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>Population</td><td>1,707</td><td>1,051</td><td>2,758</td></tr>
-          <tr><td>Male · Female</td><td>900 · 807</td><td>555 · 496</td><td>1,455 · 1,303</td></tr>
-          <tr><td>Households</td><td>300</td><td>187</td><td>487</td></tr>
-          <tr><td>Children aged 0–6</td><td>275</td><td>192</td><td>467</td></tr>
-          <tr><td>Scheduled Caste</td><td>617 (36.2%)</td><td>537 (51.1%)</td><td>1,154</td></tr>
-          <tr><td>Scheduled Tribe</td><td>2</td><td>0</td><td>2</td></tr>
-          <tr><td>Literacy (7+)</td><td>67.5%</td><td>68.3%</td><td>—</td></tr>
-          <tr><td>Total workers</td><td>476</td><td>306</td><td>782</td></tr>
-          <tr><td>of which cultivators</td><td>84</td><td>62</td><td>146</td></tr>
-          <tr><td>of which agricultural labourers</td><td>104</td><td>75</td><td>179</td></tr>
+          <tr>
+            <td>Population</td>
+            <td>1,707</td>
+            <td>1,051</td>
+            <td>2,758</td>
+          </tr>
+          <tr>
+            <td>Male · Female</td>
+            <td>900 · 807</td>
+            <td>555 · 496</td>
+            <td>1,455 · 1,303</td>
+          </tr>
+          <tr>
+            <td>Households</td>
+            <td>300</td>
+            <td>187</td>
+            <td>487</td>
+          </tr>
+          <tr>
+            <td>Children aged 0–6</td>
+            <td>275</td>
+            <td>192</td>
+            <td>467</td>
+          </tr>
+          <tr>
+            <td>Scheduled Caste</td>
+            <td>617 (36.2%)</td>
+            <td>537 (51.1%)</td>
+            <td>1,154</td>
+          </tr>
+          <tr>
+            <td>Scheduled Tribe</td>
+            <td>2</td>
+            <td>0</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Literacy (7+)</td>
+            <td>67.5%</td>
+            <td>68.3%</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Total workers</td>
+            <td>476</td>
+            <td>306</td>
+            <td>782</td>
+          </tr>
+          <tr>
+            <td>of which cultivators</td>
+            <td>84</td>
+            <td>62</td>
+            <td>146</td>
+          </tr>
+          <tr>
+            <td>of which agricultural labourers</td>
+            <td>104</td>
+            <td>75</td>
+            <td>179</td>
+          </tr>
         </tbody>
       </table>
       <p style="margin-top:14px;">
         The pattern is a working farming village, not a trading one: <strong>782 of 2,758 people are
-        recorded as workers (28.4%)</strong>, and cultivators plus agricultural labourers account for
+          recorded as workers (28.4%)</strong>, and cultivators plus agricultural labourers account for
         about two in five of them. Female literacy trails male literacy sharply in both halves (56.7%
         against 77.3% in Purba, 55.3% against 79.6% in Paschim), which is typical of the rural blocks
         in this district.
@@ -231,23 +547,33 @@
       <p>
         Goalgaon's economy is agricultural, and the market it feeds is next door. Dalkhola is
         described in regional references as an <strong>important centre for the maize, jute, oil and
-        grain trade of North Dinajpur</strong>, with maize grown across the border in Bihar and sold
+          grain trade of North Dinajpur</strong>, with maize grown across the border in Bihar and sold
         on this side — which makes the town a collection and forwarding point rather than a farm
         market.
       </p>
       <ul class="hb-list">
-        <li><strong>Paddy, maize and jute</strong> — the crops of this block. Census figures put 146 cultivators and 179 agricultural labourers across the two Goalgaon villages, with the rest of the workforce in other trades or marginal work.<span class="hb-chip">Census 2011</span></li>
-        <li><strong>Selling into Dalkhola</strong> — growers here are close enough to the town to sell directly at its arats and market lanes rather than through a village haat.</li>
-        <li><strong>Rice milling</strong> — parboiled rice mills operate in and around Dalkhola. No official count is published, so this guide prints no number.</li>
-        <li><strong>Banking and services</strong> — no bank branch is documented in the village. A business-correspondent banking point has been listed at Paschim Goalgaon, P.O. Shikarpur, P.S. Dalkhola, which is how many households here reach banking.</li>
-        <li><strong>Retail</strong> — daily-needs shops in the village and along the lanes towards Hatbari Road serve households that would otherwise walk into town.</li>
+        <li><strong>Paddy, maize and jute</strong> — the crops of this block. Census figures put 146 cultivators and 179
+          agricultural labourers across the two Goalgaon villages, with the rest of the workforce in other trades or
+          marginal work.<span class="hb-chip">Census 2011</span></li>
+        <li><strong>Selling into Dalkhola</strong> — growers here are close enough to the town to sell directly at its
+          arats and market lanes rather than through a village haat.</li>
+        <li><strong>Rice milling</strong> — parboiled rice mills operate in and around Dalkhola. No official count is
+          published, so this guide prints no number.</li>
+        <li><strong>Banking and services</strong> — no bank branch is documented in the village. A
+          business-correspondent banking point has been listed at Paschim Goalgaon, P.O. Shikarpur, P.S. Dalkhola, which
+          is how many households here reach banking.</li>
+        <li><strong>Retail</strong> — daily-needs shops in the village and along the lanes towards Hatbari Road serve
+          households that would otherwise walk into town.</li>
       </ul>
 
       <h3>Landmarks that can be checked</h3>
       <ul class="hb-list">
-        <li><strong>Paschim Goalgaon S.S.K.</strong> — a Shishu Shiksha Kendra (state pre-primary/primary centre) recorded in Dalkhola–I gram panchayat.</li>
-        <li><strong>The Goalgaon madrasah</strong> — local historical records list “Goalgaon (Madrasa)” as one of the settlement areas around Dalkhola; the madrasah is what gave the spot that name.</li>
-        <li><strong>Village lanes to Hatbari and Shikarpur</strong> — the two adjoining settlements, both also in Dalkhola–I GP.</li>
+        <li><strong>Paschim Goalgaon S.S.K.</strong> — a Shishu Shiksha Kendra (state pre-primary/primary centre)
+          recorded in Dalkhola–I gram panchayat.</li>
+        <li><strong>The Goalgaon madrasah</strong> — local historical records list “Goalgaon (Madrasa)” as one of the
+          settlement areas around Dalkhola; the madrasah is what gave the spot that name.</li>
+        <li><strong>Village lanes to Hatbari and Shikarpur</strong> — the two adjoining settlements, both also in
+          Dalkhola–I GP.</li>
       </ul>
 
       <div class="hb-note">
@@ -270,12 +596,9 @@
       <div class="hb-map-grid">
         <div>
           <div class="hb-map-frame">
-            <iframe
-              title="Google map of Goalgaon, centred between Purba and Paschim Goalgaon"
+            <iframe title="Google map of Goalgaon, centred between Purba and Paschim Goalgaon"
               src="https://maps.google.com/maps?ll=25.8951,87.8404&amp;q=25.8951,87.8404&amp;z=15&amp;hl=en&amp;output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen></iframe>
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
           </div>
           <p class="hb-map-caption">
             Centre: <strong>25.8951° N, 87.8404° E</strong> — midway between the east and west
@@ -286,7 +609,8 @@
 
         <aside class="hb-map-side">
           <h3>Finding the area</h3>
-          <p>Goalgaon lies about 2 km north of Dalkhola town centre, on the rural side of the municipality. Come off NH-27 in the town and follow the village lanes north past Hatbari.</p>
+          <p>Goalgaon lies about 2 km north of Dalkhola town centre, on the rural side of the municipality. Come off
+            NH-27 in the town and follow the village lanes north past Hatbari.</p>
           <p class="hb-addr">
             <strong>Address form used locally</strong><br>
             Vill – Goalgaon, P.O. Dalkhola,<br>
@@ -294,8 +618,10 @@
             West Bengal – 733201
           </p>
           <div class="hb-btn-row">
-            <a class="hb-btn hb-btn-solid" href="https://www.google.com/maps/@25.8951,87.8404,15z" target="_blank" rel="noopener">Open in Google Maps ↗</a>
-            <a class="hb-btn" href="https://www.google.com/maps/@25.8951,87.8404,16z/data=!3m1!1e3" target="_blank" rel="noopener">Satellite view</a>
+            <a class="hb-btn hb-btn-solid" href="https://www.google.com/maps/@25.8951,87.8404,15z" target="_blank"
+              rel="noopener">Open in Google Maps ↗</a>
+            <a class="hb-btn" href="https://www.google.com/maps/@25.8951,87.8404,16z/data=!3m1!1e3" target="_blank"
+              rel="noopener">Satellite view</a>
           </div>
         </aside>
       </div>
@@ -309,22 +635,51 @@
         short drive north of the town, on the same side as Hatbari.
       </p>
       <ul class="hb-list">
-        <li><strong>By road</strong> — NH-27 (Porbandar–Silchar) runs through Dalkhola, where NH-12 and NH-17 also meet. Older signboards and shop addresses may still say NH-31 or NH-34, the pre-renumbering names.</li>
-        <li><strong>By train</strong> — Dalkhola station (code DLK) is on the Katihar–Siliguri line under Northeast Frontier Railway’s Katihar division, with 3 platforms and a history going back to 1871. The station is the closest railhead to the village.</li>
-        <li><strong>By air</strong> — Bagdogra (IXB) is the region’s commercial airport, further along NH-27 past Islampur towards Siliguri. Kishanganj, across the border in Bihar, has no commercial airport.</li>
+        <li><strong>By road</strong> — NH-27 (Porbandar–Silchar) runs through Dalkhola, where NH-12 and NH-17 also meet.
+          Older signboards and shop addresses may still say NH-31 or NH-34, the pre-renumbering names.</li>
+        <li><strong>By train</strong> — Dalkhola station (code DLK) is on the Katihar–Siliguri line under Northeast
+          Frontier Railway’s Katihar division, with 3 platforms and a history going back to 1871. The station is the
+          closest railhead to the village.</li>
+        <li><strong>By air</strong> — Bagdogra (IXB) is the region’s commercial airport, further along NH-27 past
+          Islampur towards Siliguri. Kishanganj, across the border in Bihar, has no commercial airport.</li>
       </ul>
 
       <table class="hb-table">
-        <caption>Approximate road distances from Dalkhola. Third-party figures; treat as a guide, not a survey.</caption>
+        <caption>Approximate road distances from Dalkhola. Third-party figures; treat as a guide, not a survey.
+        </caption>
         <thead>
-          <tr><th scope="col">Destination</th><th scope="col">Direction / route</th><th scope="col">Approx. distance</th></tr>
+          <tr>
+            <th scope="col">Destination</th>
+            <th scope="col">Direction / route</th>
+            <th scope="col">Approx. distance</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td>Karandighi</td><td>Block headquarters</td><td>15 km</td></tr>
-          <tr><td>Kishanganj (Bihar)</td><td>Across the state border</td><td>30 km</td></tr>
-          <tr><td>Raiganj</td><td>District headquarters, west</td><td>47 km</td></tr>
-          <tr><td>Siliguri</td><td>North-east on NH-27</td><td>136 km</td></tr>
-          <tr><td>Kolkata</td><td>South, via NH-12 / NH-27</td><td>434 km</td></tr>
+          <tr>
+            <td>Karandighi</td>
+            <td>Block headquarters</td>
+            <td>15 km</td>
+          </tr>
+          <tr>
+            <td>Kishanganj (Bihar)</td>
+            <td>Across the state border</td>
+            <td>30 km</td>
+          </tr>
+          <tr>
+            <td>Raiganj</td>
+            <td>District headquarters, west</td>
+            <td>47 km</td>
+          </tr>
+          <tr>
+            <td>Siliguri</td>
+            <td>North-east on NH-27</td>
+            <td>136 km</td>
+          </tr>
+          <tr>
+            <td>Kolkata</td>
+            <td>South, via NH-12 / NH-27</td>
+            <td>434 km</td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -337,10 +692,14 @@
         checked against a reliable source. Four things are worth confirming in person or by phone:
       </p>
       <ul class="hb-list">
-        <li><strong>Whether a haat sits here</strong> — no market day is published for Goalgaon or for this block. Ask Dalkhola–I gram panchayat or Dalkhola Municipality (03525-257650).</li>
-        <li><strong>Mandi rates</strong> — maize and paddy prices change daily. Check an official agricultural marketing price bulletin, then confirm with the arat or trader you intend to deal with.</li>
-        <li><strong>Shop and mill timings</strong> — most trade in Dalkhola happens in the morning; rice mills run their own seasonal schedules.</li>
-        <li><strong>Whether a business still exists</strong> — directory listings for this area go stale quickly, so call ahead.</li>
+        <li><strong>Whether a haat sits here</strong> — no market day is published for Goalgaon or for this block. Ask
+          Dalkhola–I gram panchayat or Dalkhola Municipality (03525-257650).</li>
+        <li><strong>Mandi rates</strong> — maize and paddy prices change daily. Check an official agricultural marketing
+          price bulletin, then confirm with the arat or trader you intend to deal with.</li>
+        <li><strong>Shop and mill timings</strong> — most trade in Dalkhola happens in the morning; rice mills run their
+          own seasonal schedules.</li>
+        <li><strong>Whether a business still exists</strong> — directory listings for this area go stale quickly, so
+          call ahead.</li>
       </ul>
       <p>
         If you run a shop, mill or transport service in Goalgaon and want a verified listing here,
@@ -356,27 +715,51 @@
         was weak or contested, the page says so instead of filling the gap.
       </p>
       <ol class="hb-sources">
-        <li><span>Census 2011 — Purba Goalgaon (village code 309383)</span> — population 1,707, 300 households, SC 617, workers 476.
-          <a href="https://www.census2011.co.in/data/village/309383-purba-goalgaon-west-bengal.html" target="_blank" rel="noopener">census2011.co.in</a>.</li>
-        <li><span>Census 2011 — Paschim Goalgaon (village code 309384)</span> — population 1,051, 187 households, SC 537, workers 306.
-          <a href="https://www.census2011.co.in/data/village/309384-paschim-goalgaon-west-bengal.html" target="_blank" rel="noopener">census2011.co.in</a>.</li>
-        <li><span>Administrative record</span> — both villages in Dalkhola–I gram panchayat, Karandighi tehsil, PIN 733201 via Dalkhola S.O.
-          <a href="https://www.mapsofindia.com/villages/west-bengal/uttar-dinajpur/karandighi/purba-goalgaon.html" target="_blank" rel="noopener">Purba Goalgaon entry</a>,
-          <a href="https://www.mapsofindia.com/villages/west-bengal/uttar-dinajpur/karandighi/paschim-goalgaon.html" target="_blank" rel="noopener">Paschim Goalgaon entry</a>.</li>
-        <li><span>Post-Partition settlement history</span> — refugees settled in Hatbari, Goalgaon (Madrasa), Goalgaon (West), Shikarpur and others.
-          <a href="https://en.wikipedia.org/wiki/Dalkhola" target="_blank" rel="noopener">Wikipedia: Dalkhola</a>.</li>
-        <li><span>District administration, Uttar Dinajpur</span> — Islampur subdivision blocks and municipalities; Dalkhola Municipality.
-          <a href="https://uttardinajpur.gov.in/islampur-sub-division/" target="_blank" rel="noopener">uttardinajpur.gov.in</a>,
-          <a href="https://uttardinajpur.gov.in/dalkhola-municipality/" target="_blank" rel="noopener">municipality page</a>.</li>
+        <li><span>Census 2011 — Purba Goalgaon (village code 309383)</span> — population 1,707, 300 households, SC 617,
+          workers 476.
+          <a href="https://www.census2011.co.in/data/village/309383-purba-goalgaon-west-bengal.html" target="_blank"
+            rel="noopener">census2011.co.in</a>.
+        </li>
+        <li><span>Census 2011 — Paschim Goalgaon (village code 309384)</span> — population 1,051, 187 households, SC
+          537, workers 306.
+          <a href="https://www.census2011.co.in/data/village/309384-paschim-goalgaon-west-bengal.html" target="_blank"
+            rel="noopener">census2011.co.in</a>.
+        </li>
+        <li><span>Administrative record</span> — both villages in Dalkhola–I gram panchayat, Karandighi tehsil, PIN
+          733201 via Dalkhola S.O.
+          <a href="https://www.mapsofindia.com/villages/west-bengal/uttar-dinajpur/karandighi/purba-goalgaon.html"
+            target="_blank" rel="noopener">Purba Goalgaon entry</a>,
+          <a href="https://www.mapsofindia.com/villages/west-bengal/uttar-dinajpur/karandighi/paschim-goalgaon.html"
+            target="_blank" rel="noopener">Paschim Goalgaon entry</a>.
+        </li>
+        <li><span>Post-Partition settlement history</span> — refugees settled in Hatbari, Goalgaon (Madrasa), Goalgaon
+          (West), Shikarpur and others.
+          <a href="https://en.wikipedia.org/wiki/Dalkhola" target="_blank" rel="noopener">Wikipedia: Dalkhola</a>.
+        </li>
+        <li><span>District administration, Uttar Dinajpur</span> — Islampur subdivision blocks and municipalities;
+          Dalkhola Municipality.
+          <a href="https://uttardinajpur.gov.in/islampur-sub-division/" target="_blank"
+            rel="noopener">uttardinajpur.gov.in</a>,
+          <a href="https://uttardinajpur.gov.in/dalkhola-municipality/" target="_blank" rel="noopener">municipality
+            page</a>.
+        </li>
         <li><span>Trade profile of Dalkhola</span> — maize, jute, oil and grain; neighbouring Bihar maize trade.
-          <a href="https://en.wikipedia.org/wiki/Dalkhola" target="_blank" rel="noopener">Wikipedia: Dalkhola</a>.</li>
-        <li><span>Paschim Goalgaon S.S.K.</span> — school directory record for the Shishu Shiksha Kendra in Dalkhola–I gram panchayat.
-          <a href="https://liko.in/schools-in-india/school-id-1341745" target="_blank" rel="noopener">school record</a>.</li>
+          <a href="https://en.wikipedia.org/wiki/Dalkhola" target="_blank" rel="noopener">Wikipedia: Dalkhola</a>.
+        </li>
+        <li><span>Paschim Goalgaon S.S.K.</span> — school directory record for the Shishu Shiksha Kendra in Dalkhola–I
+          gram panchayat.
+          <a href="https://liko.in/schools-in-india/school-id-1341745" target="_blank" rel="noopener">school record</a>.
+        </li>
         <li><span>Village position</span> — OpenStreetMap village node “Goalgaon”, Karandighi.
-          <a href="https://www.openstreetmap.org/node/4971111578" target="_blank" rel="noopener">openstreetmap.org</a>.</li>
-        <li><span>Highways and railway</span> — NH-27 route and junctions; Dalkhola station on the Katihar–Siliguri line.
-          <a href="https://en.wikipedia.org/wiki/National_Highway_27_(India)" target="_blank" rel="noopener">Wikipedia: NH-27</a>,
-          <a href="https://en.wikipedia.org/wiki/Dalkhola_railway_station" target="_blank" rel="noopener">Wikipedia: Dalkhola railway station</a>.</li>
+          <a href="https://www.openstreetmap.org/node/4971111578" target="_blank" rel="noopener">openstreetmap.org</a>.
+        </li>
+        <li><span>Highways and railway</span> — NH-27 route and junctions; Dalkhola station on the Katihar–Siliguri
+          line.
+          <a href="https://en.wikipedia.org/wiki/National_Highway_27_(India)" target="_blank" rel="noopener">Wikipedia:
+            NH-27</a>,
+          <a href="https://en.wikipedia.org/wiki/Dalkhola_railway_station" target="_blank" rel="noopener">Wikipedia:
+            Dalkhola railway station</a>.
+        </li>
       </ol>
       <p class="hb-fine">
         <strong>Not verified, and therefore not stated:</strong> the number of rice mills, any market
@@ -390,12 +773,12 @@
       <div>
         <span class="market-eyebrow">LOCAL INFORMATION</span>
         <h2>Building a useful market guide.</h2>
-        <p>Business names, exact locations, contact details and opening hours should be added after they are checked. This keeps Dalkhola Online accurate and useful for residents and visitors.</p>
+        <p>Business names, exact locations, contact details and opening hours should be added after they are checked.
+          This keeps Dalkhola Online accurate and useful for residents and visitors.</p>
       </div>
       <a class="market-primary-link" href="../business.html">Explore business directory <span>↗</span></a>
     </section>
   </main>
-
-   <script src="../js/shared/footer.js" defer></script>
 </body>
+
 </html>
