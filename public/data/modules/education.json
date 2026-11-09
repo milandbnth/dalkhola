@@ -5,7 +5,7 @@
     "district": "Uttar Dinajpur",
     "state": "West Bengal",
     "country": "India",
-    "last_updated": "2026-11-02T04:01:41.074136Z"
+    "last_updated": "2026-11-08T00:00:00.000000Z"
   },
   "education": {
     "colleges": [
@@ -13,7 +13,23 @@
         "name": "Dalkhola College",
         "type": "General Degree College",
         "affiliated_to": "University of Gour Banga",
-        "id": "DLK-EDU-000001"
+        "id": "DLK-EDU-000001",
+        "official_name": "Shree Agrasen Mahavidyalaya",
+        "established": 1995,
+        "description": "Dalkhola's general degree college, known locally as Dalkhola College, offering undergraduate courses in arts and commerce.",
+        "facts": [
+          "Official name is Shree Agrasen Mahavidyalaya; locals call it Dalkhola College or Agrasen College.",
+          "Started in 1995 because there was no higher-education institution within about 50 km.",
+          "Was first affiliated to the University of North Bengal before moving to the University of Gour Banga.",
+          "Honours courses include Bengali, Hindi, English, History, Political Science, Sociology and Accountancy, plus general arts and commerce streams.",
+          "NAAC-accredited and co-educational."
+        ],
+        "address": "P.O. Dalkhola, Uttar Dinajpur, West Bengal 733201",
+        "phone": "03525-257440",
+        "email": "shreeagrasenmahavidyalaya@gmail.com",
+        "url": "https://samdlk.ac.in",
+        "image": "https://res.cloudinary.com/m8ojhenk/image/upload/v1794151007/dalcollg.webp",
+        "image_alt": "Main building of Shree Agrasen Mahavidyalaya, Dalkhola"
       }
     ],
     "schools": [
@@ -21,13 +37,104 @@
         "name": "Dalkhola High School (H.S.)",
         "type": "Higher Secondary",
         "medium": "Bengali / Hindi",
-        "id": "DLK-EDU-000002"
+        "id": "DLK-EDU-000002",
+        "established": 1947,
+        "description": "One of Dalkhola's oldest and largest schools, co-educational, teaching from class 5 up to class 12 (Higher Secondary).",
+        "facts": [
+          "Began in 1947 as a Middle English School and was upgraded to a high school in 1950 with just six students in class VIII.",
+          "Reported enrolment is around 2,300 students (older figure; verify with the school).",
+          "The neighbourhood around it is known as High School Para, and High School More is a local landmark."
+        ],
+        "address": "High School Para, Dalkhola, West Bengal 733201",
+        "board": "WBBSE / WBCHSE",
+        "image": "https://res.cloudinary.com/m8ojhenk/image/upload/v1794153782/dalHigh.jpg",
+        "image_alt": "Dalkhola High School building, High School Para"
       },
       {
         "name": "Dalkhola Girls High School",
         "type": "Secondary",
         "medium": "Bengali",
-        "id": "DLK-EDU-000003"
+        "id": "DLK-EDU-000003",
+        "established": 1973,
+        "description": " Dalkhola Girls High School (H.S.) (DGHSS) is a Girls Only school in Dalkhola serving Dalkhola town, listed among the town's main high schools.",
+        "facts": [
+          "Began in 1973 as a Middle School and was upgraded to an Upper Primary school in 1980 and Higher Secondary in 2007.",
+          "The medium of instruction is Bengali.",
+          "The School is located near the old Bus stand.",
+          "The School was previously adjacent to an Animal Hospital which now proposed to be a health center"
+        ],
+        "address": "New Masjid Rd, near Shivam Complex, Dalkhola, West Bengal 733201",
+        "board": "WBBSE / WBCHSE",
+        "image": "https://res.cloudinary.com/m8ojhenk/image/upload/v1794155209/ghs.png",
+        "image_alt": "Dalkhola Girls High School"
+      },
+      {
+        "name": "Uttar Dalkhola High School (H.S.)",
+        "type": "Higher Secondary",
+        "medium": "Bengali",
+        "id": "DLK-EDU-000004",
+        "established": 1987,
+        "description": "Uttar Dalkhola High School is a government State Board co-educational school located in UTTAR DINAJPUR, West Bengal. Catering to students across a wide range of grade levels. Uttar Dalkhola High School is cmmitted to providing quality education and fostering the holistic development of every student.",
+        "facts": [
+          "Established in 1987, the school has been serving the community for over 39 years",
+          "The medium of instruction is Bengali.It offers education from Class 5 to Class 12, catering to students across a wide range of grade levels",
+          "The School is located in the northern part of Dalkhola .",
+          "The School was previously adjacent to an Animal Hospital which now proposed to be a health center"
+        ],
+        "address": "Hat Bari Rd, Dalkhola (M) - Ward No.11, Uttar Dinajpur West Bengal 733201",
+        "board": "WBBSE / WBCHSE",
+        "image": "https://res.cloudinary.com/m8ojhenk/image/upload/v1794205227/uttr.png",
+        "image_alt": "Uttar Dalkhola High School"
+      },
+      {
+        "name": "Dalkhola Hindi High School",
+        "type": "Secondary",
+        "medium": "Hindi",
+        "id": "DLK-EDU-000005",
+        "established": 2000,
+        "description": "HINDI HIGH SCHOOL DALKHOLA is Co-educational in type and it is Upper Primary and Secondary from class 5 to class 10 serving Dalkhola's Hindi-speaking community.",
+        "facts": [
+          "Together with Bengali-medium schools, it reflects Dalkhola's mixed Bengali and Hindi-speaking population; the town was part of Bihar until 1959."
+        ],
+        "address": "Subhaspally, Dalkhola (M) - Ward No.8, Uttar Dinajpur West Bengal 733201",
+        "board": "WBBSE",
+        "image": "https://res.cloudinary.com/m8ojhenk/image/upload/v1794205672/hind.png",
+        "image_alt": "Dalkhola Hindi High School"
+      },
+      {
+        "name": "Jawahar Navodaya Vidyalaya, Uttar Dinajpur (JNV Dalkhola)",
+        "type": "Residential CBSE School (Classes VI-XII)",
+        "board": "CBSE",
+        "established": 2005,
+        "description": "A free, co-educational residential school run by Navodaya Vidyalaya Samiti for talented rural students, admitted through an entrance test.",
+        "facts": [
+          "Founded in 2005 and part of the nationwide Jawahar Navodaya Vidyalaya network.",
+          "Motto: Pragyanam Brahma.",
+          "Has run from Teesta Colony, Dalkhola, next to the Primary Health Centre."
+        ],
+        "address": "Teesta Colony, Dalkhola, Uttar Dinajpur, West Bengal 733201",
+        "url": "https://navodaya.gov.in/nvs/nvs-school/UttarDinajpur/en/about_us/About-JNV",
+        "image": "https://res.cloudinary.com/m8ojhenk/image/upload/v1794206893/navoday.png",
+        "image_alt": "Jawahar Navodaya Vidyalaya, Dalkhola campus",
+        "id": "DLK-EDU-000006"
+      }
+    ],
+    "training_institutes": [
+      {
+        "name": "Coaching & Training at Dalkhola College (Shree Agrasen Mahavidyalaya)",
+        "type": "College-run Coaching & Skill Training",
+        "description": "The college has offered coaching to help students prepare for government service entry, along with remedial coaching for B.A. and B.Com. students.",
+        "facts": [
+          "Coaching for service entry has been aimed at SC, ST and Minority-community students.",
+          "In 2004 the college ran a self-employment training programme for poor students under the RSVY scheme.",
+          "These details come from older descriptions of the college; confirm current programmes with the college office."
+        ],
+        "address": "P.O. Dalkhola, Uttar Dinajpur, West Bengal 733201",
+        "phone": "03525-257440",
+        "url": "https://samdlk.ac.in",
+        "image": "",
+        "image_alt": "Dalkhola College coaching classroom",
+        "id": "DLK-EDU-000008"
       }
     ]
   }

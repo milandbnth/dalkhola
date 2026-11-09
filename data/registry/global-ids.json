@@ -2,7 +2,7 @@
   "version": 1,
   "counters": {
     "BIZ": 2,
-    "EDU": 3,
+    "EDU": 8,
     "SRV": 7,
     "TRN": 3
   },
@@ -75,6 +75,26 @@
     "DLK-TRN-000003": {
       "module": "transport",
       "source": "data/modules/transport/manual/content.json.transport.highways[1]"
+    },
+    "DLK-EDU-000004": {
+      "module": "education",
+      "source": "data/modules/education/manual/content.json.education.schools[2]"
+    },
+    "DLK-EDU-000005": {
+      "module": "education",
+      "source": "data/modules/education/manual/content.json.education.schools[3]"
+    },
+    "DLK-EDU-000006": {
+      "module": "education",
+      "source": "data/modules/education/manual/content.json.education.schools[4]"
+    },
+    "DLK-EDU-000007": {
+      "module": "education",
+      "source": "data/modules/education/manual/content.json.education.schools[5]"
+    },
+    "DLK-EDU-000008": {
+      "module": "education",
+      "source": "data/modules/education/manual/content.json.education.training_institutes[0]"
     }
   }
 }

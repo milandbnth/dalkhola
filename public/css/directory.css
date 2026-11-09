@@ -159,3 +159,216 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* Education category cards */
+#content-list .education-category-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#content-list .education-category-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    background: linear-gradient(135deg, #e0ecff, #f4e9ff);
+}
+
+@media (max-width: 1024px) {
+    #content-list .education-category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    #content-list .education-category-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Back button and title when a category is open */
+#content-list .business-directory-back {
+    margin-bottom: 16px;
+    padding: 10px 18px;
+    border: 1px solid var(--border, #e5e7eb);
+    border-radius: 999px;
+    background: var(--surface, #ffffff);
+    color: inherit;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+}
+
+#content-list .business-directory-back:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+#content-list .business-directory-title {
+    margin: 0 0 20px;
+}
+
+/* Expandable education cards */
+#content-list .edu-records .bento {
+  align-items: start;
+}
+
+#content-list .bento > .edu-card {
+  grid-column: auto;
+  min-width: 0;
+}
+
+#content-list .bento > .edu-card.is-open {
+  grid-column: 1 / -1;
+}
+
+#content-list .edu-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#content-list .edu-card:hover,
+#content-list .edu-card.is-open {
+  border-color: var(--teal);
+}
+
+#content-list .edu-card:hover {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+#content-list .edu-card-toggle {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+#content-list .edu-card-toggle:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: -3px;
+}
+
+#content-list .edu-card-media {
+  height: 190px;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+#content-list .edu-card-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#content-list .edu-card-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  background: linear-gradient(135deg, #e0ecff, #f4e9ff);
+}
+
+#content-list .edu-card-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.1rem 1.25rem 1.25rem;
+}
+
+#content-list .edu-card-head h3 {
+  margin: 0;
+  font: 700 1.25rem/1.2 var(--display);
+  overflow-wrap: anywhere;
+}
+
+#content-list .edu-card-type {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--teal);
+}
+
+#content-list .edu-card-summary {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#content-list .edu-card.is-open .edu-card-summary {
+  display: block;
+  overflow: visible;
+}
+
+#content-list .edu-card-more {
+  margin-top: 0.4rem;
+  font-weight: 600;
+  color: var(--teal);
+}
+
+#content-list .edu-card-body {
+  padding: 0 1.25rem 1.4rem;
+  border-top: 1px solid var(--line);
+}
+
+#content-list .edu-card-details {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.45rem 1rem;
+  margin: 1rem 0 0;
+  font-size: 0.94rem;
+}
+
+#content-list .edu-card-details dt {
+  font-weight: 600;
+}
+
+#content-list .edu-card-details dd {
+  margin: 0;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+#content-list .edu-card-facts-title {
+  margin: 1.1rem 0 0.4rem;
+  font-size: 1rem;
+}
+
+#content-list .edu-card-facts {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+#content-list .edu-card-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--teal);
+}
+
+/* Open card: image beside the text on wider screens */
+@media (min-width: 821px) {
+  #content-list .edu-card.is-open .edu-card-toggle {
+    flex-direction: row;
+  }
+
+  #content-list .edu-card.is-open .edu-card-media {
+    flex: 0 0 340px;
+    height: auto;
+    min-height: 240px;
+  }
+
+  #content-list .edu-card.is-open .edu-card-head {
+    flex: 1;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+}

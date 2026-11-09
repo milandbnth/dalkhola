@@ -45,15 +45,37 @@
 
 
 
-<main class="wrap">
-  <section class="hero">
-    <h1>Education & Learning</h1>
-    <p class="lead">Higher secondary schools, colleges, and educational institutes in PIN 733201.</p>
+<main>
+
+  <div class="wrap">
+    <section class="hero">
+      <h1>Education & Learning</h1>
+      <p class="lead">Higher secondary schools, colleges, and educational institutes in PIN 733201.</p>
+    </section>
+  </div>
+
+  <!-- DYNAMIC EDUCATION DIRECTORY -->
+  <section class="business-directory-section" id="education-directory">
+    <div class="wrap">
+
+      <div class="business-section-heading">
+        <div>
+          <span class="business-eyebrow">FIND LOCAL EDUCATION</span>
+        </div>
+        <p>
+          Browse the colleges, schools and training centres
+          listed in the Dalkhola Online directory.
+        </p>
+      </div>
+
+      <!-- IMPORTANT: Keep this ID and class for page-renderer.js -->
+      <div id="content-list" class="grid-layout business-directory-grid">
+        <!-- Rendered dynamically from the education module data -->
+      </div>
+
+    </div>
   </section>
 
-  <section id="content-list" class="grid-layout">
-    <!-- Rendered dynamically from data/dalkhola.json -->
-  </section>
 </main>
 
 
