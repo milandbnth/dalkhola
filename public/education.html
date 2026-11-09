@@ -17,6 +17,38 @@
 <link rel="icon" type="image/png" href="dalkhola-favicon.png">
 <!-- SHARED-FAVICON:END -->
 
+<style>
+  .education-hero-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2.5rem;
+    align-items: center;
+  }
+  .education-hero-text { min-width: 0; }
+  .education-hero-text h1 {
+    font-size: clamp(1.9rem, 3.6vw, 3rem);
+    line-height: 1.1;
+    overflow-wrap: break-word;
+  }
+  .education-hero-layout .business-hero-visual {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+  .education-hero-layout .business-hero-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    object-fit: contain;
+  }
+  @media (max-width: 800px) {
+    .education-hero-layout { grid-template-columns: 1fr; }
+  }
+</style>
+
 
 
 </head>
@@ -49,8 +81,21 @@
 
   <div class="wrap">
     <section class="hero">
-      <h1>Education & Learning</h1>
-      <p class="lead">Higher secondary schools, colleges, and educational institutes in PIN 733201.</p>
+      <div class="education-hero-layout">
+        <div class="education-hero-text">
+          <h1>Education & Learning</h1>
+          <p class="lead">Higher secondary schools, colleges, and educational institutes in PIN 733201.</p>
+        </div>
+
+        <div class="business-hero-visual">
+          <img src="https://res.cloudinary.com/m8ojhenk/image/upload/v1794208006/edl.jpg"
+            alt="Students and schools in Dalkhola">
+          <div class="business-image-caption">
+            <span>LOCAL EDUCATION</span>
+            <strong>Schools. Colleges. Futures.</strong>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 
