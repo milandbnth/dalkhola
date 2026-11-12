@@ -28,6 +28,263 @@
       background: var(--teal-ink);
       color: var(--teal);
     }
+
+    /* Services page card layout */
+    .services-card-grid,
+    .bento {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    /* Manual and automated cards */
+    .bento>.snap {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 22px;
+      background: var(--surface, #ffffff);
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: 18px;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .bento>.snap:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.10);
+    }
+
+    .bento>.snap h3 {
+      margin: 12px 0;
+    }
+
+    .snap-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 14px;
+    }
+
+    .badge-pill {
+      align-self: flex-start;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: var(--teal-ink, #e0f2f1);
+      color: var(--teal, #087e75);
+    }
+
+    /* Combined healthcare card */
+    .healthcare-combined {
+      grid-column: 1 / -1;
+    }
+
+    .healthcare-facility {
+      padding: 16px 0;
+    }
+
+    .healthcare-facility+.healthcare-facility {
+      border-top: 1px solid var(--border, #e5e7eb);
+    }
+
+    .healthcare-facility h4 {
+      margin: 10px 0;
+    }
+
+    /* Expandable automated categories */
+    .service-accordion {
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: 18px;
+      background: var(--surface, #ffffff);
+      overflow: hidden;
+    }
+
+    .service-accordion-summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 20px 22px;
+      cursor: pointer;
+      font-size: 1.05rem;
+      font-weight: 700;
+      list-style: none;
+    }
+
+    .service-accordion-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .service-accordion-summary::after {
+      content: "+";
+      font-size: 1.4rem;
+    }
+
+    .service-accordion[open] .service-accordion-summary::after {
+      content: "−";
+    }
+
+    .service-count {
+      font-size: 0.8rem;
+      font-weight: 600;
+      opacity: 0.7;
+    }
+
+    .service-accordion-content {
+      padding: 20px;
+      border-top: 1px solid var(--border, #e5e7eb);
+    }
+
+    .service-accordion-content>.snap {
+      min-width: 0;
+    }
+
+    .service-status {
+      font-weight: 700;
+      color: #b45309;
+    }
+
+    .last-updated {
+      margin: 24px 0;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 600px) {
+      .bento {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .bento>.snap {
+        padding: 16px;
+      }
+
+      .service-accordion-summary {
+        padding: 16px;
+      }
+    }
+
+    /* Fix service card text visibility */
+    .bento>.snap,
+    .healthcare-combined,
+    .healthcare-facility,
+    .service-accordion-content {
+      color: #1f2937;
+    }
+
+    .bento>.snap h2,
+    .bento>.snap h3,
+    .bento>.snap h4,
+    .healthcare-combined h2,
+    .healthcare-combined h3,
+    .healthcare-facility h3,
+    .service-accordion-content h2,
+    .service-accordion-content h3,
+    .service-accordion-content h4 {
+      color: #111827;
+    }
+
+    .bento>.snap p,
+    .bento>.snap li,
+    .healthcare-combined p,
+    .healthcare-facility p,
+    .service-accordion-content p,
+    .service-accordion-content li {
+      color: #374151;
+    }
+
+    .service-accordion-summary {
+      color: #111827;
+    }
+
+    .service-count,
+    .service-status,
+    .last-updated {
+      color: #4b5563;
+    }
+
+    /* ----------  */
+
+    .services-hero {
+      display: grid !important;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 42%);
+      align-items: center;
+      gap: 32px;
+      padding: 28px;
+      overflow: hidden;
+    }
+
+    .services-hero-text {
+      min-width: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .services-hero-text h1 {
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.2;
+      margin: 0 0 16px;
+      overflow-wrap: break-word;
+    }
+
+    .services-hero-text .lead {
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-wrap: break-word;
+    }
+
+    .services-hero-image {
+      min-width: 0;
+      width: 100%;
+    }
+
+    .services-hero-image img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 16px;
+    }
+
+    @media (max-width: 700px) {
+      .services-hero {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 18px;
+      }
+    }
+
+    /* Full-width images for all manual service cards */
+    .bento>.snap img,
+    .healthcare-combined img,
+    .healthcare-facility img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 12px;
+    }
+
+    /* Ensure manual cards use the available width */
+    .bento>.snap,
+    .healthcare-combined {
+      width: 100%;
+      min-width: 0;
+    }
+
+    .bento>.snap .snap-img,
+    .healthcare-combined .snap-img {
+      width: 100%;
+      overflow: hidden;
+    }
   </style>
   <!-- SHARED-FAVICON:START -->
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -41,144 +298,25 @@
 <body>
 
 
-
   <main class="wrap">
-    <section class="hero">
-      <h1>Public Services</h1>
-      <p class="lead">Essential healthcare centers, municipal administrative desks, banking facilities, and postal
-        offices in Dalkhola.</p>
-    </section>
+    <section class="hero services-hero">
+      <div class="services-hero-text">
+        <h1>Public Services</h1>
+        <p class="lead">
+          Essential healthcare, civic administration, banking, accommodation,
+          diagnostic centres, pharmacies and postal services in Dalkhola.
+        </p>
+      </div>
 
-    <!--  Health Care and Hospitals -->
-    <section class="block">
-      <div class="sec-head">
-        <div>
-          <h2>Health Care & Hospitals</h2>
-          <p>Government rural hospital, emergency response centers, and primary health clinics.</p>
-        </div>
-      </div>
-      <div class="bento" id="healthcare-container">
-        <!-- Rendered via JS -->
-      </div>
-    </section>
-
-    <!-- 2. Dalkhola Municipality -->
-    <section class="block">
-      <div class="sec-head">
-        <div>
-          <h2>Dalkhola Municipality</h2>
-          <p>Local urban governance, trade licensing, tax assessment, and public works office.</p>
-        </div>
-      </div>
-      <div class="bento" id="municipality-container">
-        <!-- Rendered via JS -->
-      </div>
-    </section>
-
-    <!-- 3. Banking & Financial Services -->
-    <section class="block">
-      <div class="sec-head">
-        <div>
-          <h2>Banking & Financial Services</h2>
-          <p>Nationalized banks, commercial branches, IFSC details, and 24/7 ATM network.</p>
-        </div>
-      </div>
-      <div class="bento" id="banking-container">
-        <!-- Rendered via JS -->
-      </div>
-    </section>
-
-    <!-- 4. Post Office -->
-    <section class="block">
-      <div class="sec-head">
-        <div>
-          <h2>Post Office (India Post)</h2>
-          <p>Sub Post Office (PIN 733201), Speed Post, POSB savings, and Aadhaar services.</p>
-        </div>
-      </div>
-      <div class="bento" id="postoffice-container">
-        <!-- Rendered via JS -->
+      <div class="services-hero-image">
+        <img src="https://res.cloudinary.com/m8ojhenk/image/upload/v1794335252/Dalkhola_Public_Services_Banner.png"
+          alt="Public Services in Dalkhola">
       </div>
     </section>
   </main>
 
 
-  <!-- Dynamic Population Script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      fetch('/data/modules/services.json')
-        .then(response => response.json())
-        .then(data => {
-          // 1. Healthcare Render
-          const healthEl = document.getElementById('healthcare-container');
-          if (healthEl && data.healthcare) {
-            healthEl.innerHTML = data.healthcare.map(item => `
-              <div class="snap s2" id="record-${item.id}">
-                <img src="${item.image}" alt="${item.name}" class="snap-img">
-                <span class="badge-pill">${item.badge}</span>
-                <h3>${item.name}</h3>
-                <p><strong>${item.type}</strong></p>
-                <p>${item.address}</p>
-                <span class="go">${item.contact}</span>
-              </div>
-            `).join('');
-          }
-
-          // 2. Municipality Render
-          const muniEl = document.getElementById('municipality-container');
-          if (muniEl && data.municipality) {
-            muniEl.innerHTML = data.municipality.map(item => `
-              <div class="snap s1" id="record-${item.id}">
-                <img src="${item.image}" alt="${item.name}" class="snap-img">
-                <span class="badge-pill">${item.badge}</span>
-                <h3>${item.name}</h3>
-                <p>${item.type}</p>
-                <p><strong>Services:</strong> ${item.departments.join(', ')}</p>
-                <span class="go">Timing: ${item.timing}</span>
-              </div>
-            `).join('');
-          }
-
-          // 3. Banking Render
-          const bankEl = document.getElementById('banking-container');
-          if (bankEl && data.banking) {
-            bankEl.innerHTML = data.banking.map(item => `
-              <div class="snap s3" id="record-${item.id}">
-                <img src="${item.image}" alt="${item.name}" class="snap-img">
-                <span class="badge-pill">${item.badge}</span>
-                <h3>${item.name}</h3>
-                <p><strong>Branch:</strong> ${item.branch}</p>
-                <p><strong>IFSC:</strong> ${item.ifsc}</p>
-                <p>${item.address}</p>
-                <span class="go">${item.services.join(' • ')}</span>
-              </div>
-            `).join('');
-          }
-
-          // 4. Post Office Render
-          const poEl = document.getElementById('postoffice-container');
-          if (poEl && data.post_office) {
-            poEl.innerHTML = data.post_office.map(item => `
-              <div class="snap s1" id="record-${item.id}">
-                <img src="${item.image}" alt="${item.name}" class="snap-img">
-                <span class="badge-pill">${item.badge}</span>
-                <h3>${item.name} (PIN: ${item.pin_code})</h3>
-                <p><strong>Division:</strong> ${item.postal_division}</p>
-                <p><strong>Key Facilities:</strong> ${item.services.join(', ')}</p>
-                <span class="go">${item.address}</span>
-              </div>
-            `).join('');
-          }
-
-          // Timestamp
-          if (data.metadata && data.metadata.last_updated) {
-            const dateStr = new Date(data.metadata.last_updated).toLocaleString();
-            document.getElementById('last-updated').innerText = `Last Refreshed: ${dateStr}`;
-          }
-        })
-        .catch(err => console.error("Error loading services JSON:", err));
-    });
-  </script>
+  <script src="/js/pages/services-page.js" defer></script>
 </body>
 
 </html>

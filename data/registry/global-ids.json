@@ -3,7 +3,7 @@
   "counters": {
     "BIZ": 2,
     "EDU": 8,
-    "SRV": 7,
+    "SRV": 11,
     "TRN": 3
   },
   "legacy_ids": {
@@ -42,7 +42,7 @@
     },
     "DLK-SRV-000002": {
       "module": "services",
-      "source": "data/modules/services/manual/content.json.healthcare[1]"
+      "source": "data/modules/services/manual/content.json.healthcare[0]"
     },
     "DLK-SRV-000003": {
       "module": "services",
@@ -95,6 +95,22 @@
     "DLK-EDU-000008": {
       "module": "education",
       "source": "data/modules/education/manual/content.json.education.training_institutes[0]"
+    },
+    "DLK-SRV-000008": {
+      "module": "services",
+      "source": "data/modules/services/manual/content.json.healthcare[0].services[0]"
+    },
+    "DLK-SRV-000009": {
+      "module": "services",
+      "source": "data/modules/services/manual/content.json.healthcare[0].services[1]"
+    },
+    "DLK-SRV-000010": {
+      "module": "services",
+      "source": "data/modules/services/manual/content.json.healthcare[0].services[2]"
+    },
+    "DLK-SRV-000011": {
+      "module": "services",
+      "source": "data/modules/services/manual/content.json.healthcare[0].facilities[0]"
     }
   }
 }

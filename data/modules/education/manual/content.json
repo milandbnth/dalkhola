@@ -52,7 +52,7 @@
       },
       {
         "name": "Dalkhola Girls High School",
-        "type": "Secondary",
+        "type": "Higher Secondary",
         "medium": "Bengali",
         "id": "DLK-EDU-000003",
         "established": 1973,
@@ -100,7 +100,6 @@
         "board": "WBBSE",
         "image": "https://res.cloudinary.com/m8ojhenk/image/upload/v1794205672/hind.png",
         "image_alt": "Dalkhola Hindi High School"
-        
       },
       {
         "name": "Jawahar Navodaya Vidyalaya, Uttar Dinajpur (JNV Dalkhola)",

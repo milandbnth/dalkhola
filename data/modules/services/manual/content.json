@@ -7,22 +7,87 @@
   },
   "healthcare": [
     {
-      "id": "DLK-SRV-000001",
-      "name": "Dalkhola Rural Hospital",
-      "type": "Government Rural Hospital & Emergency Center",
-      "contact": "Emergency Desk: 24x7 Available",
-      "address": "Hospital Road, Dalkhola, West Bengal 733201",
-      "image": "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80",
-      "badge": "24x7 Emergency"
-    },
-    {
       "id": "DLK-SRV-000002",
-      "name": "Dalkhola Urban Primary Health Centre (UPHC)",
-      "type": "Public Municipal Health Clinic",
-      "contact": "OPD Hours: 9:00 AM – 2:00 PM",
-      "address": "Ward No. 4, Dalkhola Municipality",
-      "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-      "badge": "Free Civic Care"
+      "name": "Dalkhola Hospital",
+      "subTitle": "ডালখোলা হাসপাতাল",
+      "category": "Healthcare",
+      "type": "Government Primary Health Centre (PHC)",
+      "address": "NH 12, Opposite Fire Station, Dalkhola, Haripur, West Bengal 733201, India",
+      "district": "Uttar Dinajpur",
+      "block": "Karandighi",
+      "state": "West Bengal",
+      "pincode": "733201",
+      "country": "India",
+      "description": "Dalkhola Hospital is a government Primary Health Centre serving Dalkhola and nearby communities. The facility is also home to a 10-bed Nutritional Rehabilitation Centre serving malnourished children from across Uttar Dinajpur district.",
+      "image": "https://res.cloudinary.com/m8ojhenk/image/upload/v1794335962/hlth.png",
+      "services": [
+        {
+          "id": "DLK-SRV-000008",
+          "name": "Primary healthcare",
+          "status": "PHC facility"
+        },
+        {
+          "id": "DLK-SRV-000009",
+          "name": "Routine outpatient services",
+          "status": "District PHC service classification"
+        },
+        {
+          "id": "DLK-SRV-000010",
+          "name": "Nutritional rehabilitation",
+          "status": "Confirmed"
+        }
+      ],
+      "facilities": [
+        {
+          "id": "DLK-SRV-000011",
+          "name": "Nutritional Rehabilitation Centre",
+          "beds": 10,
+          "purpose": "Medical and nutritional care for malnourished children",
+          "coverage": "Entire Uttar Dinajpur district",
+          "status": "Officially confirmed"
+        }
+      ],
+      "historicalCapacity": {
+        "reportedBeds": 6,
+        "sourceNote": "Older government health infrastructure document; current general bed capacity needs confirmation."
+      },
+      "development": {
+        "name": "Proposed 50-bed State General Hospital",
+        "status": "Proposed - not confirmed operational",
+        "site": "Existing Dalkhola PHC site",
+        "work": "Soil exploration and investigation",
+        "tenderAwardDate": "2026-09-25"
+      },
+      "visitorInformation": {
+        "phone": null,
+        "email": null,
+        "opdTimings": null,
+        "emergencyAvailability": "Not verified",
+        "ambulanceAvailability": "Not verified",
+        "doctorRoster": "Not verified",
+        "diagnosticServices": "Not verified"
+      },
+      "location": {
+        "latitude": 25.87337,
+        "longitude": 87.86486,
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=25.87337,87.86486"
+      },
+      "dataVerification": {
+        "lastResearched": "2026-11-10",
+        "verifiedSources": [
+          "Uttar Dinajpur District Health Department",
+          "West Bengal government health infrastructure document",
+          "Public Works Department tender record"
+        ],
+        "pendingVerification": [
+          "Current phone number",
+          "OPD timings",
+          "Emergency services",
+          "Current bed capacity",
+          "Doctor and nursing staff",
+          "Diagnostic facilities"
+        ]
+      }
     }
   ],
   "municipality": [
@@ -42,52 +107,6 @@
       "badge": "Civic HQ"
     }
   ],
-  "banking": [
-    {
-      "id": "DLK-SRV-000004",
-      "name": "State Bank of India (SBI)",
-      "branch": "Dalkhola Branch",
-      "ifsc": "SBIN0002047",
-      "micr": "733002506",
-      "services": [
-        "Personal Banking",
-        "Forex Desk",
-        "Commercial Loans",
-        "24/7 ATM/Cash Deposit"
-      ],
-      "address": "Station Road, Dalkhola, PIN 733201",
-      "image": "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=800&q=80",
-      "badge": "Nationalized Bank"
-    },
-    {
-      "id": "DLK-SRV-000005",
-      "name": "Punjab National Bank (PNB)",
-      "branch": "Dalkhola Commercial Node",
-      "ifsc": "PUNB0024400",
-      "services": [
-        "Agricultural Loans",
-        "MSME Account",
-        "ATM Services"
-      ],
-      "address": "NH 12 Junction, Hatbari, Dalkhola",
-      "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80",
-      "badge": "Nationalized Bank"
-    },
-    {
-      "id": "DLK-SRV-000006",
-      "name": "Bandhan Bank",
-      "branch": "Dalkhola Town Branch",
-      "ifsc": "BDBL0001850",
-      "services": [
-        "Microfinance",
-        "Retail Savings",
-        "Fixed Deposits"
-      ],
-      "address": "Goalgaon Road, Dalkhola",
-      "image": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=800&q=80",
-      "badge": "Private Retail Bank"
-    }
-  ],
   "post_office": [
     {
       "id": "DLK-SRV-000007",
@@ -104,26 +123,5 @@
       "image": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80",
       "badge": "India Post Hub"
     }
-  ],
-  "city_summary": {
-    "healthcare": [
-      {
-        "name": "Dalkhola Rural Hospital",
-        "type": "Government Hospital",
-        "contact": "Emergency 24x7"
-      }
-    ],
-    "civic_and_banking": [
-      {
-        "name": "Dalkhola Municipality Office",
-        "type": "Civic Administration",
-        "ward": "Ward 4"
-      },
-      {
-        "name": "State Bank of India (Dalkhola Branch)",
-        "type": "Bank",
-        "ifsc": "SBIN0002047"
-      }
-    ]
-  }
+  ]
 }

@@ -29,4 +29,6 @@ desktop.ini
 .venv/
 venv/
 node_modules/
+.vscode
+settings.json
 

@@ -1,0 +1,151 @@
+{
+  "generated_at": "2026-11-10T16:14:29.932448Z",
+  "sources": {
+    "banking": {
+      "file": "latest.json",
+      "input_records": 62,
+      "input_category_counts": {
+        "Bank": 20,
+        "ATM": 15,
+        "Public sector bank": 6,
+        "Loan agency": 4,
+        "Financial institution": 3,
+        "(unknown)": 1,
+        "Internet cafe": 3,
+        "Aadhaar center": 2,
+        "Money transfer service": 1,
+        "Post office": 1,
+        "Government office": 1,
+        "Cell phone store": 1,
+        "Bridge": 1,
+        "Financial consultant": 1,
+        "Paint store": 1,
+        "Hypermarket": 1
+      },
+      "processing": {
+        "included": 46,
+        "permanently_closed": 4,
+        "wrong_category": 12,
+        "temporarily_closed_retained": 1
+      },
+      "included_records": 46
+    },
+    "hotels": {
+      "file": "hotels.json",
+      "input_records": 47,
+      "input_category_counts": {
+        "Hotel": 31,
+        "Lodge": 4,
+        "Cell phone accessory store": 1,
+        "Guest house": 2,
+        "Restaurant": 3,
+        "(unknown)": 1,
+        "Warehouse": 1,
+        "Bengali restaurant": 1,
+        "Fitness center": 1,
+        "Non vegetarian restaurant": 1,
+        "Food court": 1
+      },
+      "processing": {
+        "included": 37,
+        "wrong_category": 10,
+        "temporarily_closed_retained": 1
+      },
+      "included_records": 37
+    },
+    "diagnostics": {
+      "file": "diagnostics.json",
+      "input_records": 64,
+      "input_category_counts": {
+        "Diagnostic center": 4,
+        "Medical diagnostic imaging center": 4,
+        "Medical clinic": 27,
+        "Pathologist": 2,
+        "Medical Center": 1,
+        "Skin care clinic": 1,
+        "Pharmacy": 5,
+        "Doctor": 5,
+        "Dental clinic": 5,
+        "Blood testing service": 1,
+        "Hospital": 2,
+        "Nursing home": 1,
+        "Laboratory": 1,
+        "Free clinic": 1,
+        "Public medical center": 2,
+        "Sports medicine clinic": 1,
+        "Orthodontist": 1
+      },
+      "processing": {
+        "excluded_distant_locality": 1,
+        "included": 50,
+        "wrong_category": 12,
+        "permanently_closed": 1
+      },
+      "included_records": 50
+    },
+    "pharmacies": {
+      "file": "pharmacies.json",
+      "input_records": 102,
+      "input_category_counts": {
+        "Pharmacy": 71,
+        "Medical Center": 12,
+        "Medical supply store": 5,
+        "Doctor": 2,
+        "Drug store": 1,
+        "Homeopathic pharmacy": 1,
+        "Alternative medicine practitioner": 1,
+        "Public medical center": 2,
+        "Sports medicine clinic": 1,
+        "Nursing home": 1,
+        "Medical clinic": 4,
+        "Grocery store": 1
+      },
+      "processing": {
+        "included": 85,
+        "wrong_category": 17
+      },
+      "included_records": 85
+    }
+  },
+  "included_by_category": {
+    "banking": 46,
+    "hotels": 37,
+    "diagnostics": 50,
+    "pharmacies": 85,
+    "curated_banking": 3
+  },
+  "total_included": 221,
+  "rejected_records": [
+    {
+      "source": "latest.json",
+      "title": "Punjab National Bank",
+      "reason": "permanently_closed"
+    },
+    {
+      "source": "latest.json",
+      "title": "Union Bank Of India Atm",
+      "reason": "permanently_closed"
+    },
+    {
+      "source": "latest.json",
+      "title": "state bank of India koisk",
+      "reason": "permanently_closed"
+    },
+    {
+      "source": "latest.json",
+      "title": "Bank of India",
+      "reason": "permanently_closed"
+    },
+    {
+      "source": "diagnostics.json",
+      "title": "Thyrocare Diagnostic Lab | Blood Test Centre - Alipurduar, West Bengal",
+      "reason": "excluded_distant_locality"
+    },
+    {
+      "source": "diagnostics.json",
+      "title": "G-One pathology lab",
+      "reason": "permanently_closed"
+    }
+  ],
+  "raw_files_modified": false
+}

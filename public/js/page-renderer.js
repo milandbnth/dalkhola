@@ -30,20 +30,85 @@
         return element;
     }
 
+
     function createCard(record, title, details) {
         const card = createElement("article", "snap s2");
         card.id = `record-${record.id}`;
 
+        // Image
+        if (record.image) {
+            const image = createElement("img", "service-card-image");
+            image.src = record.image;
+            image.alt = title || record.name || "Service image";
+            image.loading = "lazy";
+            image.onerror = function () {
+                this.style.display = "none";
+            };
+            card.appendChild(image);
+        }
+
+        // Title
         card.appendChild(createElement("h3", "", title));
 
+        // Description
+        if (record.description) {
+            card.appendChild(
+                createElement("p", "service-description", record.description)
+            );
+        }
+
+        // Details
         details.forEach(detail => {
-            if (detail.value) {
+            if (detail.value !== null && detail.value !== undefined && detail.value !== "") {
                 card.appendChild(
                     createElement("p", "", `${detail.label}: ${detail.value}`)
                 );
             }
         });
 
+        // Additional hospital facilities
+        if (Array.isArray(record.facilities) && record.facilities.length) {
+            const heading = createElement("h4", "", "Facilities");
+            card.appendChild(heading);
+
+            record.facilities.forEach(facility => {
+                const item = createElement("p", "");
+                item.textContent = `${facility.name || ""}${facility.beds ? ` — ${facility.beds} beds` : ""}${facility.purpose ? `: ${facility.purpose}` : ""}`;
+                card.appendChild(item);
+            });
+        }
+
+        // Development information
+        if (record.development) {
+            const development = record.development;
+
+            card.appendChild(
+                createElement("h4", "", development.name || "Development Update")
+            );
+
+            if (development.status) {
+                card.appendChild(
+                    createElement("p", "", `Status: ${development.status}`)
+                );
+            }
+
+            if (development.update) {
+                card.appendChild(
+                    createElement("p", "", development.update)
+                );
+            }
+        }
+
+        // Map link
+        if (record.mapUrl) {
+            const mapLink = createElement("a", "service-map-link", "View on Google Maps");
+            mapLink.href = record.mapUrl;
+            mapLink.target = "_blank";
+            mapLink.rel = "noopener noreferrer";
+            card.appendChild(mapLink);
+        }
+
+        // Record ID
         if (record.id) {
             card.appendChild(
                 createElement("p", "record-id", `Record ID: ${record.id}`)
@@ -52,6 +117,7 @@
 
         return card;
     }
+
 
     function createSection(title, records, cardBuilder) {
         if (!records || records.length === 0) {
@@ -608,16 +674,90 @@
     }
 
 
+
     function renderServices(data) {
         const services = data.services || {};
 
         return [
-            createSection("Healthcare", services.healthcare || [], record =>
-                createCard(record, record.name, [
-                    { label: "Type", value: record.type },
-                    { label: "Contact", value: record.contact }
-                ])
-            ),
+            createSection("Healthcare", services.healthcare || [], record => {
+                const details = [
+                    { label: "Facility Type", value: record.type },
+                    { label: "Address", value: record.address },
+                    { label: "District", value: record.district },
+                    { label: "State", value: record.state },
+                    { label: "PIN Code", value: record.pincode },
+                    { label: "Description", value: record.description },
+                    { label: "Rating", value: record.rating ? `${record.rating}/5` : null },
+                    { label: "Reviews", value: record.reviewCount }
+                ];
+
+                // Nutritional Rehabilitation Centre
+                if (record.facilities) {
+                    record.facilities.forEach(facility => {
+                        details.push(
+                            { label: "Special Facility", value: facility.name },
+                            { label: "Bed Capacity", value: facility.beds },
+                            { label: "Purpose", value: facility.purpose },
+                            { label: "Coverage", value: facility.coverage }
+                        );
+                    });
+                }
+
+                // Hospital development information
+                if (record.development) {
+                    details.push(
+                        {
+                            label: "Development Project",
+                            value: record.development.name
+                        },
+                        {
+                            label: "Project Status",
+                            value: record.development.status
+                        },
+                        {
+                            label: "Development Update",
+                            value: record.development.update
+                        }
+                    );
+                }
+
+                // Visitor information
+                if (record.visitorInformation) {
+                    details.push(
+                        {
+                            label: "Contact",
+                            value: record.visitorInformation.phone || "Not verified"
+                        },
+                        {
+                            label: "OPD Timings",
+                            value: record.visitorInformation.opdTimings || "Not verified"
+                        },
+                        {
+                            label: "Emergency Services",
+                            value: record.visitorInformation.emergencyAvailability
+                        },
+                        {
+                            label: "Doctor Information",
+                            value: record.visitorInformation.doctorRoster
+                        }
+                    );
+                }
+
+                if (record.mapUrl) {
+                    details.push({
+                        label: "Google Maps",
+                        value: record.mapUrl
+                    });
+                }
+
+                return createCard(
+                    record,
+                    record.name,
+                    details.filter(item =>
+                        item.value !== null && item.value !== undefined && item.value !== ""
+                    )
+                );
+            }),
 
             createSection("Civic & Banking", services.civic_and_banking || [], record =>
                 createCard(record, record.name, [

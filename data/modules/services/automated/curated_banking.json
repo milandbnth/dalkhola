@@ -1,0 +1,46 @@
+[
+  {
+    "id": "DLK-SRV-000004",
+    "name": "State Bank of India (SBI)",
+    "branch": "Dalkhola Branch",
+    "ifsc": "SBIN0002047",
+    "micr": "733002506",
+    "services": [
+      "Personal Banking",
+      "Forex Desk",
+      "Commercial Loans",
+      "24/7 ATM/Cash Deposit"
+    ],
+    "address": "Station Road, Dalkhola, PIN 733201",
+    "image": "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=800&q=80",
+    "badge": "Nationalized Bank"
+  },
+  {
+    "id": "DLK-SRV-000005",
+    "name": "Punjab National Bank (PNB)",
+    "branch": "Dalkhola Commercial Node",
+    "ifsc": "PUNB0024400",
+    "services": [
+      "Agricultural Loans",
+      "MSME Account",
+      "ATM Services"
+    ],
+    "address": "NH 12 Junction, Hatbari, Dalkhola",
+    "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80",
+    "badge": "Nationalized Bank"
+  },
+  {
+    "id": "DLK-SRV-000006",
+    "name": "Bandhan Bank",
+    "branch": "Dalkhola Town Branch",
+    "ifsc": "BDBL0001850",
+    "services": [
+      "Microfinance",
+      "Retail Savings",
+      "Fixed Deposits"
+    ],
+    "address": "Goalgaon Road, Dalkhola",
+    "image": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=800&q=80",
+    "badge": "Private Retail Bank"
+  }
+]
