@@ -205,6 +205,145 @@
       </div>
     </section>
 
+
+    <!-- REGISTER YOUR BUSINESS -->
+    <section class="business-register-section">
+      <div class="wrap">
+        <div class="business-register-panel">
+          <div class="business-register-copy">
+            <span class="business-eyebrow">GROW WITH DALKHOLA</span>
+            <h2>Own a business in Dalkhola?</h2>
+            <p>
+              Get your business discovered by local customers.
+              Register your shop, company, service or organisation
+              in the Dalkhola Online business directory.
+            </p>
+          </div>
+          <button type="button" class="business-button business-button-primary" data-open-business-form>
+            Register Your Business <span>↗</span>
+          </button>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BUSINESS REGISTRATION MODAL -->
+    <div class="business-modal" id="business-modal" aria-hidden="true">
+
+      <div class="business-modal-overlay" id="close-business-overlay"></div>
+
+      <div class="business-modal-content" role="dialog" aria-modal="true" aria-labelledby="business-form-title">
+
+        <button type="button" class="business-modal-close" id="close-business-form"
+          aria-label="Close form">&times;</button>
+
+        <span class="business-eyebrow">DALKHOLA ONLINE DIRECTORY</span>
+
+        <h2 id="business-form-title">Register Your Business</h2>
+
+        <p>Submit your business details for directory listing.</p>
+
+        <form id="business-registration-form">
+
+          <div class="business-form-grid">
+
+            <div class="business-form-field">
+              <label for="business-name">Business Name *</label>
+              <input type="text" id="business-name" name="business_name" required placeholder="Enter business name">
+            </div>
+
+            <div class="business-form-field">
+              <label for="business-category">Business Category *</label>
+              <select id="business-category" name="business_category" required>
+                <option value="">Select category</option>
+                <option>Retail & Shopping</option>
+                <option>Wholesale & Trading</option>
+                <option>Food & Restaurants</option>
+                <option>Education</option>
+                <option>Healthcare</option>
+                <option>Agriculture</option>
+                <option>Transport & Logistics</option>
+                <option>Manufacturing & Industry</option>
+                <option>Professional Services</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="business-form-field">
+              <label for="owner-name">Owner / Contact Person *</label>
+              <input type="text" id="owner-name" name="owner_name" required placeholder="Full name">
+            </div>
+
+            <div class="business-form-field">
+              <label for="business-phone">Phone Number *</label>
+              <input type="tel" id="business-phone" name="phone" required placeholder="10-digit mobile number"
+                pattern="[6-9][0-9]{9}" maxlength="10">
+            </div>
+
+            <div class="business-form-field">
+              <label for="business-email">Email Address</label>
+              <input type="email" id="business-email" name="email" placeholder="business@example.com">
+            </div>
+
+            <div class="business-form-field">
+              <label for="business-location">Business Location *</label>
+              <input type="text" id="business-location" name="location" required
+                placeholder="Area, road or market name">
+            </div>
+
+            <div class="business-form-field full-width">
+              <label for="business-address">Full Business Address *</label>
+              <textarea id="business-address" name="address" required rows="3"
+                placeholder="Enter complete business address"></textarea>
+            </div>
+
+            <div class="business-form-field">
+              <label for="business-website">Website / Social Link</label>
+              <input type="url" id="business-website" name="website" placeholder="https://">
+            </div>
+
+            <div class="business-form-field">
+              <label for="business-hours">Business Hours</label>
+              <input type="text" id="business-hours" name="business_hours" placeholder="e.g. 9 AM – 8 PM">
+            </div>
+
+            <div class="business-form-field full-width">
+              <label for="business-description">
+                About Your Business *
+              </label>
+              <textarea id="business-description" name="description" required rows="4"
+                placeholder="Describe your business, products or services"></textarea>
+            </div>
+
+          </div>
+
+
+          <!-- Spam protection: keep hidden from visitors -->
+          <div aria-hidden="true" style="position:absolute;left:-10000px;">
+            <label for="company-fax">Leave this field empty</label>
+            <input type="text" id="company-fax" name="company_fax" tabindex="-1" autocomplete="off">
+          </div>
+
+
+          <label class="business-consent">
+            <input type="checkbox" name="consent" required>
+            <span>
+              I confirm that the information provided is accurate
+              and agree to its review for inclusion in the
+              Dalkhola Online business directory.
+            </span>
+          </label>
+
+          <button type="submit" class="business-button business-button-primary business-form-submit">
+            Submit Business Registration ↗
+          </button>
+
+        </form>
+      </div>
+    </div>
+
+
     <!-- BUSINESS CTA -->
     <section class="business-cta-section">
       <div class="wrap">
@@ -228,8 +367,17 @@
 
   </main>
 
+
+  <!-- FIXED BUSINESS REGISTRATION BUTTON -->
+  <button type="button" class="business-fixed-register" data-open-business-form>
+    <span class="business-fixed-register-icon">+</span>
+    <span>Register Your Business</span>
+  </button>
+
+
   <script src="js/shared/data-loader.js"></script>
   <script src="js/page-renderer.js"></script>
+  <script src="js/shared/business-registration.js"></script>
 
 </body>
 

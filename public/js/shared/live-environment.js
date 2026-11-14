@@ -214,6 +214,29 @@
     }
 
     // ----------------------------------------
+    // date
+    // ----------------------------------------
+
+    function updateLiveDate() {
+        const dateElement = document.getElementById("live-date");
+
+        if (!dateElement) return;
+
+        const now = new Date();
+
+        dateElement.textContent = "📅 " + now.toLocaleDateString("en-IN", {
+            weekday: "short",
+            day: "2-digit",
+            month: "short",
+            year: "numeric",
+            timeZone: "Asia/Kolkata"
+        });
+    }
+
+    updateLiveDate();
+    setInterval(updateLiveDate, 60000);
+
+    // ----------------------------------------
     // API request with retry and timeout
     // ----------------------------------------
 
@@ -407,106 +430,106 @@
     // Weather
     // ----------------------------------------
 
-   async function updateWeather() {
+    async function updateWeather() {
 
-    // First try Open-Meteo.
-    try {
-        const params = new URLSearchParams({
-            latitude: LOCATION.latitude,
-            longitude: LOCATION.longitude,
-            current: "temperature_2m,weather_code",
-            timezone: LOCATION.timezone,
-            forecast_days: "1"
-        });
+        // First try Open-Meteo.
+        try {
+            const params = new URLSearchParams({
+                latitude: LOCATION.latitude,
+                longitude: LOCATION.longitude,
+                current: "temperature_2m,weather_code",
+                timezone: LOCATION.timezone,
+                forecast_days: "1"
+            });
 
-        const url =
-            `https://api.open-meteo.com/v1/forecast?${params}`;
+            const url =
+                `https://api.open-meteo.com/v1/forecast?${params}`;
 
-        const data = await fetchJSON(url);
+            const data = await fetchJSON(url);
 
-        if (
-            !data.current ||
-            !Number.isFinite(data.current.temperature_2m) ||
-            !Number.isFinite(data.current.weather_code)
-        ) {
-            throw new Error("Invalid Open-Meteo response");
-        }
+            if (
+                !data.current ||
+                !Number.isFinite(data.current.temperature_2m) ||
+                !Number.isFinite(data.current.weather_code)
+            ) {
+                throw new Error("Invalid Open-Meteo response");
+            }
 
-        const code = data.current.weather_code;
+            const code = data.current.weather_code;
 
-        const reading = {
-            temperatureText:
-                `🌡️ ${Math.round(data.current.temperature_2m)}°C`,
+            const reading = {
+                temperatureText:
+                    `🌡️ ${Math.round(data.current.temperature_2m)}°C`,
 
-            conditionText:
-                `☁️ ${weatherDescriptions[code] || "Conditions unavailable"}`,
+                conditionText:
+                    `☁️ ${weatherDescriptions[code] || "Conditions unavailable"}`,
 
-            updatedAt: new Date().toISOString(),
-            source: "Open-Meteo",
-            expiresAt: 0
-        };
+                updatedAt: new Date().toISOString(),
+                source: "Open-Meteo",
+                expiresAt: 0
+            };
 
-        saveCache(CACHE_KEYS.weather, reading);
-        showWeatherReading(reading, false);
+            saveCache(CACHE_KEYS.weather, reading);
+            showWeatherReading(reading, false);
 
-        return;
+            return;
 
-    } catch (error) {
-        console.warn(
-            "Open-Meteo unavailable. Trying MET Norway.",
-            error.message
-        );
-    }
-
-    // Reuse a still-valid MET Norway reading if available.
-    const cached = readCache(CACHE_KEYS.weather);
-
-    if (
-        cached &&
-        cached.source === "MET Norway" &&
-        cached.expiresAt &&
-        Date.now() < cached.expiresAt
-    ) {
-        showWeatherReading(cached, true);
-        return;
-    }
-
-    // Try the fallback provider.
-    try {
-        const reading = await getMETNorwayWeather();
-
-        saveCache(CACHE_KEYS.weather, reading);
-        showWeatherReading(reading, false);
-
-    } catch (error) {
-        console.error(
-            "Both weather providers failed:",
-            error
-        );
-
-        // Keep the last successful reading.
-        const lastReading = readCache(CACHE_KEYS.weather);
-
-        if (
-            lastReading &&
-            lastReading.temperatureText &&
-            lastReading.conditionText
-        ) {
-            showWeatherReading(lastReading, true);
-
-        } else {
-            updateText(
-                "live-temp",
-                "🌡️ Weather temporarily unavailable"
-            );
-
-            updateText(
-                "live-condition",
-                "Weather temporarily unavailable"
+        } catch (error) {
+            console.warn(
+                "Open-Meteo unavailable. Trying MET Norway.",
+                error.message
             );
         }
+
+        // Reuse a still-valid MET Norway reading if available.
+        const cached = readCache(CACHE_KEYS.weather);
+
+        if (
+            cached &&
+            cached.source === "MET Norway" &&
+            cached.expiresAt &&
+            Date.now() < cached.expiresAt
+        ) {
+            showWeatherReading(cached, true);
+            return;
+        }
+
+        // Try the fallback provider.
+        try {
+            const reading = await getMETNorwayWeather();
+
+            saveCache(CACHE_KEYS.weather, reading);
+            showWeatherReading(reading, false);
+
+        } catch (error) {
+            console.error(
+                "Both weather providers failed:",
+                error
+            );
+
+            // Keep the last successful reading.
+            const lastReading = readCache(CACHE_KEYS.weather);
+
+            if (
+                lastReading &&
+                lastReading.temperatureText &&
+                lastReading.conditionText
+            ) {
+                showWeatherReading(lastReading, true);
+
+            } else {
+                updateText(
+                    "live-temp",
+                    "🌡️ Weather temporarily unavailable"
+                );
+
+                updateText(
+                    "live-condition",
+                    "Weather temporarily unavailable"
+                );
+            }
+        }
     }
-}
     // ----------------------------------------
     // AQI calculation
     // ----------------------------------------

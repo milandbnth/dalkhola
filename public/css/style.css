@@ -1940,3 +1940,232 @@ footer .wrap {
     min-height: 400px;
   }
 }
+
+
+/* BUSINESS REGISTRATION */
+.business-register-section {
+  padding: 75px 0;
+}
+
+.business-register-panel {
+  padding: 55px;
+  border-radius: 22px;
+  background: #102d27;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.business-register-copy {
+  max-width: 600px;
+}
+
+.business-register-copy h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 15px 0;
+  line-height: 1.15;
+}
+
+.business-register-copy p {
+  color: #c4d5cf;
+  line-height: 1.8;
+}
+
+.business-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.business-modal.active {
+  display: flex;
+}
+
+.business-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .72);
+  backdrop-filter: blur(5px);
+}
+
+.business-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 35px;
+  border-radius: 20px;
+  background: #fff;
+  color: #17332b;
+  z-index: 1;
+}
+
+.business-modal-content h2 {
+  font-size: 30px;
+  margin: 12px 0;
+}
+
+.business-modal-content > p {
+  color: #68756f;
+  margin-bottom: 25px;
+}
+
+.business-modal-close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  border: none;
+  background: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #17332b;
+}
+
+.business-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.business-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.business-form-field label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.business-form-field input,
+.business-form-field select,
+.business-form-field textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #dce4df;
+  border-radius: 9px;
+  background: #f9fbf9;
+  font: inherit;
+  color: #17332b;
+  box-sizing: border-box;
+}
+
+.business-form-field input:focus,
+.business-form-field select:focus,
+.business-form-field textarea:focus {
+  outline: 2px solid #327b61;
+  border-color: transparent;
+}
+
+.business-form-field textarea {
+  resize: vertical;
+}
+
+.business-form-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.business-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 22px 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #56665d;
+}
+
+.business-consent input {
+  margin-top: 4px;
+}
+
+.business-form-submit {
+  width: 100%;
+  justify-content: center;
+}
+
+.business-form-status {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+body.business-modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 650px) {
+  .business-register-panel {
+    padding: 30px 22px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .business-modal-content {
+    padding: 25px 18px;
+  }
+
+  .business-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .business-form-field.full-width {
+    grid-column: auto;
+  }
+}
+
+
+/* FIXED REGISTER BUTTON - ATTACHED BELOW NAVBAR */
+
+.business-fixed-register {
+  position: fixed;
+  top: var(--navbar-height, 76px);
+  right: 30px;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 11px 21px;
+  border: none;
+  border-radius: 0 0 12px 12px;
+
+  background: #173d32;
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+  transition: background .25s ease;
+}
+
+.business-fixed-register:hover {
+  background: #24644f;
+}
+
+.business-fixed-register-icon {
+  font-size: 19px;
+  line-height: 1;
+}
+
+@media (max-width: 650px) {
+  .business-fixed-register {
+    right: 12px;
+    top: var(--navbar-height, 65px);
+    padding: 9px 14px;
+    font-size: 11px;
+  }
+}
