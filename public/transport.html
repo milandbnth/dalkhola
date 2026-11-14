@@ -1,39 +1,1088 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Transport & Connectivity | Dalkhola Portal</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/directory.css">
-<script src="/js/shared/header.js" defer></script>
-<script src="/js/shared/footer.js" defer></script>
-<!-- SHARED-FAVICON:START -->
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="dalkhola-favicon.png">
-<!-- SHARED-FAVICON:END -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dalkhola at the Crossroads | Transport &amp; Connectivity | Dalkhola Portal</title>
+  <meta name="description"
+    content="A long read on Dalkhola's transport future: the railway junction, NH-12, NH-27, the Dalkhola bypass and the Raiganj–Dalkhola new railway line.">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/directory.css">
+  <script src="/js/shared/header.js" defer></script>
+  <script src="/js/shared/footer.js" defer></script>
+  <!-- SHARED-FAVICON:START -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="dalkhola-favicon.png">
+  <!-- SHARED-FAVICON:END -->
 
+  <style>
+    /* Essay-only styles. Everything is scoped to .essay so the portal's
+     own stylesheet keeps control of the header, footer and layout. */
+    .essay {
+      --e-ink: #16150f;
+      --e-ink-soft: #413d33;
+      --e-muted: #6b6558;
+      --e-paper: #fbf8f2;
+      --e-paper-2: #f4efe4;
+      --e-line: #e0d8c8;
+      --e-accent: #0f5c4d;
+      --e-accent-soft: #dcece6;
+      --e-warm: #a8491b;
+      --e-radius: 14px;
+      --e-measure: 68ch;
+      color: var(--e-ink);
+      font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.68;
+      padding: 0 0 64px;
+    }
 
+    .essay a {
+      color: var(--e-accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px
+    }
+
+    .essay a:hover {
+      color: var(--e-warm)
+    }
+
+    .essay-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      align-items: center;
+      font-size: .82rem;
+      color: var(--e-muted);
+      border-top: 1px solid var(--e-line);
+      border-bottom: 1px solid var(--e-line);
+      padding: 12px 0;
+      margin: 0 0 30px;
+      max-width: var(--e-measure);
+    }
+
+    .essay-meta b {
+      color: var(--e-ink-soft);
+      font-weight: 600
+    }
+
+    .essay p {
+      margin: 0 0 20px
+    }
+
+    .essay .lede-copy {
+      font-size: 1.14rem;
+      line-height: 1.62;
+      color: var(--e-ink-soft);
+      max-width: var(--e-measure);
+      margin: 0 0 26px;
+    }
+
+    .essay h2 {
+      font-family: "Bricolage Grotesque", "Public Sans", sans-serif;
+      font-size: clamp(1.55rem, 3.4vw, 2.2rem);
+      font-weight: 700;
+      letter-spacing: -.02em;
+      line-height: 1.16;
+      margin: 60px 0 8px;
+      max-width: 28ch;
+      color: var(--e-ink);
+    }
+
+    .essay h2 .num {
+      display: block;
+      font-family: "Public Sans", sans-serif;
+      font-size: .7rem;
+      letter-spacing: .18em;
+      font-weight: 600;
+      color: var(--e-warm);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .essay h3 {
+      font-family: "Bricolage Grotesque", "Public Sans", sans-serif;
+      font-size: 1.16rem;
+      font-weight: 700;
+      letter-spacing: -.01em;
+      margin: 34px 0 8px;
+      max-width: 36ch;
+      color: var(--e-ink);
+    }
+
+    .essay p.first {
+      margin-top: 20px
+    }
+
+    .essay .small {
+      font-size: .9rem;
+      color: var(--e-muted);
+      line-height: 1.6
+    }
+
+    .essay-contents {
+      background: var(--e-paper-2);
+      border: 1px solid var(--e-line);
+      border-radius: var(--e-radius);
+      padding: 20px 22px;
+      margin: 0 0 8px;
+      max-width: var(--e-measure);
+    }
+
+    .essay-contents h2 {
+      font-family: "Public Sans", sans-serif;
+      font-size: .72rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--e-muted);
+      font-weight: 600;
+      margin: 0 0 12px;
+      max-width: none;
+    }
+
+    .essay-contents ol {
+      margin: 0;
+      padding-left: 20px;
+      columns: 2;
+      column-gap: 30px;
+      font-size: .92rem
+    }
+
+    .essay-contents li {
+      margin: 0 0 8px;
+      break-inside: avoid
+    }
+
+    .essay-contents a {
+      text-decoration: none;
+      color: var(--e-ink-soft)
+    }
+
+    .essay-contents a:hover {
+      color: var(--e-accent);
+      text-decoration: underline
+    }
+
+    @media (max-width:640px) {
+      .essay-contents ol {
+        columns: 1
+      }
+    }
+
+    .essay-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--e-line);
+      border: 1px solid var(--e-line);
+      border-radius: var(--e-radius);
+      overflow: hidden;
+      margin: 36px 0;
+      max-width: var(--e-measure);
+    }
+
+    .essay-stats div {
+      background: var(--e-paper);
+      padding: 18px 16px
+    }
+
+    .essay-stats b {
+      display: block;
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-weight: 800;
+      font-size: 1.55rem;
+      letter-spacing: -.02em;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .essay-stats span {
+      font-size: .75rem;
+      line-height: 1.35;
+      color: var(--e-muted);
+      display: block
+    }
+
+    @media (max-width:760px) {
+      .essay-stats {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    .essay blockquote {
+      margin: 34px 0;
+      padding: 4px 0 4px 22px;
+      border-left: 3px solid var(--e-warm);
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-weight: 500;
+      font-size: 1.28rem;
+      line-height: 1.4;
+      letter-spacing: -.01em;
+      color: var(--e-ink);
+      max-width: 52ch;
+    }
+
+    .essay blockquote footer {
+      font-family: "Public Sans", sans-serif;
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--e-muted);
+      margin-top: 12px;
+      border: 0;
+      background: none;
+      padding: 0;
+    }
+
+    /* ---------- image slots ---------- */
+    .essay figure.media {
+      margin: 36px 0;
+      max-width: 940px
+    }
+
+    .essay figure.media img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--e-radius);
+      border: 1px solid var(--e-line);
+      background: var(--e-paper-2);
+      min-height: 210px;
+      object-fit: cover;
+      color: var(--e-muted);
+      font-size: .8rem;
+      line-height: 1.4;
+      padding: 14px;
+    }
+
+    .essay figure.media .slot-label {
+      display: inline-block;
+      font-family: "Public Sans", sans-serif;
+      font-size: .66rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--e-warm);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .essay figure.media figcaption {
+      font-size: .82rem;
+      color: var(--e-muted);
+      line-height: 1.55;
+      margin-top: 10px;
+      max-width: 76ch;
+    }
+
+    /* ---------- timeline ---------- */
+    .essay .timeline {
+      list-style: none;
+      margin: 40px 0 8px;
+      padding: 0;
+      max-width: var(--e-measure);
+      position: relative
+    }
+
+    .essay .timeline:before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: var(--e-line);
+    }
+
+    .essay .timeline li {
+      position: relative;
+      padding: 0 0 22px 34px;
+      margin: 0
+    }
+
+    .essay .timeline li:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--e-paper);
+      border: 2px solid var(--e-accent);
+    }
+
+    .essay .timeline li.now:before {
+      background: var(--e-warm);
+      border-color: var(--e-warm)
+    }
+
+    .essay .timeline b {
+      display: block;
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -.01em;
+    }
+
+    .essay .timeline .year {
+      font-size: .7rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--e-warm);
+      font-weight: 600;
+    }
+
+    .essay .timeline p {
+      margin: 6px 0 0;
+      font-size: .93rem;
+      color: var(--e-ink-soft)
+    }
+
+    /* ---------- callout ---------- */
+    .essay .callout {
+      border: 1px solid var(--e-line);
+      background: #fff;
+      border-radius: var(--e-radius);
+      padding: 20px 22px;
+      margin: 32px 0;
+      max-width: var(--e-measure);
+    }
+
+    .essay .callout h3 {
+      margin: 0 0 10px;
+      font-size: .72rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--e-accent);
+      font-family: "Public Sans", sans-serif;
+      font-weight: 600;
+      max-width: none;
+    }
+
+    .essay .callout ul {
+      margin: 0;
+      padding-left: 20px;
+      font-size: .94rem
+    }
+
+    .essay .callout li {
+      margin: 0 0 9px
+    }
+
+    .essay .callout li:last-child {
+      margin-bottom: 0
+    }
+
+    /* ---------- sources ---------- */
+    .essay .sources {
+      margin-top: 60px;
+      border-top: 1px solid var(--e-line);
+      padding-top: 26px;
+      max-width: var(--e-measure);
+    }
+
+    .essay .sources h2 {
+      font-size: .74rem;
+      letter-spacing: .16em;
+      margin: 0 0 12px;
+      max-width: none
+    }
+
+    .essay .sources ol {
+      margin: 0;
+      padding-left: 20px;
+      font-size: .85rem;
+      color: var(--e-muted);
+      line-height: 1.55
+    }
+
+    .essay .sources li {
+      margin: 0 0 9px
+    }
+
+    .essay .sources a {
+      color: var(--e-ink-soft)
+    }
+
+    .essay .note {
+      margin-top: 26px;
+      font-size: .82rem;
+      color: var(--e-muted);
+      border-left: 2px solid var(--e-line);
+      padding-left: 14px;
+      max-width: var(--e-measure);
+    }
+
+    /* ---------- "Crossroads" painted inside a moving road ---------- */
+.hero h1 .crossroads{
+  position:relative;display:inline-block;white-space:nowrap;isolation:isolate;
+  padding:.16em .34em .2em;      /* the road: breathing room around the word */
+  line-height:1;
+  background:#22201a;            /* asphalt */
+  border-radius:.14em;
+  vertical-align:baseline;
+}
+
+.hero h1 .road-band{
+  position:absolute;inset:0;width:100%;height:100%;
+  display:block;z-index:0;
+}
+.hero h1 .road-dash{
+  stroke:#e0894a;stroke-width:3;stroke-linecap:round;opacity:.95;
+  stroke-dasharray:14 18;
+  animation:road-dash 1.25s linear infinite;
+}
+
+.hero h1 .crossroads-text{
+  position:relative;z-index:1;display:inline-block;
+  color:#f8f2e6;line-height:1.02;
+  text-shadow:0 .02em .06em rgba(0,0,0,.45);
+  transform-origin:50% 100%;
+  animation:crossroads-walk .58s ease-in-out infinite;
+}
+
+@keyframes road-dash{to{stroke-dashoffset:-32}}  /* 14 + 18, so it loops cleanly */
+@keyframes crossroads-walk{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-.035em)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .hero h1 .road-dash,
+  .hero h1 .crossroads-text{animation:none}
+}
+    
+  </style>
 </head>
+
 <body data-category="transport">
 
-<main class="wrap">
-  <section class="hero">
-    <h1>Transport & Transit</h1>
-    <p class="lead">Dalkhola Railway Junction (DLK) and major road corridors (NH 12 / NH 27).</p>
-  </section>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Dalkhola at the <span class="crossroads">
+    <svg class="road-band" viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <line class="road-dash" x1="6" y1="13" x2="294" y2="13" vector-effect="non-scaling-stroke"></line>
+      <line class="road-dash" x1="6" y1="87" x2="294" y2="87" vector-effect="non-scaling-stroke"></line>
+    </svg>
+    <span class="crossroads-text">Crossroads</span>
+  </span></h1>
+      <p class="lead">How a small border town became the hinge of North Bengal's road and rail map — and what the next
+        decade of projects could make of it.</p>
+    </section>
 
-  <section id="content-list" class="grid-layout">
-    <!-- Rendered dynamically from data/dalkhola.json -->
-  </section>
-</main>
+    <article class="essay">
+      <nav class="essay-contents" aria-label="Contents">
+        <h2>In this essay</h2>
+        <ol>
+          <li><a href="#crossroads">A town built by a junction</a></li>
+          <li><a href="#rail">Dalkhola railway station (DLK)</a></li>
+          <li><a href="#nh12">NH-12: the road to Kolkata</a></li>
+          <li><a href="#nh27">NH-27: the corridor to the hills</a></li>
+          <li><a href="#newline">The Raiganj–Dalkhola line</a></li>
+          <li><a href="#what-next">The wider map</a></li>
+          <li><a href="#agenda">What Dalkhola should ask for</a></li>
+        </ol>
+      </nav>
+
+      <p class="lede-copy">
+        Dalkhola is easy to underestimate on a map. It is a municipality of just 15.95 square
+        kilometres in Uttar Dinajpur district, home to about 37,000 people at the 2011 Census, with
+        Bihar pressing against its western and southern edges and the Buri Mahananda running along
+        its flanks. Yet two of India's longest national highways meet inside its boundaries, and one
+        of the busiest railway lines in eastern India runs straight through it. Very few towns of its
+        size can claim either, let alone both.
+      </p>
+
+      <!-- ==================== 1. CROSSROADS ==================== -->
+      <h2 id="crossroads"><span class="num"></span>A town built by a junction</h2>
+
+      <p class="first">
+        That accident of geography is the whole story. Dalkhola sits at the point where NH-12, the
+        old NH-34, begins its 612-kilometre run from the Bihar–Bengal border down through Raiganj,
+        Malda, Farakka, Berhampore and Krishnanagar to Kolkata; and where NH-27, the Porbandar–Silchar
+        highway, turns east towards Islampur, Siliguri and the Northeast. The town is roughly 460
+        kilometres from Kolkata by road and about 120 from Siliguri. Everything that moves between the
+        rest of India and the eight northeastern states — foodgrain, fuel, cement, tea, tourists,
+        army convoys — has a fair chance of passing within a kilometre of Dalkhola's main bazaar.
+      </p>
+
+      <p>
+        The railway arrived even earlier than the highways. Dalkhola's station is conventionally dated
+        to 1871, and the metre-gauge tracks that crossed this part of the old Assam Behar country in
+        the 1880s and 1890s made the town a loading point for jute, paddy and, later, maize. When
+        Partition in 1947 severed the direct broad-gauge route from Kolkata to Siliguri through what
+        became East Pakistan, the line through Dalkhola became the main thread connecting the
+        Northeast to the rest of the country. That thread was still metre gauge until the
+        Katihar–Barsoi section was converted in 2007 and the Aluabari Road–Siliguri section in 2011.
+        Almost everything visible in Dalkhola's transport landscape today — the double electric line,
+        the four-lane highway, the bypass, the flyover — is younger than the town's grandparents.
+      </p>
+
+      <figure class="media">
+        <span class="slot-label"></span>
+        <!-- IMAGE SLOT 1 — replace IMAGE_1_URL with your image link -->
+        <img src="https://res.cloudinary.com/m8ojhenk/image/upload/v1794679437/purnia.png"
+          alt="IMAGE SLOT 1 — Dalkhola town from above, showing the NH-12 / NH-27 junction" loading="lazy">
+        <figcaption>
+          Dalkhola town grew along the highways, then found itself sitting in the
+          middle of them.
+        </figcaption>
+      </figure>
+
+      <div class="essay-stats">
+        <div><b>36,930</b><span>Municipal population, Census 2011 (15.95 sq km)</span></div>
+        <div><b>612 km</b><span>Length of NH-12, which begins at Dalkhola</span></div>
+        <div><b>3</b><span>Platforms at Dalkhola station (DLK)</span></div>
+        <div><b>~44</b><span>Trains halting daily; none originate here</span></div>
+      </div>
+
+      <p>
+        The demographic story is just as striking as the geographic one. Dalkhola's population went
+        from about 13,900 in 2001 to 36,930 in 2011 — a jump of 166 per cent, part real growth and
+        part municipal boundary change. Its literacy rate, at 67.7 per cent, still trails the state
+        average. The town is a trading town first: maize from Bihar, jute, oil, foodgrain, hardware,
+        transport contracting. It is also, increasingly, a dormitory for people who work in Raiganj,
+        Islampur or Siliguri and a service stop for thousands of long-distance truck crews.
+      </p>
+
+      <p>
+        All of which makes the current round of projects unusually consequential. A bypass or a new
+        rail line changes very little in a metropolis, where it is one more lane in a river of traffic.
+        In a town of 37,000 that sits on a national corridor, it can redraw the local economy inside a
+        decade.
+      </p>
+
+      <!-- ==================== 2. RAIL STATION ==================== -->
+      <h2 id="rail"><span class="num"></span>Dalkhola railway station: a junction in all but name</h2>
+
+      <p class="first">
+        The station code is DLK. It belongs to the Katihar division of the Northeast Frontier Railway,
+        sits 43 metres above sea level on a double, electrified broad-gauge section, and handles
+        roughly 44 halting trains a day across three platforms and six tracks. It is classified as a
+        standard II-R interlocked roadside station — bureaucratic shorthand for a station that was
+        built to pass trains rather than to start them. No train originates or terminates at Dalkhola.
+      </p>
+
+      <p>
+        That last sentence explains most of the station's problems. A pass-through station on a
+        saturated corridor gives a town connectivity without giving it capacity: you can board a train
+        to Delhi, Guwahati, Kolkata or Ajmer from Dalkhola, but you cannot be sure of a seat, and the
+        timetable is written for the corridor rather than for the town. The long-distance departures
+        arrive at awkward hours — the Sealdah–New Alipurduar Teesta Torsha just after midnight, the
+        Nagaon Express at one in the morning, the Uttar Banga Express at four. The local network is
+        more forgiving: DEMUs and passengers link Dalkhola with Katihar, Siliguri, Malda and
+        Radhikapur through the day, and intercity trains such as the Siliguri–Katihar express make
+        short-haul travel practical.
+      </p>
+
+      <p>
+        The station's importance, though, is not really about its own passengers. Dalkhola sits on the
+        Katihar–Siliguri line, the 203-kilometre artery that funnels freight and long-distance
+        passenger traffic from the Bihar plains into the Siliguri corridor and onward to Assam and the
+        Northeast. It also functions as a rake point — a place where rakes can be stabled and parcels
+        handled — and as the railhead for a wide rural catchment of Karandighi, Tunidighi and the
+        villages towards the Bihar border. Freight that cannot move is a national problem; a station
+        that cannot hold a train is a local one. At Dalkhola both questions meet on the same three
+        platforms.
+      </p>
+
+      <figure class="media">
+        <span class="slot-label"></span>
+        <!-- IMAGE SLOT 2 — replace IMAGE_2_URL with your image link -->
+        <img src="https://res.cloudinary.com/m8ojhenk/image/upload/v1794679548/rly.jpg"
+          alt="Platform and station board at Dalkhola railway station (DLK)" loading="lazy">
+        <figcaption>
+          DLK Railway Station
+        </figcaption>
+      </figure>
+
+      <h3>What modernisation would actually mean here</h3>
+
+      <p>
+        Indian Railways' Amrit Bharat Station Scheme has become the standard route for a station like
+        this one: a master plan, phased execution, better circulating areas, wider foot overbridges or
+        an air concourse, lifts and ramps, improved platform surfaces and shelters, parking,
+        multimodal integration, and kiosks under the One Station One Product idea. Around 1,340
+        stations are in the programme nationally, with roughly 260 completed so far. The scheme is
+        deliberately flexible: a station gets what its footfall and its city's layout require.
+      </p>
+
+      <p>
+        For Dalkhola, the requirement is unusually clear. The station's approach road runs off NH-12
+        into a dense market area; the circulating area is small; parking for autos, e-rickshaws and
+        private cars is improvised; and the platforms carry both long-distance crowds and a heavy
+        local commuter load with luggage. A second entry on the town side, a wider foot overbridge
+        with lifts, a proper auto and bus bay, and a parcel-handling area would do more for the town
+        than a decorative façade. The larger prize is integration: a station forecourt that functions
+        as a small bus terminal would let a passenger arriving from Karandighi or Tunidighi reach
+        Siliguri without hiring a cycle-van to cross the bazaar.
+      </p>
+
+      <p>
+        There is a strategic argument too, and it is the one that tends to move files in Delhi. The
+        Katihar division's own project list reads like a corridor under pressure: doubling and
+        third-and-fourth-line work on the Malda Town–Kumedpur, Kumedpur–Aluabari Road,
+        Aluabari Road–New Jalpaiguri and Thakurganj–Siliguri stretches, with detailed project reports
+        prepared for several and fresh sanctions for others. Every one of those projects adds capacity
+        to the same funnel that passes Dalkhola. A station that is only a passing loop in that funnel
+        will keep absorbing growth without capturing any of it.
+      </p>
+
+      <!-- ==================== 3. NH-12 ==================== -->
+      <h2 id="nh12"><span class="num"></span>NH-12 Bypass: the road that made Dalkhola a market town</h2>
+
+      <p class="first">
+        NH-12 is the quieter of Dalkhola's two highways and, for the town, the more important one. It
+        begins at its junction with NH-27 in Dalkhola and runs 612 kilometres south, entirely within
+        West Bengal, to Bakkhali on the Sundarbans coast. Until the 2010 renumbering, the Dalkhola–Kolkata
+        portion was NH-34 and the Kolkata–Bakkhali stretch was NH-117; older signboards, land records
+        and local speech still say "thirty-four", and the station's own address is still listed on
+        NH-34.
+      </p>
+
+      <p>
+        The road passes Karandighi, Raiganj, Gazole, Malda, the Farakka Barrage, Berhampore,
+        Krishnanagar, Ranaghat and Barasat before entering Kolkata — the spine of the old
+        north–south trade route of Bengal. For Dalkhola it is the link to the district headquarters at
+        Raiganj, to the Malda rail and medical hubs, and to the wholesale markets of Kolkata. For the
+        country it is one of two road options for reaching the Northeast, and the one that serves the
+        Bangladesh border trade points at Mahadipur and Hili through NH-512.
+      </p>
+
+      <h3>Four lanes, thirty years, one stubborn town</h3>
+
+      <p>
+        The four-laning of NH-12 has been a saga of Indian highway delivery in miniature. The
+        Raiganj–Dalkhola section was awarded in 2010 to a special purpose vehicle, Raiganj-Dalkhola
+        Highways Limited, on a design-build-finance-operate-transfer toll basis under NHDP Phase III,
+        with a 30-year concession. Progress was minimal. NHAI terminated the concession and re-let the
+        balance work on engineering-procurement-construction mode, at a total project cost of about
+        ₹1,028.70 crore for 50.35 kilometres, from km 398 to km 452.750. By the end of 2023 that
+        contract was reported at over 98 per cent physical progress, with completion targeted for
+        March 2024 — a stretch that includes the Dalkhola bypass and its rail overbridge.
+      </p>
+
+      <p>
+        What is left is maintenance, and the tender trail shows it. In 2026 NHAI floated a short-term
+        maintenance contract for the four-lane Raiganj–Dalkhola section including the Dalkhola bypass,
+        from km 398 to km 452.750, worth roughly ₹6.9 crore, and there is a toll plaza at Barai on the
+        same stretch. That shift — from building to maintaining — is the clearest signal that the
+        corridor has finally been delivered.
+      </p>
+
+      <p>
+        Delivery, however, is not the same as comfort. Four lanes have cut journey times, but the
+        highway still runs through settlements where access is uncontrolled, where service roads are
+        incomplete, and where slow-moving traffic — tractors, cycle-vans, cattle — shares the
+        carriageway with trucks doing 80 kmph. Raiganj and Malda still present urban bottlenecks.
+        Anyone who has driven the stretch at dusk knows that the weakest points are not the
+        engineering but the interfaces: junctions, market fronts, and the last kilometre into town.
+      </p>
+
+      <figure class="media">
+        <span class="slot-label"></span>
+        <!-- IMAGE SLOT 3 — replace IMAGE_3_URL with your image link -->
+        <img src="https://res.cloudinary.com/m8ojhenk/image/upload/v1794679896/byps.png"
+          alt="IMAGE SLOT 3 — Four-lane NH-12 near Raiganj with trucks and service roads" loading="lazy">
+        <figcaption>
+          Dalkhola Bypass between Raiganj and Dalkhola, where four lanes replaced a two-lane bottleneck that had
+          been in the works since the 2000s.
+        </figcaption>
+      </figure>
+
+      <!-- ==================== 4. NH-27 ==================== -->
+      <h2 id="nh27"><span class="num"></span>NH-27: the corridor that carries the Northeast</h2>
+
+      <p class="first">
+        If NH-12 is Dalkhola's market road, NH-27 is its national errand. The highway runs roughly
+        3,500 kilometres from Porbandar in Gujarat to Silchar in Assam — the longest national highway
+        in India — and enters West Bengal from Purnea in Bihar, passing Dalkhola before turning
+        north-east through Islampur, Bagdogra, Siliguri, Jalpaiguri, Dhupguri and Falakata and then
+        east into Assam. Much of it carries the Asian Highway AH-02 designation, and the
+        Dalkhola–Islampur–Siliguri–Salsalabari
+        stretch is officially catalogued as a corridor serving Nepal, Bhutan and Bangladesh
+        simultaneously — a rare piece of road that touches three international borders' hinterlands.
+      </p>
+
+      <p>
+        The 120 kilometres from Dalkhola to Siliguri are the most consequential in eastern India. They
+        pass through the 20-odd-kilometre-wide Siliguri corridor, the "Chicken's Neck", the only land
+        link between the Northeast and the rest of the country. Every truck carrying essential goods
+        to Assam, every tourist headed to Darjeeling or Sikkim, every army convoy moving to the
+        eastern border, and every fuel tanker feeding eight states uses this road or the railway
+        beside it. A blockage here does not delay a commute; it empties shelves in Guwahati.
+      </p>
+
+      <h3>What the upgrades look like from the driving seat</h3>
+
+      <p>
+        NH-27 through North Bengal has been progressively four-laned, bypassed and re-surfaced, with
+        the Dalkhola–Islampur and Islampur–Ghoshpukur stretches operated under long-term maintenance
+        and tolling arrangements, and the Islampur bypass built to take through traffic around the
+        town. The current work is less glamorous than new construction and, for drivers, more
+        noticeable: short-term improvement and routine maintenance packages, structural repairs on
+        the Salsalabari–Assam border section, median and avenue plantation contracts, and a
+        black-spot programme covering 17 identified accident locations on NH-27 in West Bengal,
+        including seven on the Dalkhola–Ghoshpukur section. A six-lane flyover near Jalpaiguri,
+        estimated at around ₹1,000 crore, is being planned to remove a cluster of those black spots.
+      </p>
+
+      <p>
+        For Dalkhola, NH-27's upgrade has had a paradoxical effect. Better roads bring more traffic,
+        and more traffic brings more pressure on the exact point where NH-27 crosses NH-12 — a
+        T-junction in the middle of a market town. The bypass described below solved the worst of it.
+        It did not solve the underlying geometry: Dalkhola is a crossroads with no ring road, and a
+        crossroads without a ring road is a bottleneck with a municipal budget.
+      </p>
+
+      <blockquote>
+        A corridor town gets two futures. It can become a node — warehouses, workshops, cold chains,
+        bus bays, a station people use — or it can become a speed bump that everyone remembers and
+        nobody stops at.
+        <footer>The planning choice facing Dalkhola</footer>
+      </blockquote>
+
+      <figure class="media">
+        <span class="slot-label"></span>
+        <!-- IMAGE SLOT 4 — replace IMAGE_4_URL with your image link -->
+        <img src="https://res.cloudinary.com/m8ojhenk/image/upload/v1794680291/purniam.png"
+          alt="IMAGE SLOT 4 — NH-27 near Dalkhola or Islampur, trucks heading to Siliguri" loading="lazy">
+        <figcaption>
+          Dalkhola Purnia More, NH-27
+        </figcaption>
+      </figure>
 
 
-<script src="js/shared/data-loader.js"></script>
-<script src="js/page-renderer.js"></script>
+      <!-- ==================== 5. NEW LINE ==================== -->
+      <h2 id="newline"><span class="num"></span>The Raiganj–Dalkhola new railway line</h2>
+
+      <p class="first">
+        Of everything on Dalkhola's horizon, this is the project that could change the town's
+        relationship with the railway rather than just its traffic. The Raiganj–Dalkhola new line is a
+        43.43-kilometre broad-gauge link between Raiganj, on the Barsoi–Radhikapur branch, and
+        Dalkhola on the Katihar–Siliguri main line. It is planned with five stations — Raiganj,
+        Bilashpur Halt, Tunidighi, Karandighi and Dalkhola — and its engineering is not trivial:
+        13 major bridges, 97 minor bridges, six rail overbridges and 32 road underbridges, crossing the
+        Nagri and Kulik rivers and a landscape that floods most monsoons.
+      </p>
+
+      <p>
+        In one sense the line is a restoration. Railway histories record that the old metre-gauge route
+        towards Malda once ran through Raiganj, and that when the alignment was shifted to
+        Dalkhola–Barsoi–Malda, the Raiganj section was demoted to a branch. Raiganj — a town of about
+        1.8 lakh people and the district headquarters — has lived with that demotion ever since: a
+        handful of trains, no main-line access, and a rail journey to Siliguri or Guwahati that means
+        going north to Barsoi first, or giving up and taking the road.
+      </p>
+
+      <h3>A project with a long paper trail</h3>
+
+      <p>
+        The modern version was sanctioned in 2011-12 as a material modification of the
+        Katihar–Jogbani and Barsoi–Radhikapur gauge-conversion projects, at an anticipated cost of
+        ₹322.10 crore, with a detailed estimate of ₹291.53 crore approved by the Railway Board on
+        9 May 2011 and an initial target of March 2015. It did not happen. A Northeast Frontier Railway
+        project review from early 2023 shows why: of 341.99 hectares required, 17.11 hectares — about
+        5 per cent — had been acquired; 5.06 kilometres of formation had been completed out of 43.43;
+        five of thirteen major bridge substructures were up; three of 97 minor bridges; and not a
+        single one of the six rail overbridges or 32 road underbridges had started. Financial progress
+        was reported at around 51 per cent of the project's overall outlay, most of it spent on land,
+        earthwork and the early bridge work.
+      </p>
+
+      <p>
+        Then, in 2026, the file began to move. In late January and early February the Railway Board
+        cleared the start of construction on a package of new lines in West Bengal and the Northeast,
+        and the Raiganj–Dalkhola line was on the list — described by officials as a project with
+        substantial preliminary work already done, intended to create an efficient transit route
+        between Dalkhola and Raiganj and to support both passenger and freight movement. In July 2026
+        the Ministry of Railways published gazette notifications under clause (7A) of Section 2 of the
+        Railways Act, 1989, appointing the District Land Acquisition Officer, Katihar, and the
+        Additional District Magistrate (Land Acquisition), Uttar Dinajpur, as competent authorities
+        for the "Raiganj–Dalkhola new line project". That is the legal switch that turns an intention
+        into an acquisition.
+      </p>
+
+      <div class="callout">
+        <h3>The project at a glance</h3>
+        <ul>
+          <li><b>Length:</b> 43.43 km, Raiganj to Dalkhola, across Uttar Dinajpur (West Bengal) and Katihar district
+            (Bihar).</li>
+          <li><b>Stations:</b> Raiganj, Bilashpur Halt, Tunidighi, Karandighi, Dalkhola.</li>
+          <li><b>Structures:</b> 13 major bridges, 97 minor bridges, 6 rail overbridges, 32 road underbridges.</li>
+          <li><b>Sanction:</b> 2011-12, as a material modification of the Katihar–Jogbani and Barsoi–Radhikapur
+            gauge-conversion projects.</li>
+          <li><b>Estimate:</b> ₹291.53 crore at 2011 prices; a figure that will certainly be revised before construction
+            is complete.</li>
+          <li><b>Status (late 2026):</b> construction start cleared by the Railway Board; land-acquisition authorities
+            notified in both states.</li>
+        </ul>
+      </div>
+
+      <h3>Why 43 kilometres matter</h3>
+
+      <p>
+        The line's value is not in its length but in what it connects. Today the rail network of this
+        part of North Bengal is shaped like a fork: the main line runs Katihar–Barsoi–Dalkhola–Kishanganj–Siliguri,
+        while the Radhikapur branch peels away at Barsoi and serves Raiganj, Kaliaganj and the
+        Bangladesh border. A passenger from Raiganj who wants to go east must first travel north-west
+        to Barsoi, then turn around. The new line closes the fork into a loop, and turns Raiganj into a
+        junction with direct access to the main line.
+      </p>
+
+      <p>
+        The consequences cascade. Karandighi and Tunidighi — block headquarters with no station of
+        their own on the main line — get rail access. Raiganj's traders get a shorter route to Siliguri
+        and, via the main line, to Guwahati. Dalkhola gains a second approach and a plausible future as
+        a transfer point. And the Railway's own network gains redundancy: if the Barsoi–Dalkhola
+        section is blocked by floods, an accident or engineering work, trains have an alternative.
+        In a corridor as fragile as the Chicken's Neck, redundancy is not a luxury.
+      </p>
+
+      <p>
+        The caveats are real, and it is worth stating them plainly. A 2011 estimate of ₹291.53 crore
+        works out to under ₹7 crore per kilometre, well below what new broad-gauge lines cost today;
+        the figure will be revised upward, probably several times. Land acquisition across two states,
+        in a densely farmed and flood-prone district, with six rail overbridges and 32 underbridges to
+        build, is slow work even when it is properly funded. And the line has already missed one
+        target by a decade. The July 2026 gazette notifications are a genuine step — but they are the
+        beginning of the hard part, not the end of it.
+      </p>
+
+      <figure class="media">
+        <span class="slot-label"></span>
+        <!-- IMAGE SLOT 6 — replace IMAGE_6_URL with your image link -->
+        <img src="https://res.cloudinary.com/m8ojhenk/image/upload/v1794680756/new.png"
+          alt="IMAGE SLOT 6 — Alignment or construction site of the Raiganj–Dalkhola new railway line" loading="lazy">
+        <figcaption>
+          The Raiganj–Dalkhola New Line (Length=43.43 Km.)
+        </figcaption>
+      </figure>
+
+      <!-- ==================== 6. WIDER MAP ==================== -->
+      <h2 id="what-next"><span class="num"></span>The wider map: what else is coming</h2>
+
+      <p class="first">
+        Dalkhola's four projects do not sit in isolation. They are part of an unusually dense cluster
+        of sanctioned and proposed infrastructure in North Bengal, and their value depends on whether
+        the rest of the cluster is delivered.
+      </p>
+
+      <h3>Rail</h3>
+
+      <p>
+        The Katihar division's project list includes the Jogbani–Biratnagar new line (19 km), the
+        Balurghat–Hilli line (29 km), Kaliaganj–Buniadpur (34 km), Jalalgarh–Kishanganj (51 km), the
+        Raiganj–Itahar, Gazole–Itahar and Itahar–Buniadpur lines (76 km together), and the
+        Katihar–Kumedpur and Katihar–Mukuria doubling (64 km). The three smaller lines around Raiganj
+        are the ones that turn the new Dalkhola link into a network: Raiganj–Itahar is 22.16 km with
+        four stations at an estimated ₹129.34 crore; Gazole–Itahar is 27.20 km at ₹85.59 crore;
+        Itahar–Buniadpur is 27.095 km at ₹287.94 crore. Add them up and you get a grid that lets
+        trains move between Malda, Raiganj, Dalkhola and the Radhikapur border without threading
+        through Katihar.
+      </p>
+
+      <p>
+        Beyond the district, the Union Budget of 2026 announced a high-speed rail corridor linking
+        Siliguri with Varanasi, alongside the new-line package. Whatever its timeline, the direction of
+        travel is clear: North Bengal is being re-planned as a corridor region rather than a set of
+        branch lines.
+      </p>
+
+      <h3>Roads</h3>
+
+      <p>
+        In September 2026 the Centre announced a ₹61,500-crore, 630-kilometre highway corridor linking
+        Siliguri with Guwahati and Shillong, with a first phase of about 400 kilometres between
+        Siliguri and Guwahati at roughly ₹30,000 crore. A separate expressway from Gorakhpur to
+        Siliguri is also planned, which would give the Northeast a second high-speed approach from the
+        Gangetic plain. The Kharagpur–Siliguri Economic Corridor — 516 kilometres of four-lane,
+        access-controlled highway through Bardhaman, Berhampore, Malda and Raiganj — is already under
+        way in its southern portion, with the 231-kilometre Kharagpur–Morgram expressway at about
+        ₹10,247 crore. NHAI has also commissioned a feasibility study for a 100-kilometre ring road
+        around Siliguri, and the four-laning of NH-327 towards the Nepal border is in progress.
+      </p>
+
+      <p>
+        Read together, these projects point to a future in which the Siliguri corridor carries
+        materially more traffic on better roads — and in which the Kharagpur–Siliguri corridor begins
+        to compete with NH-12 for long-distance freight. That is precisely the scenario in which a town
+        like Dalkhola either gains a logistics role or loses its through-traffic character entirely.
+      </p>
+
+      <ul class="timeline">
+        <li>
+          <span class="year">1871 · 1888</span>
+          <b>The railway arrives</b>
+          <p>Dalkhola's station is dated to 1871; the Katihar–Raiganj sections are laid in the 1880s on metre gauge,
+            making the town a loading point for jute and grain.</p>
+        </li>
+        <li>
+          <span class="year">1947 · 2011</span>
+          <b>Partition, then broad gauge</b>
+          <p>The line through Dalkhola becomes the main link to the Northeast after Partition. Gauge conversion reaches
+            Katihar–Barsoi in 2007 and Aluabari Road–Siliguri in 2011.</p>
+        </li>
+        <li>
+          <span class="year">2007 · 2022</span>
+          <b>The bypass, twice started</b>
+          <p>Work begins in 2007, stalls on land, is folded into the Raiganj–Dalkhola four-laning and is finally opened
+            on 17 November 2022 with its rail overbridge.</p>
+        </li>
+        <li>
+          <span class="year">2011 · 2023</span>
+          <b>The new line stalls</b>
+          <p>Raiganj–Dalkhola is sanctioned at ₹291.53 crore. A decade later, land acquired is about 5 per cent and
+            formation about 5 of 43 kilometres.</p>
+        </li>
+        <li class="now">
+          <span class="year">2026</span>
+          <b>Paperwork moves</b>
+          <p>The Railway Board clears construction start on new lines in Bengal; in July, land-acquisition authorities
+            are notified for the Raiganj–Dalkhola project in Bihar and West Bengal.</p>
+        </li>
+        <li>
+          <span class="year">Next</span>
+          <b>Land, contracts, money</b>
+          <p>The test is whether acquisition is funded and completed, contracts are awarded, and the line is built while
+            the corridor's other projects proceed around it.</p>
+        </li>
+      </ul>
+
+      <figure class="media">
+        <span class="slot-label"></span>
+        <!-- IMAGE SLOT 7 — replace IMAGE_7_URL with your image link -->
+
+        <!-- <figcaption>
+        The Siliguri corridor, 20-odd kilometres wide at its narrowest, carries every land route
+        between the Northeast and the rest of India. Replace with a regional map or a corridor
+        photograph.
+      </figcaption> -->
+      </figure>
+
+      <!-- ==================== 7. AGENDA ==================== -->
+      <h2 id="agenda"><span class="num"></span>What Dalkhola should ask for</h2>
+
+      <p class="first">
+        A municipality of 15.95 square kilometres cannot build a national corridor. But it can decide
+        what kind of town it wants to be when the corridor is finished, and it can ask for the
+        relatively small interventions that determine whether the benefits land inside its boundary.
+        Six things stand out.
+      </p>
+
+      <p>
+        <b>A ring, not another ribbon.</b> The 2022 bypass solved the level crossing. The next step is
+        an access-controlled connection between NH-12, NH-27 and the Raiganj road that keeps through
+        traffic out of the market entirely — a project that the 2026 decongestion policy now actively
+        favours.
+      </p>
+
+      <p>
+        <b>A station that works as a gateway.</b> A second entrance, a wider foot overbridge with
+        lifts, a proper auto and bus bay, and parcel handling would cost a fraction of a new line and
+        change daily life for thousands of commuters.
+      </p>
+
+      <p>
+        <b>A bus terminal next to the railway.</b> Dalkhola's private bus operators load and unload on
+        the highway shoulder. An integrated bus-and-rail interchange is the single cheapest way to
+        convert pass-through passengers into customers for the town.
+      </p>
+
+      <p>
+        <b>Land-use control along the bypass.</b> Without setbacks, service lanes and designated
+        commercial pockets, the bypass will be lined with frontage development within a decade and the
+        town will be back where it started, only further out.
+      </p>
+
+      <p>
+        <b>Logistics, not just godowns.</b> Dalkhola's economy is maize, jute, oil and foodgrain. A
+        mandi with weighing, grading, storage and cold-chain capacity — sited to use both the highway
+        and the railway — would capture value that currently passes through.
+      </p>
+
+      <p>
+        <b>Drainage and solid waste first.</b> The municipality sits beside the Buri Mahananda and
+        floods most monsoons; it has tendered a 15-tonne-per-day waste processing plant and has been
+        installing LED street lighting under the Green City Mission. Corridor traffic brings revenue
+        and dust in equal measure, and the civic basics are the price of admitting either.
+      </p>
+
+      <p>
+        None of this is exotic. It is the ordinary vocabulary of Indian corridor towns that have
+        managed the transition well — a ring road, an interchange, a station upgrade, a mandi, a
+        drainage plan. What makes Dalkhola unusual is how much of the national map runs through it, and
+        how little institutional weight a town of its size carries in the rooms where that map is
+        drawn.
+      </p>
+
+      <h3>The honest summary</h3>
+
+      <p>
+        As of late 2026, Dalkhola's transport story is a story of delivered roads and delayed rails.
+        NH-12 is four-laned and now in maintenance; NH-27 is being patched, planted, black-spot-fixed
+        and widened piece by piece; the bypass has been open for four years; and the station remains
+        what it has always been — busy, useful, and too small. The Raiganj–Dalkhola line, sanctioned in
+        2011 and practically dormant for a decade, has finally reached the stage where land is being
+        formally acquired. That is progress, but it is the kind of progress that is measured in
+        gazettes rather than trains.
+      </p>
+
+      <p>
+        The next five years will be decided by three unglamorous things: whether land acquisition in
+        Uttar Dinajpur and Katihar is funded and finished; whether contracts are awarded before costs
+        escalate again; and whether the town uses the window to plan its own growth. Dalkhola has spent
+        seventy years being the place where two highways and a railway meet. The projects now on paper
+        are its first real chance to be the place where they connect.
+      </p>
+
+      <!-- ==================== SOURCES ==================== -->
+      <section class="sources">
+        <h2>Sources &amp; further reading</h2>
+        <ol>
+          <li>Press Information Bureau, "Shri Nitin Gadkari inaugurates 2 NH projects worth Rs. 1082 Crore at Raiganj,
+            West Bengal", 17 November 2022 — Dalkhola bypass (5 km, ₹120 crore) and Raniganj–Dalkhola four-laning (₹962
+            crore).</li>
+          <li>Lok Sabha Starred Question No. 172, Ministry of Road Transport and Highways, 14 December 2023 — balance
+            four-laning of Raiganj–Dalkhola, 50.35 km, ₹1,028.70 crore, 98.63 per cent progress.</li>
+          <li>NHAI tender notices, 2026 — short-term maintenance contract for the Raiganj–Dalkhola section including the
+            Dalkhola bypass (km 398.000–452.750); median and avenue plantation on NH-27 from Dalkhola to Ghoshpukur.
+          </li>
+          <li>Ministry of Railways gazette notifications S.O. 3999(E) and S.O. 4004(E), July 2026 — competent
+            authorities for land acquisition for the Raiganj–Dalkhola new line project in Katihar and Uttar Dinajpur.
+          </li>
+          <li>Northeast Frontier Railway, Construction Organisation project review (2023) — Raiganj–Dalkhola: 43.43 km,
+            341.99 ha land, progress figures, structures.</li>
+          <li>RailPost and Indian Express reports, February 2026 — Railway Board approval of new lines in West Bengal,
+            including Raiganj–Dalkhola (₹291.53 crore, five stations).</li>
+          <li>Press Information Bureau, "Infrastructure development in Katihar railway division", March 2026 —
+            sanctioned lines and doubling surveys in the division.</li>
+          <li>Ministry of Road Transport and Highways, urban decongestion policy, June 2026 — access-controlled bypasses
+            and ring roads with closed tolling.</li>
+          <li>Reports on the Siliguri–Guwahati–Shillong corridor (₹61,500 crore, 630 km), September 2026;
+            Kharagpur–Siliguri Economic Corridor and Kharagpur–Morgram expressway.</li>
+          <li>Census of India 2011, Uttar Dinajpur district handbook — Dalkhola municipality population, area and
+            literacy; Wikipedia entries for Dalkhola, Dalkhola railway station, NH-12, NH-27 and the Katihar–Siliguri
+            line for route and station details.</li>
+        </ol>
+        <p class="note">
+          Figures are as reported by the cited agencies and are not adjusted for inflation. Project
+          costs and completion dates in Indian infrastructure are frequently revised; where a status is
+          described as of late 2026, it reflects the most recent public reporting available at the time
+          of writing.
+        </p>
+      </section>
+
+    </article>
+  </main>
+
 </body>
+
 </html>
