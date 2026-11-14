@@ -418,22 +418,40 @@
 
 
 
+
     const police = createSection(
       "Dalkhola Police Station",
       "Police assistance and public safety information.",
       "police-container"
     );
 
-    const policeCard = create("article", "snap s1");
-    policeCard.appendChild(create("h3", "", "Dalkhola Police Station"));
+    const policeCard = create("article", "snap s1 police-embedded-card");
+
+    policeCard.appendChild(
+      create("h3", "", "Dalkhola Police Station")
+    );
+
     policeCard.appendChild(
       create(
         "p",
         "",
-        "Contact number, verified address and operating details will be added after confirmation from an official source."
+        "Police services, contact information and public safety details."
       )
     );
+
+    const policeFrame = document.createElement("iframe");
+
+    policeFrame.src = "/police-station.html";
+    policeFrame.title = "Dalkhola Police Station information";
+    policeFrame.className = "police-iframe";
+    policeFrame.style.width = "100%";
+    policeFrame.style.height = "900px";
+    policeFrame.loading = "lazy";
+    policeFrame.setAttribute("scrolling", "yes");
+
+    policeCard.appendChild(policeFrame);
     police.container.appendChild(policeCard);
+
 
     const postOffice = createSection(
       "Post Office (India Post)",

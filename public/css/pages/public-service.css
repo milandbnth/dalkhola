@@ -1,0 +1,341 @@
+
+/* Dalkhola Online — Shared Public Service Styles
+   Used by municipality.html, police-station.html,
+   and other dedicated public-service pages.
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.65;
+  color: #243247;
+  background: #f5f8fc;
+}
+
+/* Main page container */
+.public-service-page,
+.municipality-page {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* Shared hero */
+.public-service-page .hero,
+.municipality-page .hero {
+  padding: 28px;
+  border-radius: 18px;
+  color: #fff;
+  background: linear-gradient(135deg, #123d67, #167b83);
+}
+
+.public-service-page .hero h1,
+.municipality-page .hero h1 {
+  margin: 0 0 5px;
+  font-size: clamp(25px, 5vw, 36px);
+}
+
+.public-service-page .hero p,
+.municipality-page .hero p {
+  margin: 5px 0;
+  opacity: 0.95;
+}
+
+/* Municipality hero image */
+.municipality-hero {
+  position: relative;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  color: #fff !important;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(5, 25, 48, 0.75),
+      rgba(5, 25, 48, 0.25)
+    ),
+    url("https://res.cloudinary.com/m8ojhenk/image/upload/v1794339928/muni.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Hero text */
+.municipality-hero .hero-overlay,
+.police-hero .hero-overlay {
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+}
+
+.municipality-hero h1,
+.municipality-hero p,
+.police-hero h1,
+.police-hero p {
+  color: #fff !important;
+}
+
+.municipality-hero .bengali-title,
+.police-hero .bengali-title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Shared content sections */
+.public-service-page .section,
+.municipality-page .section {
+  margin-top: 18px;
+  padding: 22px;
+  border: 1px solid #e3eaf2;
+  border-radius: 15px;
+  background: #fff;
+}
+
+.public-service-page h2,
+.municipality-page h2 {
+  margin-top: 0;
+  color: #164c75;
+  font-size: 21px;
+}
+
+.public-service-page h3,
+.municipality-page h3 {
+  color: #23617d;
+  font-size: 17px;
+}
+
+/* Statistics cards */
+.public-service-page .stats,
+.municipality-page .stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.public-service-page .stat,
+.municipality-page .stat {
+  padding: 16px;
+  border-radius: 12px;
+  background: #edf5fa;
+}
+
+.public-service-page .stat strong,
+.municipality-page .stat strong {
+  display: block;
+  color: #135b83;
+  font-size: 25px;
+}
+
+.public-service-page .stat span,
+.municipality-page .stat span {
+  color: #526579;
+  font-size: 13px;
+}
+
+/* Information grids */
+.public-service-page .info-grid,
+.municipality-page .info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.public-service-page .info,
+.municipality-page .info {
+  padding: 13px;
+  border-radius: 10px;
+  background: #f5f8fc;
+}
+
+.public-service-page .info strong,
+.municipality-page .info strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #164c75;
+}
+
+/* Lists */
+.public-service-page ul,
+.municipality-page ul {
+  padding-left: 22px;
+}
+
+.public-service-page li,
+.municipality-page li {
+  margin-bottom: 7px;
+}
+
+/* Notices */
+.public-service-page .notice,
+.municipality-page .notice {
+  padding: 13px;
+  border-left: 4px solid #d69b28;
+  border-radius: 7px;
+  background: #fff8e8;
+  color: #654d1d;
+}
+
+/* Verification labels */
+.public-service-page .verified,
+.municipality-page .verified {
+  color: #18734a;
+  font-weight: bold;
+}
+
+.public-service-page .historical,
+.municipality-page .historical {
+  color: #8b6117;
+  font-weight: bold;
+}
+
+/* Links */
+.public-service-page a,
+.municipality-page a {
+  color: #1768bd;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.public-service-page a:hover,
+.municipality-page a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.public-service-footer,
+.footer {
+  padding: 20px 5px;
+  color: #657487;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .public-service-page .hero,
+  .public-service-page .section,
+  .municipality-page .hero,
+  .municipality-page .section {
+    padding: 17px;
+  }
+
+  .municipality-hero {
+    min-height: 240px;
+    background-position: center;
+  }
+
+  .municipality-hero .hero-overlay,
+  .police-hero .hero-overlay {
+    padding: 20px;
+  }
+}
+/* Equal sizing for Municipality and Police Station cards */
+.municipality-embedded-card,
+.police-embedded-card {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.municipality-iframe,
+.police-iframe {
+  display: block;
+  width: 100%;
+  min-width: 100%;
+  height: 900px;
+  border: 0;
+  border-radius: 12px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .municipality-embedded-card,
+  .police-embedded-card {
+    padding: 12px;
+  }
+
+  .municipality-iframe,
+  .police-iframe {
+    height: 1000px;
+  }
+}
+
+/* Header image support */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.25)
+    );
+    color: white;
+}
+
+.hero-overlay h1 {
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .hero,
+    .hero-overlay {
+        min-height: 260px;
+    }
+
+    .hero-overlay {
+        padding: 24px;
+    }
+}
+/* Keep the header image visible behind the text */
+.hero-overlay {
+    background: transparent !important;
+}
+
+.hero-overlay h1,
+.hero-overlay p {
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+}
