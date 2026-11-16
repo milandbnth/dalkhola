@@ -70,10 +70,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const status = document.getElementById("business-form-status");
     const submitBtn = form.querySelector('[type="submit"]');
 
-    status.textContent =
-      "Your registration has been submitted. Thank you for registering with Dalkhola Online!";
+    if (status) {
+      status.textContent =
+        "Your registration has been submitted. Thank you for registering with Dalkhola Online!";
 
-    status.style.color = "#16804a";
+      status.style.color = "#16804a";
+    }
     submitBtn.disabled = false;
     submitBtn.textContent = "Submit Business Registration ↗";
 
@@ -98,8 +100,11 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     submitting = true;
-    status.textContent = "Submitting your registration...";
-    status.style.color = "#946200";
+
+    if (status) {
+      status.textContent = "Submitting your registration...";
+      status.style.color = "#946200";
+    }
 
     submitBtn.disabled = true;
     submitBtn.textContent = "Submitting...";

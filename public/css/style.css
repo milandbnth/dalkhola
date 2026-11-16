@@ -2169,3 +2169,15 @@ body.business-modal-open {
     font-size: 11px;
   }
 }
+
+/* date 11/16/2026 */
+
+.business-form-status {
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.business-form-status:empty {
+  display: none;
+}
